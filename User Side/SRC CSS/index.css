@@ -1,4 +1,6 @@
+
 /* -------------start body--------------- */
+
 #con1{
     display: flex;
     justify-content: space-between;
@@ -9,7 +11,9 @@
 #con1 div{
     width: 30%;
     margin:0px 12px;
+
     background-color: rgb(65, 66, 72);
+
  
 }
 #con1 div p{
@@ -145,12 +149,15 @@ p{
 }
 #con7>div>div>img:hover{
    cursor: pointer;
+
    transform:rotateY(40deg)
   
+
 }
 #con7 h3,p{
     margin: 5px;
 }
+
 hr{
     width: 90%;
     margin: auto;
@@ -229,3 +236,4 @@ h1{
     padding: 8px;
 }
 /* ------------End body------------- */
+
