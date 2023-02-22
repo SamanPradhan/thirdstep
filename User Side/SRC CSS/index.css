@@ -1,0 +1,153 @@
+#con1{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 80px;
+    margin:30px auto;  
+}
+#con1 div{
+    width: 30%;
+    margin:0px 12px;
+    background-color: rgb(41, 43, 60);
+ 
+}
+#con1 div p{
+    color: white;
+    margin: 7px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#con1 div p:hover{
+    cursor: pointer;
+}
+#con2{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+#con2 div{
+    width:45%;
+}
+#con2 div img,video{
+    height: 400px;
+}
+
+#i{
+    width: 80%;
+    margin: 30px auto;
+} 
+#i:hover{
+    cursor: pointer;
+}
+
+#con3{
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+   width: 80%;
+    margin: auto;
+}
+#con3 div{
+    text-align: center;
+}
+#con3 div img{
+    width: 80%;   
+}
+#con3 div:hover{
+    transform: translateY(5px);
+    cursor: pointer;
+}
+span{
+    color: red;
+}
+h2,h4,p,h3{
+    text-align: center;
+    color: rgb(41, 40, 40);
+    margin: 20px;
+}
+p{
+    text-align: center;
+    color: rgb(72, 70, 70);
+    margin: 20px; 
+}
+
+#con4{
+    display: flex;
+    justify-content: center;
+}
+#con4 div{
+    margin: 17px;
+    position: relative;
+}
+#con4 div h4{
+    position: absolute;
+   top: 25px;
+   left: 7px;
+    z-index:1;
+    color: white;
+}
+#con4 span{
+    font-size: 30px;
+    color: white;
+}
+#con4 div:hover{
+    cursor: pointer;
+}
+
+
+#con5{
+    display: flex;
+    width: 80%;
+    margin: 30px auto
+}
+
+#con5 div img{
+    width: 100%;
+}
+
+#con6{
+    display: flex;
+    width: 80%;
+    margin: 30px auto
+}
+#con6 div{
+    margin: 10px;
+    width: 100%;
+}
+
+#con6 div img{
+    width: 100%;
+}
+#con6 h2,h3{
+    color: black;
+}
+
+
+#con7{
+    display: flex;
+    width: 80%;
+    margin: 30px auto
+}
+#con7>div{
+    margin: 10px;
+    width: 100%;
+}
+#con7>div:hover{
+    cursor: pointer;
+}
+#con7>div>div{
+    height: 100px;
+    text-align: center;
+}
+
+#con7>div>div>img{
+    width: 80%;
+}
+#con7>div>div>img:hover{
+   cursor: pointer;
+   transform:translateY(5px)
+}
+#con7 h3,p{
+    margin: 5px;
+}
+
+
