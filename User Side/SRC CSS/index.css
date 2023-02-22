@@ -1,3 +1,6 @@
+
+/* -------------start body--------------- */
+
 #con1{
     display: flex;
     justify-content: space-between;
@@ -8,7 +11,9 @@
 #con1 div{
     width: 30%;
     margin:0px 12px;
-    background-color: rgb(41, 43, 60);
+
+    background-color: rgb(65, 66, 72);
+
  
 }
 #con1 div p{
@@ -144,10 +149,91 @@ p{
 }
 #con7>div>div>img:hover{
    cursor: pointer;
-   transform:translateY(5px)
+
+   transform:rotateY(40deg)
+  
+
 }
 #con7 h3,p{
     margin: 5px;
 }
 
+hr{
+    width: 90%;
+    margin: auto;
+}
+
+#con8{
+    display: flex;
+    justify-content: center;
+}
+#con8 div{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: rgb(72, 70, 70);
+    border-bottom: 3px solid rgb(72, 70, 70);
+}
+#con8 div:hover{
+    cursor: pointer;
+}
+h1{
+    margin-top: 50px;
+    color:rgb(54, 53, 53);
+   text-align: center;
+}
+
+#con9{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+#con9>div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px;
+}
+#con9>div>div:nth-child(1){
+    text-align: right;
+   
+}
+#con9>div>div:nth-child(2){
+    text-align: left;
+  padding-left: 10px;
+}
+#con9 img{
+    width: 70%;
+    text-align: right;
+}
+
+#con10{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin:80px auto 30px ;
+}
+#con10 div:nth-child(2){
+    width: 50%;
+    height: 40px;
+    text-align: right;
+}
+#con10 button{
+    background-color: rgb(60, 60, 60);
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+}
+#con10 button:hover{
+    background-color: rgb(31, 30, 30);
+}
+#con10 input{
+    width: 70%;
+    border-color: grey;
+    font-size: 20px;
+    padding: 8px;
+}
+/* ------------End body------------- */
 
