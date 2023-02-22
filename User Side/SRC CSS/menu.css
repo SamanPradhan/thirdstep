@@ -43,13 +43,11 @@ body{
     margin: auto;
     width: 80%;
     /* border: 2px solid black; */
-    height: 100vh;
     gap: 30px;
 }
 #filterbox{
     width: 15%;
     /* border: 2px solid red; */
-    height: 100vh;
 }
 #filter1>p{
     color: #7C878E;
@@ -201,4 +199,37 @@ input.checkbrand,input.price{
     font-size: 14px;
     line-height: 1.7142857143;
 }
-
+#paginationstart{
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+#beforepages{
+    width: 15%;
+}
+#pages{
+    width: 85%;
+    text-align: center;
+    float: right;
+}
+#pages>button{
+    width: 44px;
+    height: 44px;
+    background-color:white;
+    border: 1px solid #333f48;
+    border-radius: 0px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+#lasthr{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+#pages>button:hover{
+    background-color: #333f48;
+    color: white;
+}
+#protitle{
+    cursor: pointer;
+}
