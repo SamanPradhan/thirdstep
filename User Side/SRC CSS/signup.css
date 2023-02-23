@@ -1,0 +1,38 @@
+#main {
+  display: flex;
+}
+img {
+  width: 500px;
+  margin: 20px;
+}
+#login-form {
+  width: 45%;
+}
+#main {
+  padding: 0px 150px 0px 150px;
+}
+input {
+  width: 100%;
+  height: 30px;
+}
+#topWords {
+  display: flex;
+  /* border: 2px solid red; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#topWords p {
+  font-size: 13px;
+  text-align: center;
+}
+label {
+  font-size: 10px;
+}
+#small_font {
+  font-size: 12px;
+}
+#don {
+  display: flex;
+}
