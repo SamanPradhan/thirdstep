@@ -1,34 +1,34 @@
-let empty=document.querySelector("#empty")
+let empty=document.getElementById("empty")
  let myCart=JSON.parse(localStorage.getItem("product"))||{};
  console.log(myCart)
-// display(myCart);
-// function display(data)
+display(myCart);
+function display(data)
     
-// {
+{
   empty.innerHTML=""
-   // data.forEach(element => {
+  // data.forEach(element => {
     let products=document.createElement("div")
     let productDetails=document.createElement("div")
     let productAmount=document.createElement("div")
     let btn=document.createElement("div")
 
     let img=document.createElement("img")
-    img.setAttribute("src","https://www.famousfootwear.com/blob/product-images/20000/76/83/5/76835_pair_medium.jpg")
+    img.setAttribute("src",data.image1)
 
     let brand=document.createElement("h2")
-    brand.innerText="Vans";
+    brand.innerText=data.brand;
 
     let gender=document.createElement("h3")
-    gender.innerText="Female";
+    gender.innerText=data.gender;
 
     let name=document.createElement("p")
-    name.innerText="Women's Ward Low Top Platform Sneaker";
+    name.innerText=data.name;
 
     let price=document.createElement("h1")
-    price.innerText=   `₹999`;
+    price.innerText=   `₹${data.price}`;
 
-    let quantity = document.createElement("span");
-    quantity.innerText=1;
+    // let quantity = document.createElement("span");
+    // quantity.innerText=data.image1;
 
     let Increment = document.createElement("button");
     let Decrement = document.createElement("button");
@@ -64,10 +64,9 @@ Decrement.addEventListener("click", () => {
   btn.append(remove)
   products.append(img)
   productDetails.append(brand,gender,name)
-  productAmount.append(price,Decrement,quantity,Increment,btn)
+  productAmount.append(price,Decrement,Increment,btn)
   empty.append(products,productDetails,productAmount) 
-
 // });
 
 
-// }
+ }
