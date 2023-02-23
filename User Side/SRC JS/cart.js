@@ -1,6 +1,6 @@
 
 let empty=document.querySelector("#empty")
- let myCart=JSON.parse(localStorage.getItem("product"))||{};
+ let myCart=JSON.parse(localStorage.getItem("cartData"))||[];
  console.log(myCart)
 // display(myCart);
 // function display(data)
