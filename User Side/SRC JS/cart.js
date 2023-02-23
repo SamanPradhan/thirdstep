@@ -1,5 +1,7 @@
+
 let empty=document.getElementById("empty")
  let myCart=JSON.parse(localStorage.getItem("product"))||{};
+
  console.log(myCart)
 display(myCart);
 function display(data)
@@ -69,4 +71,6 @@ Decrement.addEventListener("click", () => {
 // });
 
 
+
  }
+
