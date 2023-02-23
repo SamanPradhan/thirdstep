@@ -80,7 +80,8 @@ function displaydata(data) {
     protitle.addEventListener("click", () => {
       productdata = item;
       localStorage.setItem("product", JSON.stringify(productdata));
-      window.location.assign("/User Side/product.html")
+      console.log(productdata);
+      window.location.assign("/User Side/product.html");
     });
 
     let prices = document.createElement("div");
@@ -178,3 +179,15 @@ filterby.addEventListener("change", () => {
 });
 
 //end filter code
+
+//page loader code
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#spinner").style.visibility = "visible";
+  } else {
+    document.querySelector("#spinner").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};

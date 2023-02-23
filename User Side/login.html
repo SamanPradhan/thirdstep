@@ -20,8 +20,8 @@
         <div class="top-section">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="">
-                        <img src="./image/logoAsset 3@4x-8.png" alt="" />
+                    <a>
+                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
                 </div>
                 <div class="main-menu">
@@ -30,32 +30,87 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <i class="fa fa-circle-user fa-2x"></i>
-                        <i class="fa fa-heart fa-2x"></i>
-                        <i class="fa fa-bag-shopping fa-2x"></i>
-                        <!-- <i class="fa fa-cart-shopping"></i> -->
+                        <a href="./login.html">
+                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        </a>
+                        <a href="">
+                            <img class="icon-top" width="10px"
+                                src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
+                        </a>
+                        <a href="">
+                            <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
                 </div>
                 <div class="info-menu">
                     <ul>
                         <li>
+                            <a href="./menu.html" id="Menu"><strong>Menu</strong></a>
+                            <!-- <div id="sub-menu">
+                                <div class="section-1">
+                                    <div class="information">
+                                        <strong>Spotlight On</strong>
+                                        <br>
+                                        <div>
+                                            <a href="./menu.html">New Arrivals</a>
+                                        </div>
+                                        <div>
+                                            <a href="./menu.html">Eco-Conscious Style</a>
+                                        </div>
+                                        <strong>Shop by Occasion</strong>
+                                        <br>
+                                        <div>
+                                            <a href="./menu.html">Wedding & Events</a>
+                                        </div>
+                                        <div>
+                                            <a href="./menu.html">Beach Gateway</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="section-2">
+                                    <a class="img" href="">
+                                        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_getaway.jpg"
+                                            alt="">
+                                        <H3>GETAWAY SHOP</H3>
+                                    </a>
+                                    <a class="img" href="">
+                                        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/mega_nav_spg23_wsneakershop.jpg"
+                                            alt="">
+                                        <H3>SNEAKER SHOP</H3>
+                                    </a>
+                                    <a class="img" href="">
+                                        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_activeshop.jpg"
+                                            alt="">
+                                        <h3>ACTIVE SHOP</h3>
+                                    </a>
+                                    <a class="img" href="">
+                                        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/mega-menu/new-and-now/2023/spring/wk2_020823_site_ads_mega_nav_spg23_eventedit.jpg"
+                                            alt="">
+                                        <h3>EVENT EDIT</h3>
+                                    </a>
+                                </div>
+                            </div> -->
+                        </li>
+                        <li>
                             <a href="" id="New-Now"><strong>New & Now</strong></a>
                             <div id="sub-menu">
                                 <div class="section-1">
                                     <div class="information">
-                                        <h3>Spotlight On</h3>
+                                        <strong>Spotlight On</strong>
+                                        <br>
                                         <div>
-                                            <a href="">New Arrivals</a>
+                                            <a href="./menu.html">New Arrivals</a>
                                         </div>
                                         <div>
-                                            <a href="">Eco-Conscious Style</a>
+                                            <a href="./menu.html">Eco-Conscious Style</a>
                                         </div>
-                                        <h3>Shop by Occasion</h3>
+                                        <strong>Shop by Occasion</strong>
+                                        <br>
                                         <div>
-                                            <a href="">Wedding & Events</a>
+                                            <a href="./menu.html">Wedding & Events</a>
                                         </div>
                                         <div>
-                                            <a href="">Beach Gateway</a>
+                                            <a href="./menu.html">Beach Gateway</a>
                                         </div>
 
                                     </div>
@@ -664,6 +719,53 @@
         </div>
     </div>
     <!-- End Navbar code here -->
+    <div id="biggMain">
+
+        <div id="main11">
+
+            <form id="login-form">
+                <div id="topWords">
+                    <h1 id="createaccount">Log in to your Account</h1>
+
+                </div>
+
+
+
+
+                <h2>Email Address* </h2>
+                </label>
+                <input id="email" type="email" />
+
+                <p id="wrong_email"></p>
+                <label>
+                    <h2>Password*</h2>
+                </label>
+                <input id="password" type="password" placeholder="*******" />
+                <label>
+
+
+                    <p id="wrong_password"></p>
+
+
+                    <p id="login_successful"></p>
+                    <input type="submit" id="button" value="LOG IN" />
+                    <p id="bottom-line-login-now">Don't have an account? <a href="signup.html">Create here</a></p>
+
+                    <div id="bottom">
+                        <h2>Or Sign up With</h2>
+                        <img src="SRC Image/image.png" alt="">
+                    </div>
+            </form>
+
+
+        </div>
+        <div id="imgSignin">
+
+            <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/homepage/2023/spring/1-story/wk3_021223_hp_right_loafers.jpg"
+                alt="">
+        </div>
+    </div>
+
 </body>
 <script src="SRC JS/login.js"></script>
 
