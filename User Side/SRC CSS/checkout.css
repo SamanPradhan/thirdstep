@@ -1,0 +1,27 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+header {
+  height: 80px;
+  border: 2px solid red;
+}
+header > div {
+  width: 80%;
+  margin: auto;
+  border: 2px solid black;
+  display: flex;
+  height: 80px;
+}
+header > div > div {
+  width: 100px;
+}
+header > div > div > img {
+  width: 100%;
+}
+a {
+  font-family: Tahoma, serif, thin;
+
+  color: #333f48;
+  font-size: 12px;
+}
