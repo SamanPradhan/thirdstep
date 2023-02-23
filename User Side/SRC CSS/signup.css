@@ -33,3 +33,6 @@ label {
 #small_font {
   font-size: 12px;
 }
+#don {
+  display: flex;
+}
