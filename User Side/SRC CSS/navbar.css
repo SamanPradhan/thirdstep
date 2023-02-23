@@ -1,6 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
 #container {
   width: 100%;
+  /* margin-bottom: 300px; */
   /* height: 100%; */
+}
+.navbar{
+    position: sticky;
 }
 #container .navbar {
   width: 100%;
@@ -166,7 +175,7 @@ strong {
   /* position: fixed; */
 }
 .section-2 .img {
-  width: 27%;
+  width: 20%;
 }
 #sub-menu .section-2 .img {
   margin: 10px;
@@ -220,12 +229,106 @@ strong {
 #sale {
   color: #d50032;
 }
+.fa-brands {
+    color: black;
+}
 .fa-tag {
   color: #d50032;
 }
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  /* height: 2000PX; */
+
+/* Footer Css code start here */
+footer{
+    background-color: #f0f0f0;
+    padding: 20px;
 }
+.social-media{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 400px;
+}
+.social-media strong{
+    margin: 7px;
+    font-weight: 500;
+}
+.icons{
+    /* margin: auto; */
+    margin-left: 266px;
+    width: 200px;
+    position: relative;
+    left: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 1px solid teal; */
+}
+/* .icons a:nth-child(1){
+    margin-top: 24px;
+}
+.icons a:nth-child(2){
+    margin-top: 8px;
+} */
+.icons a:nth-child(3){
+    /* margin-top: 15px; */
+    margin-left: -30px;
+} 
+.icon-top{
+    /* border: 2px solid teal; */
+}
+.icons img{
+    width: 50%;
+}
+.social-icons a{
+    margin: 5px 25px;
+}
+.policy{
+    color: gray;
+}
+.last-tnstruction{
+    margin-top: 20px;
+    color: gray;
+}
+.footer-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-links .apply-links{
+ width: 40%;
+ display: flex;
+ margin-top: 100px;
+}
+.apply-links .credit-card{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-links .sub-links{
+    width: 60%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.img-subinfo{
+    width: 20%;
+    position: relative;
+    left: 140px;
+    top: 96px;
+}
+.boldtag{
+    /* width: 300px; */
+    position: relative;
+    top: 94px;
+    /* left: 300px; */
+}
+.img-subinfo img{
+    width: 50%;
+}
+.stores a{
+    text-decoration: none;
+    color: gray;
+}
+.stores div:first-child{
+    margin-bottom: 15px;
+}
+/* footer css code end here */
