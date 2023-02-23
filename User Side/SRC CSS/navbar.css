@@ -158,8 +158,9 @@ body {
   grid-template-columns: auto auto auto auto;
   margin-right: 15px;
 }
-strong {
-  margin-left: 10px;
+.information strong {
+  /* margin-left: 0; */
+  margin-bottom: 10px;
 }
 #size-grid div a {
   color: black;
@@ -235,11 +236,16 @@ strong {
 .fa-tag {
   color: #d50032;
 }
+#Menu{
+    color: #d50032;
+}
 
 /* Footer Css code start here */
 footer{
     background-color: #f0f0f0;
     padding: 20px;
+    padding-left: 81px;
+    padding-right: 84px;
 }
 .social-media{
     display: flex;
