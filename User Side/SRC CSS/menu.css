@@ -243,3 +243,25 @@ a {
   color: #333f48;
   font-size: 12px;
 }
+
+#spinner {
+  animation: spin 1s linear infinite;
+  color: rgb(121, 121, 121);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.inline {
+  display: flex;
+}
+.spinner i {
+  margin-top: 10px;
+  margin-left: 50px;
+}

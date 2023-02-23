@@ -80,6 +80,8 @@ function displaydata(data) {
     protitle.addEventListener("click", () => {
       productdata = item;
       localStorage.setItem("product", JSON.stringify(productdata));
+      console.log(productdata);
+      window.location.assign("/User Side/product.html");
     });
 
     let prices = document.createElement("div");
@@ -144,41 +146,6 @@ priceplus.addEventListener("click", () => {
   }
 });
 
-//   return card;
-// }
-//let pages = document.getElementById("pages");
-
-// let brandchkbox = document.getElementById("brdchk");
-// let brandplus = document.getElementById("brandplus");
-// let flag = false;
-// brandplus.addEventListener("click", () => {
-//   flag = !flag;
-//   if (flag == true) {
-//     brandplus.textContent = "_";
-//     brandplus.style.marginBottom = "30px";
-//     brandchkbox.style.display = "block";
-//   } else if (flag == false) {
-//     brandplus.textContent = "+";
-//     brandplus.style.marginBottom = "0px";
-//     brandchkbox.style.display = "none";
-//   }
-// });
-
-// let pricecheckbox = document.getElementById("prcchk");
-// let priceplus = document.getElementById("priceplus");
-// priceplus.addEventListener("click", () => {
-//   flag = !flag;
-//   if (flag == true) {
-//     priceplus.textContent = "_";
-//     priceplus.style.marginBottom = "30px";
-//     pricecheckbox.style.display = "block";
-//   } else if (flag == false) {
-//     priceplus.textContent = "+";
-//     priceplus.style.marginBottom = "0px";
-//     pricecheckbox.style.display = "none";
-//   }
-// });
-
 function pagebtn(text, pageNumber) {
   return `<button class="pagebtn" data-page-number="${pageNumber}">${text}</button>&nbsp;&nbsp;`;
 }
@@ -212,3 +179,15 @@ filterby.addEventListener("change", () => {
 });
 
 //end filter code
+
+//page loader code
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#spinner").style.visibility = "visible";
+  } else {
+    document.querySelector("#spinner").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
