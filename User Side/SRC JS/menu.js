@@ -215,14 +215,6 @@ filterby.addEventListener("change", () => {
   }
 });
 
-//end filter code
 
-setTimeout(function () {
-  let producttitle = document.querySelectorAll("p");
-  console.log(producttitle);
-  for (let i = 0; i < producttitle.length; i++) {
-    producttitle[i].addEventListener("click", () => {
-      localStorage.setItem("product", JSON.stringify(alldata[i]));
-    });
-  }
-}, 1000);
+  //end filter code
+
