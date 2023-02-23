@@ -1,4 +1,7 @@
+
+ 
 let productdata = JSON.parse(localStorage.getItem("product")) || {};
+let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 
 let container = document.getElementById("product-container");
 
@@ -52,10 +55,28 @@ container.innerHTML = ` <div id="roll">
     <input type="radio">
     <h3>Ship to Address</h3>
     <h3>Receive in 4-7 business days with standard</h3>
-    <button>ADD TO CART</button>
+
+    <button id="btn">ADD TO CART</button>
+
     <h4>Enjoy $10 OFF Today* on your first purchase with the <br>
         FAMOUSLY YOU REWARDS® Credit Card at time of <br>
         account opening.Learn More</h4>
 </div>
 
 </div>`;
+     
+let btn = document.getElementById("btn")
+
+btn.addEventListener("click", function () {
+    // addTocart(el);
+    alert("Product Successfully added to Cart");
+     cartData.push(productdata);
+    localStorage.setItem("productsAdd", JSON.stringify(cartData));
+    console.log(cartData)
+     window.location.href="cart.html"
+});
+
+
+
+
+ 

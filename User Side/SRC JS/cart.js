@@ -1,3 +1,4 @@
+
 let empty=document.querySelector("#empty")
  let myCart=JSON.parse(localStorage.getItem("product"))||{};
  console.log(myCart)
@@ -71,3 +72,4 @@ Decrement.addEventListener("click", () => {
 
 
 // }
+
