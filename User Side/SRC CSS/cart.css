@@ -4,3 +4,227 @@ a {
   color: #333f48;
   font-size: 12px;
 }
+
+#cont{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+}
+/* #empty{
+  display: grid;
+  padding: 40px;
+  width: 60%;
+  height:fit-content;
+}
+#empty>h1,p{
+  text-align: center;
+  color: rgb(73, 72, 72);
+} */
+a{
+ font-weight: bold;
+ color: rgb(83, 81, 81);
+ cursor: pointer;
+}
+/* #empty button{
+  padding: 15px 100px;
+  width: fit-content;
+  margin: auto;
+ font-size: 15px;
+ background-color: rgb(65, 64, 64);
+ border:none;
+ font-weight: bold;
+} */
+/* #empty button:hover{
+  background-color: rgb(30, 30, 30);
+} */
+#summary{
+  width: 40%;
+  padding: 15px;
+}
+#summary h2{
+  margin: 0;
+  color: rgb(26, 25, 25);
+}
+#sub{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+#sub h3{
+  margin: 0;
+  color: rgb(62, 61, 61);
+  font-family:sans-serif;
+  font-weight: 100;
+}
+span{
+  font-weight:1000;
+}
+#extra{
+  display: flex;
+  justify-content: space-between;
+}
+#extra img{
+  width: 20%;
+  margin: 20px;
+}
+p{
+  text-align: left;
+}
+#extra p{
+  text-align: left;
+}
+#summary button{
+  padding: 15px 100px;
+  width: 100%;
+ color: white;
+ font-size: 15px;
+ background-color: rgb(65, 64, 64);
+ border:none;
+ font-weight: bold;
+ margin: auto;
+}
+#summary button:hover{
+  background-color:rgb(30, 30, 30); ;
+}
+/* ----------------------------------------------------------------- */
+h2{
+ margin: 40px 0 0 10%;
+}
+#con7{
+  display: flex;
+  width: 80%;
+  margin: 30px auto
+}
+#con7>div{
+  margin: 10px;
+  width: 100%;
+}
+#con7>div:hover{
+  cursor: pointer;
+}
+#con7>div>div{
+  height: 100px;
+  text-align: center;
+}
+
+#con7>div>div>img{
+  width: 80%;
+}
+#con7>div>div>img:hover{
+ cursor: pointer;
+ transform:rotateY(40deg)
+
+}
+#con7 h3,p{
+  margin: 5px;
+}
+#con7 h3{
+  color: rgb(33, 33, 33);
+}
+#con7 p{
+  font-weight: 100;
+}
+a{
+  text-decoration: none;
+}
+
+/* ------------------------------------------------- */
+#con9{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+#con9>div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px;
+}
+#con9>div>div:nth-child(1){
+  text-align: right;
+  color: rgb(83, 81, 81);
+ 
+}
+#con9>div>div:nth-child(2){
+  text-align: left;
+padding-left: 10px;
+color: rgb(83, 81, 81);
+}
+#con9 img{
+  width: 70%;
+  text-align: right;
+}
+
+#con10{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin:80px auto 30px ;
+}
+#con10 div:nth-child(2){
+  width: 50%;
+  height: 40px;
+  text-align: right;
+}
+#con10 button{
+  background-color: rgb(60, 60, 60);
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 8px;
+}
+#con10 button:hover{
+  background-color: rgb(31, 30, 30);
+}
+#con10 input{
+  width: 70%;
+  border-color: grey;
+  font-size: 20px;
+  padding: 8px;
+}
+
+/* ----------------------------------------------------------- */
+
+#empty{
+  width: 70%;
+  display: flex;
+  justify-content:center;
+}
+#empty>div{
+  width:30%;
+  padding: 10px; 
+  height: 200px;
+}
+#empty>div:nth-child(1){
+  text-align: center;
+  padding-top: 40px;
+}
+#empty>div>img{
+  width: 80%;
+}
+#empty>div>h2,h1,p,h3{
+  margin-left: 0;
+  padding-top: 0;
+}
+#empty>div>span{
+  margin: 8px;
+}
+#empty>div>div>button{
+  margin: 20px 0 ;
+  padding: 8px 17px;
+
+}
+#empty>div button{
+  background-color: rgb(89, 88, 88);
+  border: none;
+  padding: 7px 12px;
+  color: white;
+}
+#empty>div button:hover{
+  background-color: rgb(28, 28, 28);
+}
+
+
