@@ -1,8 +1,6 @@
-
- 
 let productdata = JSON.parse(localStorage.getItem("product")) || {};
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
-
+let JSON_flag_signin = JSON.parse(localStorage.getItem("login")) || true;
 let container = document.getElementById("product-container");
 
 console.log(productdata);
@@ -64,19 +62,44 @@ container.innerHTML = ` <div id="roll">
 </div>
 
 </div>`;
-     
-let btn = document.getElementById("btn")
+
+let btn = document.getElementById("btn");
 
 btn.addEventListener("click", function () {
-    // addTocart(el);
-    alert("Product Successfully added to Cart");
-     cartData.push(productdata);
-    localStorage.setItem("productsAdd", JSON.stringify(cartData));
-    console.log(cartData)
-     window.location.href="cart.html"
+  // addTocart(el);
+
+  if (JSON_flag_signin == false) {
+    cartadding.innerText = "Please Log in First";
+  } else {
+    if (duplicate(productdata) == false) {
+      cartData.push({ ...productdata, quantity: 1 });
+
+      console.log(cartData);
+      console.log("cartData");
+      console.log(cartData.quantity);
+      localStorage.setItem("productsAdd", JSON.stringify(cartData));
+      //   cartadding.innerText = "Product Added To Cart";
+      alert("Product Successfully added to Cart");
+      console.log("login", JSON_flag_signin);
+    } else if (duplicate(productdata) == true) {
+      cartData.forEach((element) => {
+        if (element.id == productdata.id) {
+          element.quantity++;
+          console.log(cartData);
+        }
+      });
+    }
+
+    //window.location.href = "cart.html";
+  }
 });
+function duplicate(product) {
+  for (let i = 0; i < cartData.length; i++) {
+    if (cartData[i].id == product.id) {
+      cartData[i].quantity++;
+      return true;
+    }
+  }
 
-
-
-
- 
+  return false;
+}
