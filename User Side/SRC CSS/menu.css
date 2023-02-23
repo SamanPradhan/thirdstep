@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
- /* // font-family: "Famous Footwear Sans", sans-serif; */
+  /* // font-family: "Famous Footwear Sans", sans-serif; */
   color: #333f48;
 }
 
@@ -224,9 +224,6 @@ input.price {
   cursor: pointer;
 }
 
-#mainCard {
-  border: 2px solid red;
-}
 #img1 {
   cursor: pointer;
 }
@@ -238,4 +235,11 @@ h5,
 h6,
 p {
   font-family: Tahoma, sans-serif;
+  color: #333f48;
+}
+a {
+  font-family: Tahoma, serif, thin;
+
+  color: #333f48;
+  font-size: 12px;
 }
