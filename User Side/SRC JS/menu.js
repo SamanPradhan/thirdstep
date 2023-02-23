@@ -80,7 +80,8 @@ function displaydata(data) {
     protitle.addEventListener("click", () => {
       productdata = item;
       localStorage.setItem("product", JSON.stringify(productdata));
-      window.location.assign("/User Side/product.html")
+      console.log(productdata);
+      window.location.assign("/User Side/product.html");
     });
 
     let prices = document.createElement("div");
