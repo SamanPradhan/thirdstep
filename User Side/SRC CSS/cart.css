@@ -4,6 +4,9 @@ a {
   color: #333f48;
   font-size: 12px;
 }
+#logo{
+  width: 200px;
+}
 
 #cont{
   display: flex;
@@ -21,12 +24,12 @@ a {
 #empty>h1,p{
   text-align: center;
   color: rgb(73, 72, 72);
-} */
+}
 a{
  font-weight: bold;
  color: rgb(83, 81, 81);
  cursor: pointer;
-}
+} */
 /* #empty button{
   padding: 15px 100px;
   width: fit-content;
@@ -35,8 +38,8 @@ a{
  background-color: rgb(65, 64, 64);
  border:none;
  font-weight: bold;
-} */
-/* #empty button:hover{
+}
+#empty button:hover{
   background-color: rgb(30, 30, 30);
 } */
 #summary{
