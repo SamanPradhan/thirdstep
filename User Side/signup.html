@@ -669,7 +669,7 @@
 
         <form id="login-form">
             <div id="topWords">
-                <h1>Create Account</h1>
+                <h1 id="createaccount">Create Account</h1>
                 <p>FAMOUSLY YOU REWARDS® members enjoy special savings and perks every day!</p>
             </div>
             <label>
@@ -698,22 +698,36 @@
             <input id="phoneNo" type="text" />
             <p id="wrong_password"></p>
             <ul>
-                <li id="don"><input class="check" type="checkbox" />By selecting the box, you agree to our Privacy
-                    Policy and
-                    Terms
-                    of Use.</li>
-                <li><input class="check" type="checkbox" /> Sign up for Email updates and Promotions.</li>
+                <li class="don"><input class="checkbox" type="checkbox" />
+                    <p> By selecting the box, you agree
+                        to our
+                        Privacy
+                        Policy and
+                        Terms
+                        of Use.</p>
+                </li>
+                <li class="don"><input class="checkbox" type="checkbox" />
+                    <p> Sign up for Email updates and
+                        Promotions.</p>
+                </li>
             </ul>
 
             <p id="login_successful"></p>
-            <input type="submit" value="CREATE ACCOUNT/REGISTER" />
+            <input type="submit" id="button" value="CREATE ACCOUNT/REGISTER" />
             <p id="bottom-line-login-now">Already have an account? <a href="login.html">Log in Now</a></p>
+            <div id="bottom">
+                <img src="SRC Image/image.png" alt="">
+            </div>
         </form>
         <div id="imgSignin">
             <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/rewards-refresh-2022/create-account-lp/wk25_071822_rewards_refresh_web_lp_create_account_us_only_hero.jpg"
                 alt="">
         </div>
+
     </div>
+
+
+
 </body>
 <script src="SRC JS/signup.js"></script>
 
