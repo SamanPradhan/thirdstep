@@ -1,14 +1,14 @@
-img {
+#biggMain {
+  display: flex;
+  padding: 50px 150px 50px 150px;
+}
+#imgSignin > img {
   width: 500px;
   margin: 20px;
 }
-#login-form {
-  width: 45%;
-}
+
 #main11 {
-  padding: 0px 150px 0px 150px;
-  display: flex;
-  justify-content: center;
+  width: 500px;
 }
 input {
   width: 100%;
@@ -106,6 +106,8 @@ h3,
 h1,
 h2 {
   color: #333f48;
+  font-family: Tahoma, serif, thin;
+  font-size: 15px;
 }
 a {
   font-family: Tahoma, serif, thin;
