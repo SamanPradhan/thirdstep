@@ -85,10 +85,22 @@ p,
 #bottom img {
   width: 300px;
 }
+#bottom h2 {
+  font-weight: inherit;
+  font-style: inherit;
+
+  font-family: inherit;
+  vertical-align: baseline;
+  color: #333f48;
+  letter-spacing: 0.0125rem;
+  font-weight: 500;
+}
 
 #bottom {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #createaccount {

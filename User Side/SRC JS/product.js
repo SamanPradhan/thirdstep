@@ -13,7 +13,7 @@ container.innerHTML = ` <div id="roll">
 <img src="${productdata.image2}" alt="">
 </div>
 <div id="box">
-<h1>Women's Ward Low Top Platform Sneaker</h1>
+<h1>${productdata.name}</h1>
 <h2 id="gender">${productdata.gender}</h2>
 <h3 id="price">₹${productdata.price}</h3>
 <h3 id="brand">${productdata.brand}</h3>
@@ -85,7 +85,8 @@ btn.addEventListener("click", function () {
       cartData.forEach((element) => {
         if (element.id == productdata.id) {
           element.quantity++;
-          console.log(cartData);
+          console.log(element);
+          localStorage.setItem("productsAdd", JSON.stringify(cartData));
         }
       });
     }
@@ -96,7 +97,6 @@ btn.addEventListener("click", function () {
 function duplicate(product) {
   for (let i = 0; i < cartData.length; i++) {
     if (cartData[i].id == product.id) {
-      cartData[i].quantity++;
       return true;
     }
   }
