@@ -6,11 +6,20 @@ let userAuthToken = localStorage.getItem("localAccessToken") || null;
 
 loginUserform.addEventListener("submit", (e) => {
   e.preventDefault();
+<<<<<<< HEAD
+
+  console.log("yes");
+=======
+>>>>>>> 5d39529d44d799a63d6f8863bb36e9914cbf1de8
   if (
     loginUserEmail.value == "admin@gmail.com" &&
     loginUserPassword.value == "admin"
   ) {
+<<<<<<< HEAD
+    location.href = "../Admin Side/admin.html";
+=======
     window.location.href = "./Admin Side/admintemplate.html";
+>>>>>>> 5d39529d44d799a63d6f8863bb36e9914cbf1de8
   } else {
     loginUser();
   }
