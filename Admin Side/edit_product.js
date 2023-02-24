@@ -9,6 +9,7 @@ sidebarBtn.onclick = function () {
 };
 
 async function fetch_product() {
+  console.log("fetched");
   let req = await fetch(`${url}beverage`);
   let res = await req.json();
   let product_details = document.querySelector(".sales-details");
@@ -19,11 +20,12 @@ async function fetch_product() {
       return `<div class="card">
         <div class="img"><img src="${el.image1}" ></div>
         <div>
+        <p><span class="name">Product ID:- </span><span class="ans-id">${el.id}</span></p>
             <p><span class="name">Name:- </span><span class="ans-name">${el.name}</span></p>
             <p><span class="name">Brand:- </span> ${el.brand}</p>
             <p><span class="name">Gender:- </span> ${el.gender}</p>
             <p><span class="name">Size:- </span>${el.size}</p>
-            <p><span class="name">Price:- </span>${el.price}</p>
+            <p><span class="name">Price:- </span>₹${el.price}</p>
         </div>
     </div>`;
     })
@@ -73,4 +75,5 @@ addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
   editProduct();
   fetch_product();
+  //location.reload();
 });

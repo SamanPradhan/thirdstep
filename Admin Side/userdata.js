@@ -17,13 +17,13 @@ async function fetch_product() {
   product_details.innerHTML = productData
     .map((el) => {
       return `<div class="card">
-       
+      <div class="img"><img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg" ></div>
         <div>
             <p><span class="name">First Name:- </span><span class="ans-name">${el.firstName}</span></p>
             <p><span class="name">Last Name:- </span> ${el.lastName}</p>
             <p><span class="name">email:- </span> ${el.email}</p>
             <p><span class="name">Phone No:- </span>${el.phoneNo}</p>
-            <p><span class="name">password:- </span>${el.password}</p>
+            <p><span class="name">password:- </span>***********</p>
             <p><span class="name">birthday:- </span>${el.birthday}</p>
         </div>
     </div>`;
