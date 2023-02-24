@@ -66,6 +66,12 @@ function displaydata(data) {
     let cardimage1 = document.createElement("img");
     cardimage1.setAttribute("class", "firstimage");
     cardimage1.src = item.image1;
+    cardimage1.addEventListener("mouseover",()=>{
+      cardimage1.src=item.image2;
+    })
+    cardimage1.addEventListener("mouseout",()=>{
+      cardimage1.src = item.image1;
+    })
     cardimg.append(cardimage1);
     let proinfo = document.createElement("div");
     proinfo.setAttribute("id", "proinfo");
@@ -88,7 +94,7 @@ function displaydata(data) {
     prices.setAttribute("id", "prices");
     let price1 = document.createElement("p");
     price1.setAttribute("id", "price1");
-    price1.textContent = "$" + item.price + ".99";
+    price1.textContent = "₹" + item.price + ".99";
     prices.append(price1);
     let rating = document.createElement("div");
     rating.setAttribute("id", "rating");
@@ -175,6 +181,18 @@ filterby.addEventListener("change", () => {
       newdata.push(alldata[i]);
     }
     displaydata(newdata);
+  }
+  else if(filterby.value=="high"){
+    let newdata=alldata.sort((a,b)=>{
+      return b.price-a.price;
+    })
+    displaydata(newdata)
+  }
+  else if(filterby.value=="low"){
+    let newdata=alldata.sort((a,b)=>{
+      return a.price-b.price;
+    })
+    displaydata(newdata)
   }
 });
 
