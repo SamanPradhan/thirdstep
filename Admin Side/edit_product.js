@@ -75,4 +75,5 @@ addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
   editProduct();
   fetch_product();
+  //location.reload();
 });

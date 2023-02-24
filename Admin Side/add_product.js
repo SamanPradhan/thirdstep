@@ -73,5 +73,6 @@ async function addProduct() {
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addProduct();
-  fetch_product();
+  //fetch_product();
+  location.reload();
 });
