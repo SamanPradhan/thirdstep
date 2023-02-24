@@ -16,33 +16,7 @@ a {
   margin: 40px auto;
   padding: 5px;
 }
-/* #empty{
-  display: grid;
-  padding: 40px;
-  width: 60%;
-  height:fit-content;
-}
-#empty>h1,p{
-  text-align: center;
-  color: rgb(73, 72, 72);
-}*/
-/* a{
- font-weight: bold;
- color: rgb(83, 81, 81);
- cursor: pointer;
-}  */
-/* #empty button{
-  padding: 15px 100px;
-  width: fit-content;
-  margin: auto;
- font-size: 15px;
- background-color: rgb(65, 64, 64);
- border:none;
- font-weight: bold;
-}
-#empty button:hover{
-  background-color: rgb(30, 30, 30);
-} */
+
 #summary{
   width: 40%;
   padding: 15px;
@@ -199,8 +173,7 @@ color: rgb(83, 81, 81);
   display: flex;
   width: 80%;
   margin: auto;
-  background-color: white;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 #empty>div>div{
   margin: 10px;
@@ -230,6 +203,9 @@ color: rgb(83, 81, 81);
 #empty>div>div>div{
   display: flex;
   margin-top: 20px;
+}
+h4{
+  color: rgb(25, 25, 25);
 }
 #empty>div>div>div>button{
  background-color: rgb(73, 72, 72);
