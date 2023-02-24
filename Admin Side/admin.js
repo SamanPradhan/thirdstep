@@ -1,4 +1,4 @@
-const url = `https://jsson-testing.onrender.com/`;
+const url = `https://63c77a71e52516043f3eaecd.mockapi.io/`;
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".sidebarBtn");
 sidebarBtn.onclick = function () {
@@ -7,28 +7,6 @@ sidebarBtn.onclick = function () {
     sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
   } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 };
-
-async function Fetch_admin() {
-  let req = await fetch(`${url}admin`);
-  let res = await req.json();
-  let admin_details = document.querySelector(".sales-details");
-  let adminData = res;
-  console.log(adminData);
-  admin_details.innerHTML = adminData
-    .map((el) => {
-      return `<div class="card">
-        <div class="img"><img src="${el.image}" ></div>
-        <div>
-            <p><span class="name">Name:- </span><a href=""></a><span class="ans-name">${el.name}</span></p>
-            <p><span class="name">LinkedIn:- </span><a href="${el.linkedin}" class="ans">${el.linkedin}</a></p>
-            <p><span class="name">Github:- </span><a href="${el.Github}" class="ans">${el.Github}</a></p>
-            <p><span class="name">E-Mail:- </span><a href="${el.email}" class="ans">${el.email}</a></p>
-        </div>
-    </div>`;
-    })
-    .join("");
-}
-Fetch_admin();
 
 let Admin_data = JSON.parse(localStorage.getItem("admin_data"));
 // displayCards(Admin_data);
@@ -68,7 +46,7 @@ function displayCards() {
 
 async function countData() {
   try {
-    let api_data = await fetch("https://jsson-testing.onrender.com/products", {
+    let api_data = await fetch(`${url}beverage`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -83,9 +61,7 @@ async function countData() {
       localStorage.getItem("editcount") || 0;
     document.getElementById("TotalDelete").innerText =
       localStorage.getItem("deletecount") || 0;
-  } catch (error) {
-    alert("Can't able to fetch Details of Admin");
-  }
+  } catch (error) {}
 }
 
 userDetailss();
