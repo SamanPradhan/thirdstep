@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Poppins", sans-serif; */
-  font-family: Tahoma, serif, thin;
+  font-family: Tahoma, sans-serif;
 }
 
 .sidebar {
@@ -65,7 +65,7 @@
 } */
 
 .sidebar .nav-links li a:hover {
-  background: #333F48;
+  background: #333f48;
 }
 
 .sidebar .nav-links li i {
