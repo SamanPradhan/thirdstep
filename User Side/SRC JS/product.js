@@ -8,9 +8,10 @@ console.log(productdata);
 container.innerHTML = ` <div id="roll">
 <p>Shoes / ${productdata.gender}/Sneakers and Athletic Shoes / Lifestyle and Fashion Sneakers</p>
 </div>
+<div id="container1">
 <div id="cont">
-<!-- <img src="${productdata.image1}" alt=""> -->
-<img src="${productdata.image2}" alt="">
+<img src="${productdata.image1}" alt="">
+<img src="${productdata.image2}" class="img-top" alt="">
 </div>
 <div id="box">
 <h1>${productdata.name}</h1>
@@ -18,7 +19,7 @@ container.innerHTML = ` <div id="roll">
 <h3 id="price">₹${productdata.price}</h3>
 <h3 id="brand">${productdata.brand}</h3>
 <h3 id="size">${productdata.size}</h3>
-</div>
+
 <div class="btn">
 <button>5</button>
 <button>6</button>
@@ -33,7 +34,22 @@ container.innerHTML = ` <div id="roll">
 <h3>color:black/white</h3>
 <h4>Width:</h4>
 <button>Medium</button>
-<div id="box2">
+
+
+<h3>Size Chart</h3>
+ <input type="radio">
+ <h2>Store Pickup - FREE</h2>
+<input type="radio">
+<h3>Ship to Address</h3>
+<h3>Receive in 4-7 business days with standard</h3>
+
+<button id="btn">ADD TO CART</button>
+
+<h4>Enjoy $10 OFF Today* on your first purchase with the <br>
+ FAMOUSLY YOU REWARDS® Credit Card at time of <br>
+ account opening.Learn More</h4>
+ </div>
+ </div>
 <div id="cool">
     <h2>ITEM DETAILS</h2>
     <p>Style #40087</p>
@@ -45,21 +61,6 @@ container.innerHTML = ` <div id="roll">
         <li>Smooth lining with a padded footbed</li> <br>
         <li>Durable rubber outsole with a 3.5" wedge heel</li>
     </ul>
-</div>
-<div id="box1">
-    <h3>Size Chart</h3>
-    <input type="radio">
-    <h2>Store Pickup - FREE</h2>
-    <input type="radio">
-    <h3>Ship to Address</h3>
-    <h3>Receive in 4-7 business days with standard</h3>
-
-    <button id="btn">ADD TO CART</button>
-
-    <h4>Enjoy $10 OFF Today* on your first purchase with the <br>
-        FAMOUSLY YOU REWARDS® Credit Card at time of <br>
-        account opening.Learn More</h4>
-</div>
 
 </div>`;
 
