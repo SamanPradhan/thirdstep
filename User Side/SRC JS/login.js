@@ -3,40 +3,39 @@ let loginUserPassword = document.getElementById("password");
 let loginUserform = document.querySelector("form");
 
 let userAuthToken = localStorage.getItem("localAccessToken") || null;
+let a = localStorage.getItem("loginUser") || false;
 
 loginUserform.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (
-    loginUserEmail.value == "admin@gmail.com" &&
-    loginUserPassword.value == "admin"
-  ) {
-    location.href = "../Admin Side/admin.html";
-  } else {
-    console.log("went to fetch the user details");
-    loginUser();
-  }
+  loginUser();
 });
 
-async function loginUser() {
-  try {
-    //console.log(loginUserPassword);
-    let loginObj = {
-      email: loginUserEmail.value,
-      password: loginUserPassword.value,
-    };
-
-    let login_request = await fetch(
-      `https://63c77a71e52516043f3eaecd.mockapi.io/Dominos`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
+function loginUser() {
+  fetch(`https://63c77a71e52516043f3eaecd.mockapi.io/Dominos/`)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        if (
+          loginUserEmail.value == "admin@gmail.com" &&
+          loginUserPassword.value == "admin"
+        ) {
+          location.href = "../Admin Side/admin.html";
+        } else if (
+          data[i].email == loginUserEmail.value &&
+          data[i].password == loginUserPassword.value
+        ) {
+          a = true;
+          localStorage.setItem("loginUser", a);
+          console.log(a);
+          return;
+        }
       }
-    );
-    console.log(login_request);
-  } catch (error) {
-    console.log(error);
-  }
+      return;
+    });
 }
+
+console.log(a);

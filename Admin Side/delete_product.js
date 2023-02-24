@@ -56,6 +56,6 @@ addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
   deleteProduct();
   console.log("deee");
-  //fetch_product();
-  location.reload()
+  fetch_product();
+  //location.reload()
 });
