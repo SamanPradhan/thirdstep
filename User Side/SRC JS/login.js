@@ -7,21 +7,20 @@ let userAuthToken = localStorage.getItem("localAccessToken") || null;
 loginUserform.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  console.log("yes");
-
   if (
     loginUserEmail.value == "admin@gmail.com" &&
     loginUserPassword.value == "admin"
   ) {
     location.href = "../Admin Side/admin.html";
   } else {
+    console.log("went to fetch the user details");
     loginUser();
   }
 });
 
 async function loginUser() {
   try {
-    console.log(loginUserPassword);
+    //console.log(loginUserPassword);
     let loginObj = {
       email: loginUserEmail.value,
       password: loginUserPassword.value,
@@ -30,11 +29,10 @@ async function loginUser() {
     let login_request = await fetch(
       `https://63c77a71e52516043f3eaecd.mockapi.io/Dominos`,
       {
-        method: "POST",
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(loginObj),
       }
     );
     console.log(login_request);
