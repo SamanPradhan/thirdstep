@@ -31,33 +31,33 @@ async function fetch_product() {
 }
 fetch_product();
 
-//console.log(addProductForm);
-
 ///adding the products
 
-let addImage1 = document.getElementById("addImage1");
-let addImage2 = document.getElementById("addImage2");
-let addName = document.getElementById("addName");
-let addBrand = document.getElementById("addBrand");
-let addGender = document.getElementById("addGender");
-let addSize = document.getElementById("addSize");
-let addPrice = document.getElementById("addPrice");
+let editId = document.getElementById("addId");
+let editImage1 = document.getElementById("editImage1");
+let editImage2 = document.getElementById("editImage2");
+let editName = document.getElementById("editName");
+let editBrand = document.getElementById("editBrand");
+let editGender = document.getElementById("editGender");
+let editSize = document.getElementById("editSize");
+let editPrice = document.getElementById("editPrice");
 let addProductForm = document.querySelector("form");
 
-async function addProduct() {
+async function editProduct() {
   try {
     let obj = {
-      image1: addImage1.value,
-      image2: addImage2.value,
-      name: addName.value,
-      brand: addBrand.value,
-      gender: addGender.value,
-      size: addSize.value,
-      price: addPrice.value,
+      id: editId.value,
+      image1: editImage1.value,
+      image2: editImage2.value,
+      name: editName.value,
+      brand: editBrand.value,
+      gender: editGender.value,
+      size: editSize.value,
+      price: editPrice.value,
     };
 
-    let register_request = await fetch(`${url}beverage`, {
-      method: "POST",
+    let register_request = await fetch(`${url}beverage/${editId.value}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -71,6 +71,6 @@ async function addProduct() {
 
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  addProduct();
+  editProduct();
   fetch_product();
 });

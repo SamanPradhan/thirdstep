@@ -5,20 +5,20 @@
 <head>
     <meta charset="UTF-8" />
     <title>Edit Product</title>
-    <link rel="stylesheet" href="admin.css" />
+
     <link rel="icon" type="image/x-icon" href="./Photos/logo1.png">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Product</title>
     <link rel="stylesheet" href="crud.css">
-
+    <link rel="stylesheet" href="admin.css" />
 </head>
 
 <body>
     <div class="sidebar">
         <div class="logo-details" onclick="location.href=`./index.html`">
             <!-- logo -->
-            <img style="width:100%" src="./Photos/logo1.png" alt="">
+            <!-- <img style="width:100%" src="./Photos/logo1.png" alt=""> -->
         </div>
         <ul class="nav-links">
             <li>
@@ -85,11 +85,13 @@
                     <div id="form">
                         <form>
                             <input type="text" id="addId" placeholder="Id" required />
-                            <input type="mail" id="addCategory" placeholder="Image Link" required />
-                            <input type="text" id="addTitle" placeholder="Enter Title" required />
-                            <!-- <input type="text" id="addDescription" placeholder="Enter Description" required /> -->
-                            <input type="number" id="addPrice" placeholder="Enter price" required />
-
+                            <input type="mail" id="editImage1" placeholder="Image Link1" required />
+                            <input type="mail" id="editImage2" placeholder="Image Link2" required />
+                            <input type="text" id="editName" placeholder="Enter Product Name" required />
+                            <input type="text" id="editBrand" placeholder="Enter Product Brand" required />
+                            <input type="text" id="editGender" placeholder="Enter Gender" required />
+                            <input type="number" id="editSize" placeholder="Enter Size" required />
+                            <input type="number" id="editPrice" placeholder="Enter price" required />
 
 
 
@@ -97,7 +99,8 @@
                                 Note: Product details will get updated in the site, make sure
                                 before updating details.
                             </p>
-                            <input style="font-size: 18px; width: 94%" type="button" id="addBtn" value="Edit Product" />
+                            <button style="font-size: 18px; width: 94%" id="addBtn">Add Product
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -106,6 +109,6 @@
     </section>
 
 </body>
-<script src="./script/edit_product.js"></script>
+<script src="edit_product.js"></script>
 
 </html>
