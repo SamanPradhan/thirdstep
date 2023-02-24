@@ -1,5 +1,6 @@
 let productdata = JSON.parse(localStorage.getItem("product")) || null;
-
+let loginUserToken = localStorage.getItem("loginUser") || false;
+console.log("loginUserToken:", loginUserToken)
 let alldata = [];
 let fetcheddata = [];
 window.addEventListener("load", () => {
