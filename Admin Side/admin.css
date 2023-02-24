@@ -5,14 +5,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: Tahoma, serif, thin;
 }
 
 .sidebar {
   position: fixed;
   height: 100%;
   width: 240px;
+<<<<<<< HEAD
   background: #633fc0;
+=======
+  background: gray;
+>>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
   transition: all 0.5s ease;
 }
 
@@ -64,7 +69,11 @@
 } */
 
 .sidebar .nav-links li a:hover {
+<<<<<<< HEAD
   background: #081d45;
+=======
+  background: #333F48;
+>>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
 }
 
 .sidebar .nav-links li i {
@@ -89,12 +98,16 @@
 
 .home-section {
   position: relative;
-  background: #2f248b;
+  background: gray;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
+<<<<<<< HEAD
   border: 2px solid red;
+=======
+  /* border: 2px solid red; */
+>>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
 }
 
 .sidebar.active ~ .home-section {

@@ -37,12 +37,20 @@ form > input:last-child:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
+<<<<<<< HEAD
   background: #2f248b;
+=======
+  background: gray;
+>>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+<<<<<<< HEAD
   background: #2f248b;
+=======
+  background: gray;
+>>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
 }
 
 /* Delete button */
