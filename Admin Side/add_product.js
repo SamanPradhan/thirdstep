@@ -1,0 +1,76 @@
+const url = `https://63c77a71e52516043f3eaecd.mockapi.io/`;
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function () {
+  sidebar.classList.toggle("active");
+  if (sidebar.classList.contains("active")) {
+    sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+  } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+};
+
+async function fetch_product() {
+  let req = await fetch(`${url}beverage`);
+  let res = await req.json();
+  let product_details = document.querySelector(".sales-details");
+  let productData = res;
+  console.log(productData);
+  product_details.innerHTML = productData
+    .map((el) => {
+      return `<div class="card">
+        <div class="img"><img src="${el.image1}" ></div>
+        <div>
+            <p><span class="name">Name:- </span><span class="ans-name">${el.name}</span></p>
+            <p><span class="name">Brand:- </span> ${el.brand}</p>
+            <p><span class="name">Gender:- </span> ${el.gender}</p>
+            <p><span class="name">Size:- </span>${el.size}</p>
+            <p><span class="name">Price:- </span>${el.price}</p>
+        </div>
+    </div>`;
+    })
+    .join("");
+}
+fetch_product();
+
+//console.log(addProductForm);
+
+///adding the products
+
+let addImage1 = document.getElementById("addImage1");
+let addImage2 = document.getElementById("addImage2");
+let addName = document.getElementById("addName");
+let addBrand = document.getElementById("addBrand");
+let addGender = document.getElementById("addGender");
+let addSize = document.getElementById("addSize");
+let addPrice = document.getElementById("addPrice");
+let addProductForm = document.querySelector("form");
+
+async function addProduct() {
+  try {
+    let obj = {
+      image1: addImage1.value,
+      image2: addImage2.value,
+      name: addName.value,
+      brand: addBrand.value,
+      gender: addGender.value,
+      size: addSize.value,
+      price: addPrice.value,
+    };
+
+    let register_request = await fetch(`${url}beverage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    });
+    console.log(register_request);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+addProductForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  addProduct();
+  fetch_product();
+});
