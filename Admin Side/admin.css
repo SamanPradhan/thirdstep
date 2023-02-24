@@ -5,14 +5,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: Tahoma, serif, thin;
 }
 
 .sidebar {
   position: fixed;
   height: 100%;
   width: 240px;
-  background: #633fc0;
+  background: gray;
   transition: all 0.5s ease;
 }
 
@@ -64,7 +65,7 @@
 } */
 
 .sidebar .nav-links li a:hover {
-  background: #081d45;
+  background: #333F48;
 }
 
 .sidebar .nav-links li i {
@@ -89,12 +90,12 @@
 
 .home-section {
   position: relative;
-  background: #2f248b;
+  background: gray;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .sidebar.active ~ .home-section {

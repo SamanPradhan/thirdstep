@@ -37,12 +37,12 @@ form > input:last-child:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2f248b;
+  background: gray;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #2f248b;
+  background: gray;
 }
 
 /* Delete button */
