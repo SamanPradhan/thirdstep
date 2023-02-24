@@ -6,13 +6,14 @@ a {
 }
 #logo{
   width: 200px;
+  padding-left: 40px;
 }
 
 #cont{
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: auto;
+  margin: 40px auto;
   padding: 5px;
 }
 /* #empty{
@@ -24,12 +25,12 @@ a {
 #empty>h1,p{
   text-align: center;
   color: rgb(73, 72, 72);
-}
-a{
+}*/
+/* a{
  font-weight: bold;
  color: rgb(83, 81, 81);
  cursor: pointer;
-} */
+}  */
 /* #empty button{
   padding: 15px 100px;
   width: fit-content;
@@ -190,44 +191,57 @@ color: rgb(83, 81, 81);
 }
 
 /* ----------------------------------------------------------- */
-
 #empty{
   width: 70%;
-  display: flex;
-  justify-content:center;
-}
-#empty>div{
-  width:30%;
-  padding: 10px; 
-  height: 200px;
-}
-#empty>div:nth-child(1){
-  text-align: center;
-  padding-top: 40px;
-}
-#empty>div>img{
-  width: 80%;
-}
-#empty>div>h2,h1,p,h3{
-  margin-left: 0;
-  padding-top: 0;
-}
-#empty>div>span{
-  margin: 8px;
-}
-#empty>div>div>button{
-  margin: 20px 0 ;
-  padding: 8px 17px;
 
 }
-#empty>div button{
-  background-color: rgb(89, 88, 88);
+#empty>div{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 15px;
+}
+#empty>div>div{
+  margin: 10px;
+ padding: 0;
+}
+#empty>div>div>img{
+  width: 200px;
+}
+#empty>div>div:nth-child(1){
+  width: 300px;
+}
+#empty>div>div:nth-child(2){
+  margin: 10px;
+  color: rgb(67, 66, 66);
+  font-weight: 300;
+  width: 400px;
+}
+#empty>div>div:nth-child(3){
+  width: 200px;
+}
+#empty>div>div h4,h5{
+  margin: 7px;
+}
+#empty>div>div span{
+  padding: 5px;
+}
+#empty>div>div>div{
+  display: flex;
+  margin-top: 20px;
+}
+#empty>div>div>div>button{
+ background-color: rgb(73, 72, 72);
+  padding: 5px 15px;
   border: none;
-  padding: 7px 12px;
   color: white;
 }
 #empty>div button:hover{
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(32, 32, 32);
+  color: white;
 }
+
+
 
 
