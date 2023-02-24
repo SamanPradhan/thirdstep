@@ -17,7 +17,7 @@
 
         <div class="logo-details" onclick="location.href=`./index.html`">
             <!-- logo -->
-            <img style="width:100%" src="./Photos/logo1.png" alt="">
+            <!-- <img style="width:100%" src="./Photos/logo1.png" alt=""> -->
         </div>
         <ul class="nav-links">
             <li>
@@ -82,16 +82,21 @@
                     <div class="title">Add Item</div>
                     <div id="form">
                         <form>
-                            <input type="mail" id="addCategory" placeholder="Image Link" required />
-                            <input type="text" id="addTitle" placeholder="Enter Title" required />
+                            <input type="mail" id="addImage1" placeholder="Image Link1" required />
+                            <input type="mail" id="addImage2" placeholder="Image Link2" required />
+                            <input type="text" id="addName" placeholder="Enter Product Name" required />
+                            <input type="text" id="addBrand" placeholder="Enter Product Brand" required />
+                            <input type="text" id="addGender" placeholder="Enter Gender" required />
                             <!-- <input type="text" id="addDescription" placeholder="Enter Description" required /> -->
+                            <input type="number" id="addSize" placeholder="Enter Size" required />
                             <input type="number" id="addPrice" placeholder="Enter price" required />
 
                             <p style="color: black; margin-top: 35px">
                                 Note: Product details will get updated in the site, make sure
                                 before updating details.
                             </p>
-                            <input style="font-size: 18px; width: 94%" type="button" id="addBtn" value="Add Product" />
+                            <button style="font-size: 18px; width: 94%" id="addBtn">Add Product
+                            </button>
                         </form>
 
                     </div>
@@ -100,7 +105,7 @@
         </div>
     </section>
 
-    <script src="./script/add_product.js"></script>
+    <script src="add_product.js"></script>
 </body>
 
 </html>

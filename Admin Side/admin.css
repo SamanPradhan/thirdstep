@@ -94,6 +94,7 @@
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
+  border: 2px solid red;
 }
 
 .sidebar.active ~ .home-section {
@@ -311,11 +312,11 @@ nav .profile-details i {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.home-content .sales-boxes .sales-details {
-  /* display: flex; */
+/* .home-content .sales-boxes .sales-details {
+   display: flex; 
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 .sales-boxes .box .title {
   font-size: 24px;
@@ -403,7 +404,7 @@ nav .profile-details i {
 /* Admin Card section */
 .card {
   display: flex;
-  height: fit-content;
+
   width: 95%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
@@ -418,7 +419,7 @@ nav .profile-details i {
 
 .img img {
   height: 170px;
-  width: 130px;
+  width: 250px;
   border-radius: 10px;
   margin-right: 30px;
 }
@@ -495,6 +496,10 @@ nav .profile-details i {
   }
 }
 
+.sales-details {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 550px) {
   .overview-boxes .box {
     width: 100%;
