@@ -3,8 +3,8 @@ let loginUserPassword = document.getElementById("password");
 let loginUserform = document.querySelector("form");
 
 let userAuthToken = localStorage.getItem("localAccessToken") || null;
-let a = localStorage.getItem("loginUser") || false;
-
+let loginUserToken = localStorage.getItem("loginUser") || false;
+console.log("loginUserToken:", loginUserToken);
 loginUserform.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -28,14 +28,17 @@ function loginUser() {
           data[i].email == loginUserEmail.value &&
           data[i].password == loginUserPassword.value
         ) {
-          a = true;
-          localStorage.setItem("loginUser", a);
-          console.log(a);
+          loginUserToken = true;
+          localStorage.setItem("loginUser", loginUserToken);
+          console.log(loginUserToken);
+          alert("log in successful");
+          location.href = "../User Side/menu.html";
           return;
         }
       }
+      alert("Invalid Details");
       return;
     });
 }
 
-console.log(a);
+console.log(loginUserToken);

@@ -1,6 +1,7 @@
 let productdata = JSON.parse(localStorage.getItem("product")) || {};
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
-let JSON_flag_signin = JSON.parse(localStorage.getItem("login")) || true;
+let loginUserToken = localStorage.getItem("loginUser") || false;
+console.log("loginUserToken:", loginUserToken);
 let container = document.getElementById("product-container");
 
 console.log(productdata);
@@ -69,8 +70,8 @@ let btn = document.getElementById("btn");
 btn.addEventListener("click", function () {
   // addTocart(el);
 
-  if (JSON_flag_signin == false) {
-    cartadding.innerText = "Please Log in First";
+  if (loginUserToken == false) {
+    alert("Please Log in First");
   } else {
     if (duplicate(productdata) == false) {
       cartData.push({ ...productdata, quantity: 1 });
@@ -107,11 +108,11 @@ function duplicate(product) {
 
 var header = document.getElementsByClassName("btn");
 var btns = document.getElementsByClassName("one");
-console.log(btns)
+console.log(btns);
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
+  btns[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
   });
 }
