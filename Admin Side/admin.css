@@ -12,7 +12,7 @@
   position: fixed;
   height: 100%;
   width: 240px;
-  background: #494949;
+  background: #633fc0;
   transition: all 0.5s ease;
 }
 
@@ -64,7 +64,7 @@
 } */
 
 .sidebar .nav-links li a:hover {
-  background: #4d4d4d;
+  background: #081d45;
 }
 
 .sidebar .nav-links li i {
