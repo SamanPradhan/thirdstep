@@ -1,5 +1,9 @@
 #roll p{
   text-align: left;
+  margin-left: 20px;
+  font-weight: 100;
+  font-size: 15px;
+  color: grey;
 }
 #container1{
   display: flex;
@@ -8,9 +12,11 @@
   margin: auto;
 }
 #container1>div{
-  margin: 15px;
+  margin: 10px;
 }
-
+#container1>div:nth-child(2){
+  width: 60%;
+}
 button {
   background-color: rgb(76, 75, 75);
   color: aliceblue;
@@ -41,14 +47,15 @@ button {
 .btn > button {
   width: 44px;
   height: 44px;
-  background-color: rgb(89, 86, 86);
-  border: 1px solid #878787;
+  color: black;
+  border: 1px solid black;
   border-radius: 2px;
   cursor: pointer;
 }
 button:hover {
   background-color: #1e1e1f;
   color: white;
+  
 }
 
 #cont {
@@ -58,8 +65,8 @@ button:hover {
  
 }
 #cont>img{
-  width: 80%;
-  height: 50%;
+  width: 70%;
+  height: 40%;
    margin-top: 20%;
 }
 #cont .img-top {
@@ -72,12 +79,24 @@ button:hover {
 #cont:hover .img-top {
   display: inline;
 }
-
+.one {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+.active, .one:hover {
+  background-color: #666;
+  color: white;
+}
 /* ----------------------------------------- */
 h1,h2,h3,h4,h5,h6,p {
   color: #393a3a;
-  margin: 5px 0;
-  font-weight: 200;
+  margin: 10px 0;
+  font-weight: 100;
+      font-family: inherit;
 }
 a {
   font-family: Tahoma, serif, thin;

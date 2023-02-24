@@ -1,9 +1,10 @@
 let total=document.getElementById("total");
 let count=document.getElementById("count");
 let amt=document.getElementById("amount");
-let coupon=document.getElementById("coupon");
+let inp=document.getElementById("inp");
 let apply=document.getElementById("app");
 let empty = document.getElementById("empty");
+let coupon=document.getElementById("coupon");
 let myCart = JSON.parse(localStorage.getItem("product")) || {};
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 let sum=0,s=0,sum1=0;
@@ -90,13 +91,16 @@ function display(data) {
 
 }
 apply.addEventListener("click",()=>{
-  let pro=prompt("Enter Code")
-  if(pro=='masai20'){
+  inpVal=inp.value;
+  if(inpVal=='masai20'){
     sum1=Math.floor(sum1*0.8);
     amt.textContent=sum1;
-    apply.innerText="Applied"
+    coupon.innerText="Applied"
+    coupon.style.fontSize="30px";
+    coupon.style.color="rgb(235, 19, 55)"
   }
   else{
+    alert("Not a valid Coupon");
     amt.textContent=sum1;
   }
 })
