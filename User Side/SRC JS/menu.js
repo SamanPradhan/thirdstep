@@ -175,14 +175,7 @@ function showpages(total, limit) {
 //apply filter from here
 
 filterby.addEventListener("change", () => {
-  if (filterby.value == "top" || filterby.value == "newest") {
-    let newdata = [];
-    for (let i = 0; i < 16; i++) {
-      newdata.push(alldata[i]);
-    }
-    displaydata(newdata);
-  }
-  else if(filterby.value=="high"){
+  if(filterby.value=="high"){
     let newdata=alldata.sort((a,b)=>{
       return b.price-a.price;
     })
@@ -193,6 +186,21 @@ filterby.addEventListener("change", () => {
       return a.price-b.price;
     })
     displaydata(newdata)
+  }
+  else if(filterby.value=="top"){
+    let newdata=alldata.sort((a,b)=>{
+      return a.size-b.size;
+    })
+    displaydata(newdata)
+  }
+  else if(filterby.value=="newest"){
+    let newdata=alldata.sort((a,b)=>{
+      return b.size-a.size;
+    })
+    displaydata(newdata)
+  }
+  else {
+    displaydata(alldata)
   }
 });
 
