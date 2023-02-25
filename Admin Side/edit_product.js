@@ -74,6 +74,11 @@ async function editProduct() {
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
   editProduct();
-  fetch_product();
-  //location.reload();
+  alert("Product is updated in inventory");
+  //fetch_product();
+  location.reload();
 });
+let admin_name = document.getElementById("admin_name");
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+admin_name.innerText = login_name;
+console.log(login_name);

@@ -34,7 +34,7 @@ fetch_product();
 
 ///adding the products
 
-let deleteId = document.getElementById("deleteId");
+let deleteId = document.getElementById("addBtn");
 
 let addProductForm = document.querySelector("form");
 
@@ -55,7 +55,12 @@ async function deleteProduct() {
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
   deleteProduct();
+  alert("Product is deleted from inventory");
   console.log("deee");
-  fetch_product();
-  //location.reload()
+  //fetch_product();
+  location.reload();
 });
+let admin_name = document.getElementById("admin_name");
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+admin_name.innerText = login_name;
+console.log(login_name);

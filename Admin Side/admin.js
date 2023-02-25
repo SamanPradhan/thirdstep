@@ -64,17 +64,22 @@ async function countData() {
   } catch (error) {}
 }
 
-userDetailss();
-function userDetailss() {
-  let admin = JSON.parse(localStorage.getItem("admin"));
-  let cont = document.getElementById("admin_name");
-  let cont2 = document.getElementById("img-admin");
+// userDetailss();
+// function userDetailss() {
+//   let admin = JSON.parse(localStorage.getItem("admin"));
+//   let cont = document.getElementById("admin_name");
+//   let cont2 = document.getElementById("img-admin");
 
-  cont2.innerHTML = `<img src="${admin.image}">`;
-  cont.innerHTML = `${admin.name}`;
-}
+//   cont2.innerHTML = `<img src="${admin.image}">`;
+//   cont.innerHTML = `${admin.name}`;
+// }
 
-document.getElementsByClassName("log_out")[0].addEventListener("click", () => {
-  localStorage.clear("admin-signed");
-  localStorage.clear("admin");
-});
+// document.getElementsByClassName("log_out")[0].addEventListener("click", () => {
+//   localStorage.clear("admin-signed");
+//   localStorage.clear("admin");
+// });
+
+let admin_name = document.getElementById("admin_name");
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+admin_name.innerText = login_name;
+console.log(login_name);

@@ -67,10 +67,7 @@
 } */
 
 .sidebar .nav-links li a:hover {
-
   background: #333f48;
-
-
 }
 
 .sidebar .nav-links li i {
@@ -102,7 +99,6 @@
   transition: all 0.5s ease;
 
   /* border: 2px solid red; */
-
 }
 
 .sidebar.active ~ .home-section {
@@ -341,7 +337,23 @@ nav .profile-details i {
   list-style: none;
   margin: 8px 0;
 }
-
+.sales-details > div > :nth-child(2) {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.sales-details {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sales-details > div {
+  /* border: 2px solid rgb(0, 0, 0); */
+  padding: 20px;
+  width: 100%;
+}
 .sales-boxes .sales-details li a {
   font-size: 18px;
   color: #333;

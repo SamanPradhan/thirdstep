@@ -3,7 +3,7 @@ let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 let loginUserToken = localStorage.getItem("loginUser") || false;
 console.log("loginUserToken:", loginUserToken);
 let container = document.getElementById("product-container");
-
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 console.log(productdata);
 
 container.innerHTML = ` <div id="roll">

@@ -1,6 +1,45 @@
 let productdata = JSON.parse(localStorage.getItem("product")) || null;
+let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
+////login/signout option on navbar
 let loginUserToken = localStorage.getItem("loginUser") || false;
-console.log("loginUserToken:", loginUserToken)
+console.log("loginUserToken:", loginUserToken);
+
+/////signout/log in button
+
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+console.log(login_name);
+
+let loginButton = document.getElementById("loginButton");
+let signout = document.getElementById("signoutButton");
+if (loginUserToken == true) {
+  //console.log(login_name);
+  loginButton.innerText = "Hi,  " + login_name;
+}
+
+if (loginUserToken == true) {
+  signout.innerText = "Sign Out";
+  loginButton.style.fontSize = "14px";
+  signout.addEventListener("click", () => {
+    loginUserToken = false;
+    login_name = "";
+  });
+}
+
+if (loginUserToken != true) {
+  //console.log(signout.innerText);
+  //signout.style.backgroundColor = "rgb(0, 100, 145)";
+}
+signout.addEventListener("click", () => {
+  loginUserToken = false;
+  login_name = "";
+  cartData = [];
+  localStorage.setItem("cart", JSON.stringify(cartData));
+  localStorage.setItem("loginUser", JSON.stringify(loginUserToken));
+  localStorage.setItem("login_name", JSON.stringify(login_name));
+  localStorage.setItem("productsAdd", JSON.stringify(cartData));
+  window.location.href = "index.html";
+});
+
 let alldata = [];
 let fetcheddata = [];
 window.addEventListener("load", () => {
@@ -67,12 +106,12 @@ function displaydata(data) {
     let cardimage1 = document.createElement("img");
     cardimage1.setAttribute("class", "firstimage");
     cardimage1.src = item.image1;
-    cardimage1.addEventListener("mouseover",()=>{
-      cardimage1.src=item.image2;
-    })
-    cardimage1.addEventListener("mouseout",()=>{
+    cardimage1.addEventListener("mouseover", () => {
+      cardimage1.src = item.image2;
+    });
+    cardimage1.addEventListener("mouseout", () => {
       cardimage1.src = item.image1;
-    })
+    });
     cardimg.append(cardimage1);
     let proinfo = document.createElement("div");
     proinfo.setAttribute("id", "proinfo");
@@ -176,32 +215,28 @@ function showpages(total, limit) {
 //apply filter from here
 
 filterby.addEventListener("change", () => {
-  if(filterby.value=="high"){
-    let newdata=alldata.sort((a,b)=>{
-      return b.price-a.price;
-    })
-    displaydata(newdata)
-  }
-  else if(filterby.value=="low"){
-    let newdata=alldata.sort((a,b)=>{
-      return a.price-b.price;
-    })
-    displaydata(newdata)
-  }
-  else if(filterby.value=="top"){
-    let newdata=alldata.sort((a,b)=>{
-      return a.size-b.size;
-    })
-    displaydata(newdata)
-  }
-  else if(filterby.value=="newest"){
-    let newdata=alldata.sort((a,b)=>{
-      return b.size-a.size;
-    })
-    displaydata(newdata)
-  }
-  else {
-    displaydata(alldata)
+  if (filterby.value == "high") {
+    let newdata = alldata.sort((a, b) => {
+      return b.price - a.price;
+    });
+    displaydata(newdata);
+  } else if (filterby.value == "low") {
+    let newdata = alldata.sort((a, b) => {
+      return a.price - b.price;
+    });
+    displaydata(newdata);
+  } else if (filterby.value == "top") {
+    let newdata = alldata.sort((a, b) => {
+      return a.size - b.size;
+    });
+    displaydata(newdata);
+  } else if (filterby.value == "newest") {
+    let newdata = alldata.sort((a, b) => {
+      return b.size - a.size;
+    });
+    displaydata(newdata);
+  } else {
+    displaydata(alldata);
   }
 });
 
