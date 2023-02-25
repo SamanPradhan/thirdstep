@@ -44,7 +44,7 @@
 }
 
 .sidebar .nav-links {
-  margin-top: 10px;
+  margin-top: 23px;
 }
 
 .sidebar .nav-links li {
@@ -209,7 +209,9 @@ nav .profile-details i {
   font-size: 25px;
   color: #333;
 }
-
+.home-section{
+ background-color: #333F48;
+}
 .home-section .home-content {
   position: relative;
   padding-top: 104px;
@@ -231,7 +233,9 @@ nav .profile-details i {
   width: calc(100% / 4 - 15px);
   background: #fff;
   padding: 15px 14px;
+
   border-radius: 1px;
+
   /* border-radius: 12px; */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -321,7 +325,9 @@ nav .profile-details i {
   padding: 20px 30px;
   margin: 0 20px;
   /* border-radius: 12px; */
+
   border-radius: 1px;
+
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -399,7 +405,9 @@ nav .profile-details i {
   padding: 20px 30px;
   margin: 0 20px 0 0;
   /* border-radius: 12px; */
+
   border-radius: 1px;
+
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -414,8 +422,10 @@ nav .profile-details i {
   height: 40px;
   width: 40px;
   object-fit: cover;
+
   /* border-radius: 12px; */
   border-radius: 1px;
+
   margin-right: 10px;
   background: #333;
 }

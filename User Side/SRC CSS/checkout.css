@@ -274,6 +274,7 @@ input.checks{
     color: white;
     background-color: #333F48;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
 }
