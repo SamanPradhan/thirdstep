@@ -1,5 +1,6 @@
 let registerUserform = document.querySelector("form");
-
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 registerUserform.addEventListener("submit", (e) => {
   e.preventDefault();
   registerUser();

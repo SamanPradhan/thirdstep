@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Edit Product</title>
-
-    <link rel="icon" type="image/x-icon" href="./Photos/logo1.png">
+    <link rel="stylesheet" href="admin.css" />
+    <title>Delete Product</title>
+    <link rel="icon" type="image/x-icon" href="logoAsset 3@4x-8.png">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Product</title>
     <link rel="stylesheet" href="crud.css">
-    <link rel="stylesheet" href="admin.css" />
+
 </head>
 
 <body>
     <div class="sidebar">
+
         <div class="logo-details" onclick="location.href=`./index.html`">
             <!-- logo -->
             <img style="width:50%" src="logoAsset 3@4x-8.png" alt="">
@@ -23,19 +22,19 @@
         <ul class="nav-links">
             <li>
                 <a href="admin.html" class="active">
-                    <i class="bx bx-grid-alt"></i>
+                    <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
             </li>
             <li>
                 <a href="add_product.html">
-                    <i class="bx bx-folder-plus"></i>
+                    <i class='bx bx-folder-plus'></i>
                     <span class="links_name">Add Product</span>
                 </a>
             </li>
-            <li style="background-color: #081d45">
+            <li>
                 <a href="edit_product.html">
-                    <i class="bx bx-edit-alt"></i>
+                    <i class='bx bx-edit-alt'></i>
                     <span class="links_name">Edit Product</span>
                 </a>
             </li>
@@ -65,12 +64,13 @@
                 </a>
             </li>
         </ul>
+
     </div>
     <section class="home-section">
         <nav>
             <div class="sidebar-button">
                 <i class="bx bx-menu sidebarBtn"></i>
-                <span class="dashboard">Edit Product</span>
+                <span class="dashboard">Delete Product</span>
             </div>
             <!-- <div class="search-box">
                 <input type="text" placeholder="Search...">
@@ -90,29 +90,19 @@
                 <div class="recent-sales box">
                     <div class="title">Fetch Updated Data list</div>
                     <div class="sales-details">
-                        <!-- Fetch Edit Item-->
+                        <!-- Fetch Updated Data -->
                     </div>
                 </div>
-                <div class="top-sales box" style="height: 700px">
-                    <div class="title">Edit Selected Item</div>
+                <div class="top-sales box" style="height: 350px;">
+                    <div class="title">Delete Selectd Item</div>
                     <div id="form">
                         <form>
-                            <input type="text" id="addId" placeholder="Id" required />
-                            <input type="mail" id="editImage1" placeholder="Image Link1" required />
-                            <input type="mail" id="editImage2" placeholder="Image Link2" required />
-                            <input type="text" id="editName" placeholder="Enter Product Name" required />
-                            <input type="text" id="editBrand" placeholder="Enter Product Brand" required />
-                            <input type="text" id="editGender" placeholder="Enter Gender" required />
-                            <input type="number" id="editSize" placeholder="Enter Size" required />
-                            <input type="number" id="editPrice" placeholder="Enter price" required />
-
-
-
+                            <input type="mail" id="deleteId" placeholder="Product ID" />
                             <p style="color: black; margin-top: 35px">
-                                Note: Product details will get updated in the site, make sure
-                                before updating details.
+                                Note: Product will permananty removed from the site, make sure
+                                before removing.
                             </p>
-                            <button style="font-size: 18px; width: 94%" id="addBtn">Add Product
+                            <button style="font-size: 18px; width: 94%" id="addBtn">Delete Product
                             </button>
                         </form>
                     </div>
@@ -121,7 +111,8 @@
         </div>
     </section>
 
+
 </body>
-<script src="edit_product.js"></script>
+<script src="delete_product.js"></script>
 
 </html>

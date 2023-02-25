@@ -37,12 +37,12 @@ form > input:last-child:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2f248b;
+  background: gray;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #2f248b;
+  background: gray;
 }
 
 /* Delete button */
@@ -58,7 +58,7 @@ form > input:last-child:hover {
 }
 /* ---------------scroll -----------------*/
 
-.sales-details {
+/* .sales-details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -66,7 +66,7 @@ form > input:last-child:hover {
   gap: 0 2%;
   height: 780px;
   overflow-y: scroll;
-}
+} */
 
 .sales-details > div {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -97,4 +97,33 @@ form > input:last-child:hover {
 .sales-details > div > h4 {
   text-align: left;
   padding-left: 6%;
+}
+#addBtn {
+  border-width: 0;
+  border-style: solid;
+  border-radius: 0;
+  box-sizing: border-box;
+  min-height: 44px;
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-family: "Famous Footwear Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.046875rem;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  text-shadow: none;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+  background: #333f48;
+  color: #fff;
+  cursor: pointer;
 }

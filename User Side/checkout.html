@@ -10,7 +10,6 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="SRC CSS/checkout.css">
-    <link rel="stylesheet" href="SRC CSS/navbar.css">
 
 </head>
 
@@ -126,16 +125,25 @@
                         <input type="checkbox" checked>
                         <p>Save as Primary Shipping Address</p>
                     </div>
-                    <div id="sspeed">
-                        <button id="submitbtn">SELECT SHIPPING SPEED</button>
-                    </div>
                 </div>
             </div>
             <div id="payment">
                 <h2>2. Payment</h2>
             </div>
+            <div id="paymentcard">
+                <h3>Card Details:</h3>
+             <div id="carddetails">
+              <input type="text" id="cardholdername" placeholder="Card holder name"><br><br>
+              <input type="number" id="cardnumber" placeholder="Card number"><br><br>
+              <input type="text" id="expirydate" placeholder="Expiry date">
+              <input type="text" id="cvv" placeholder="CVV">
+             </div>
+            </div>
             <div id="review">
                 <h2>3. Review</h2>
+            </div>
+            <div id="sspeed">
+                <button id="submitbtn">SELECT SHIPPING SPEED</button>
             </div>
         </div>
         <div id="summery">
@@ -143,7 +151,7 @@
                 <h5>Order Summary</h5>
                 <div id="subtotals">
                     <p>Subtotal</p>
-                    <p id="totalprice">$234.96</p>
+                    <p id="totalprice">00.00</p>
                 </div>
                 <div id="shipingcharge">
                     <p>Standard Ground Shipping</p>
@@ -152,12 +160,12 @@
                 <hr>
                 <div id="estimated">
                     <p>Estimated Total</p>
-                    <p id="estimatedtotal">$234.96</p>
+                    <p id="estimatedtotal">00.00</p>
                 </div>
                 <div id="zip2">
                     <div>
-                        <p>or <span id="totalcount">4</span> payments of <span id="zipdoller">
-                                $5.00</span> with</p>
+                        <p>or <span id="totalcount"></span> payments of <span id="zipdoller">
+                            $5.00</span> with</p>
                     </div>
                     <div id="zipimg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Zip_Logo.svg/1200px-Zip_Logo.svg.png"
@@ -192,7 +200,7 @@
         <div>
             <div>
                 <p>
-                    << /p>
+                    <</p>
                         <p id="backtocart">Back to Cart</p>
             </div>
             <div>

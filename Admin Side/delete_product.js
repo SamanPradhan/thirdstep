@@ -9,7 +9,6 @@ sidebarBtn.onclick = function () {
 };
 
 async function fetch_product() {
-  console.log("fetched");
   let req = await fetch(`${url}beverage`);
   let res = await req.json();
   let product_details = document.querySelector(".sales-details");
@@ -20,7 +19,7 @@ async function fetch_product() {
       return `<div class="card">
         <div class="img"><img src="${el.image1}" ></div>
         <div>
-        <p><span class="name">Product ID:- </span><span class="ans-id">${el.id}</span></p>
+            <p><span class="name">Product ID:- </span><span class="ans-id">${el.id}</span></p>
             <p><span class="name">Name:- </span><span class="ans-name">${el.name}</span></p>
             <p><span class="name">Brand:- </span> ${el.brand}</p>
             <p><span class="name">Gender:- </span> ${el.gender}</p>
@@ -35,35 +34,17 @@ fetch_product();
 
 ///adding the products
 
-let editId = document.getElementById("addId");
-let editImage1 = document.getElementById("editImage1");
-let editImage2 = document.getElementById("editImage2");
-let editName = document.getElementById("editName");
-let editBrand = document.getElementById("editBrand");
-let editGender = document.getElementById("editGender");
-let editSize = document.getElementById("editSize");
-let editPrice = document.getElementById("editPrice");
+let deleteId = document.getElementById("deleteId");
+
 let addProductForm = document.querySelector("form");
 
-async function editProduct() {
+async function deleteProduct() {
   try {
-    let obj = {
-      id: editId.value,
-      image1: editImage1.value,
-      image2: editImage2.value,
-      name: editName.value,
-      brand: editBrand.value,
-      gender: editGender.value,
-      size: editSize.value,
-      price: editPrice.value,
-    };
-
-    let register_request = await fetch(`${url}beverage/${editId.value}`, {
-      method: "PUT",
+    let register_request = await fetch(`${url}beverage/${deleteId.value}`, {
+      method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(obj),
     });
     console.log(register_request);
   } catch (error) {
@@ -73,8 +54,9 @@ async function editProduct() {
 
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  editProduct();
-  alert("Product is updated in inventory");
+  deleteProduct();
+  alert("Product is deleted from inventory");
+  console.log("deee");
   //fetch_product();
   location.reload();
 });

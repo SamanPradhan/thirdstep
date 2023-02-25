@@ -32,14 +32,17 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <a href="./login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+                            <p id="loginButton">log In</p>
+                            <p id="signoutButton"></p>
                         </a>
                         <a href="">
-                            <img class="icon-top" width="10px"
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a href="">
+                        <a onclick="window.location.href='cart.html';">
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
                 </div>
@@ -731,7 +734,10 @@
     <div id="offbanner">
         <div>
             <p style="color: white;">
-                $15 off $75+,$20 off $100+,$30 off $150+ with code MOREPLS
+
+                ₹1000 off ₹5000+,₹2000 off ₹8000+,₹3000 off ₹10000+ with code MOREPLS
+
+
             </p>
             <p style="color: white;">
                 Exclusions apply.
@@ -751,8 +757,8 @@
                 <p>Sort by</p>
                 <select name="filter" id="filterby">
                     <option value="featured">Featured</option>
-                    <option value="top">Top Rated</option>
-                    <option value="newest">Newest</option>
+                    <option value="top">Shoe Size: Smaller</option>
+                    <option value="newest">Shoe Size: Larger</option>
                     <option value="high">Price: High to Low</option>
                     <option value="low">Price: Low to High</option>
                 </select>
@@ -808,20 +814,20 @@
                 <div id="prcchk">
                     <div class="pricechecks">
                         <label for="">
-                            <input type="checkbox" value="30" class="price">
-                            <P>Under $30</P>
+                            <input type="checkbox" value="200" class="price">
+                            <P>Under ₹200</P>
                         </label>
                         <label for="">
-                            <input type="checkbox" value="50" class="price">
-                            <p>$30 to $50</p>
+                            <input type="checkbox" value="500" class="price">
+                            <p>₹300 to ₹500</p>
                         </label>
                         <label for="">
-                            <input type="checkbox" value="75" class="price">
-                            <p>$50 to $75</p>
+                            <input type="checkbox" value="750" class="price">
+                            <p>₹500 to ₹750</p>
                         </label>
                         <label for="">
                             <input type="checkbox" value="" class="price">
-                            <p>$75+</p>
+                            <p>₹750+</p>
                         </label>
                     </div>
                 </div>
@@ -905,8 +911,8 @@
 
     <hr style="width: 100%;margin-top: 50px;border: 2px solid  rgb(241, 9, 102);">
 
-     <!-- footer code start from here -->
-     <div class="footer">
+    <!-- footer code start from here -->
+    <div class="footer">
 
         <footer>
             <div class="social-media">
