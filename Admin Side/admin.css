@@ -204,7 +204,9 @@ nav .profile-details i {
   font-size: 25px;
   color: #333;
 }
-
+.home-section{
+ background-color: #333F48;
+}
 .home-section .home-content {
   position: relative;
   padding-top: 104px;
