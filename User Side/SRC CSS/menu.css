@@ -197,6 +197,9 @@ input.price {
 #beforepages {
   width: 15%;
 }
+#protitle {
+  height: 40px;
+}
 #pages {
   width: 85%;
   text-align: center;
@@ -265,7 +268,6 @@ a {
   margin-top: 10px;
   margin-left: 50px;
 }
-
 
 #con9 {
   display: flex;
