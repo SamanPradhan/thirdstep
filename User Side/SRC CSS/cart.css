@@ -174,8 +174,7 @@ color: rgb(83, 81, 81);
   width: 80%;
   margin: auto;
   margin-bottom: 35px;
-
-
+  
 }
 #empty>div>div{
   margin: 10px;
@@ -214,17 +213,8 @@ color: rgb(83, 81, 81);
   display: flex;
   margin-top: 20px;
 }
-
 h4{
   color: rgb(25, 25, 25);
-}
-
-
-#empty>div>div>div>button{
- background-color: rgb(73, 72, 72);
-  padding: 5px 15px;
-  border: none;
-  color: white;
 }
 
 #empty>div button:hover{
