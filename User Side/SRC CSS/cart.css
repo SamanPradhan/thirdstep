@@ -174,10 +174,19 @@ color: rgb(83, 81, 81);
   width: 80%;
   margin: auto;
   margin-bottom: 35px;
+  
 }
 #empty>div>div{
   margin: 10px;
  padding: 0;
+}
+#empty>div>div:nth-child(4) button{
+  border-radius: 50%;
+  border-width: 1px;
+  background-color: white;
+}
+#empty>div>div:nth-child(4) button:hover{
+  color: black;
 }
 #empty>div>div>img{
   width: 200px;
@@ -207,12 +216,7 @@ color: rgb(83, 81, 81);
 h4{
   color: rgb(25, 25, 25);
 }
-#empty>div>div>div>button{
- background-color: rgb(73, 72, 72);
-  padding: 5px 15px;
-  border: none;
-  color: white;
-}
+
 #empty>div button:hover{
   background-color: rgb(32, 32, 32);
   color: white;
