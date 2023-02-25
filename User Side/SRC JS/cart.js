@@ -1,21 +1,23 @@
-let total=document.getElementById("total");
-let count=document.getElementById("count");
-let amt=document.getElementById("amount");
-let inp=document.getElementById("inp");
-let apply=document.getElementById("app");
+let total = document.getElementById("total");
+let count = document.getElementById("count");
+let amt = document.getElementById("amount");
+let inp = document.getElementById("inp");
+let apply = document.getElementById("app");
 let empty = document.getElementById("empty");
-let coupon=document.getElementById("coupon");
+let coupon = document.getElementById("coupon");
 let loginUserToken = localStorage.getItem("loginUser") || false;
 console.log("loginUserToken:", loginUserToken);
 let myCart = JSON.parse(localStorage.getItem("product")) || {};
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
-let sum=0,s=0,sum1=0;
+let sum = 0,
+  s = 0,
+  sum1 = 0;
 display(cartData);
 function display(data) {
   empty.innerHTML = "";
   data.forEach((element) => {
-    let box=document.createElement("div")
+    let box = document.createElement("div");
     let products = document.createElement("div");
     let productDetails = document.createElement("div");
     let productAmount = document.createElement("div");
@@ -37,7 +39,7 @@ function display(data) {
     price.innerText = `₹${element.price}`;
 
     let quantity = document.createElement("span");
-    quantity.innerText=element.quantity;
+    quantity.innerText = element.quantity;
 
     let Increment = document.createElement("button");
     let Decrement = document.createElement("button");
@@ -70,40 +72,38 @@ function display(data) {
         display(cartData);
       }
     });
+    let br = document.createElement("hr");
     btn.append(remove);
     products.append(img);
-    productDetails.append(name,brand, gender);
-    productAmount.append(price, Decrement,quantity, Increment);
+    productDetails.append(name, brand, gender);
+    productAmount.append(price, Decrement, quantity, Increment);
     box.append(products, productDetails, productAmount, btn);
-    empty.append(box)
+    empty.append(box, br);
   });
-  
-   sum=0;
-   s=0;
-   sum1=0;
-  for(let i=0;i<cartData.length;i++)
-  {
-    sum+=cartData[i].price*cartData[i].quantity;
-    s+=cartData[i].quantity;
-  }
-  sum1=sum+0;
-  count.textContent=s;
-  total.textContent=sum;
-  // console.log(sum1)
-   amt.textContent=sum1;
 
+  sum = 0;
+  s = 0;
+  sum1 = 0;
+  for (let i = 0; i < cartData.length; i++) {
+    sum += cartData[i].price * cartData[i].quantity;
+    s += cartData[i].quantity;
+  }
+  sum1 = sum + 0;
+  count.textContent = s;
+  total.textContent = sum;
+  // console.log(sum1)
+  amt.textContent = sum1;
 }
-apply.addEventListener("click",()=>{
-  inpVal=inp.value;
-  if(inpVal=='masai20'){
-    sum1=Math.floor(sum1*0.8);
-    amt.textContent=sum1;
-    coupon.innerText="Applied"
-    coupon.style.fontSize="30px";
-    coupon.style.color="rgb(235, 19, 55)"
-  }
-  else{
+apply.addEventListener("click", () => {
+  inpVal = inp.value;
+  if (inpVal == "masai20") {
+    sum1 = Math.floor(sum1 * 0.8);
+    amt.textContent = sum1;
+    coupon.innerText = "Applied";
+    coupon.style.fontSize = "30px";
+    coupon.style.color = "rgb(235, 19, 55)";
+  } else {
     alert("Not a valid Coupon");
-    amt.textContent=sum1;
+    amt.textContent = sum1;
   }
-})
+});

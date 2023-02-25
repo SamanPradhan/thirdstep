@@ -4,12 +4,14 @@ a {
   color: #333f48;
   font-size: 12px;
 }
-#logo{
+#logo {
   width: 200px;
   padding-left: 40px;
 }
-
-#cont{
+#empty > hr {
+  width: 80%;
+}
+#cont {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -17,147 +19,146 @@ a {
   padding: 5px;
 }
 
-#summary{
+#summary {
   width: 40%;
   padding: 15px;
 }
-#summary h2{
+#summary h2 {
   margin: 0;
   color: rgb(26, 25, 25);
 }
-#sub{
+#sub {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
-#sub h3{
+#sub h3 {
   margin: 0;
   color: rgb(62, 61, 61);
-  font-family:sans-serif;
+  font-family: sans-serif;
   font-weight: 100;
 }
-span{
-  font-weight:1000;
+span {
+  font-weight: 1000;
 }
-#extra{
+#extra {
   display: flex;
   justify-content: space-between;
 }
-#extra img{
+#extra img {
   width: 20%;
   margin: 20px;
 }
-p{
+p {
   text-align: left;
 }
-#extra p{
+#extra p {
   text-align: left;
 }
-#summary button{
+#summary button {
   padding: 15px 100px;
   width: 100%;
- color: white;
- font-size: 15px;
- background-color: rgb(65, 64, 64);
- border:none;
- font-weight: bold;
- margin: auto;
+  color: white;
+  font-size: 15px;
+  background-color: rgb(65, 64, 64);
+  border: none;
+  font-weight: bold;
+  margin: auto;
 }
-#summary button:hover{
-  background-color:rgb(30, 30, 30); ;
+#summary button:hover {
+  background-color: rgb(30, 30, 30);
 }
 /* ----------------------------------------------------------------- */
-h2{
- margin: 40px 0 0 10%;
+h2 {
+  margin: 40px 0 0 10%;
 }
-#con7{
+#con7 {
   display: flex;
   width: 80%;
-  margin: 30px auto
+  margin: 30px auto;
 }
-#con7>div{
+#con7 > div {
   margin: 10px;
   width: 100%;
 }
-#con7>div:hover{
+#con7 > div:hover {
   cursor: pointer;
 }
-#con7>div>div{
+#con7 > div > div {
   height: 100px;
   text-align: center;
 }
 
-#con7>div>div>img{
+#con7 > div > div > img {
   width: 80%;
 }
-#con7>div>div>img:hover{
- cursor: pointer;
- transform:rotateY(40deg)
-
+#con7 > div > div > img:hover {
+  cursor: pointer;
+  transform: rotateY(40deg);
 }
-#con7 h3,p{
+#con7 h3,
+p {
   margin: 5px;
 }
-#con7 h3{
+#con7 h3 {
   color: rgb(33, 33, 33);
 }
-#con7 p{
+#con7 p {
   font-weight: 100;
 }
-a{
+a {
   text-decoration: none;
 }
 
 /* ------------------------------------------------- */
-#con9{
+#con9 {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: auto;
 }
-#con9>div{
+#con9 > div {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin: 10px;
 }
-#con9>div>div:nth-child(1){
+#con9 > div > div:nth-child(1) {
   text-align: right;
   color: rgb(83, 81, 81);
- 
 }
-#con9>div>div:nth-child(2){
+#con9 > div > div:nth-child(2) {
   text-align: left;
-padding-left: 10px;
-color: rgb(83, 81, 81);
+  padding-left: 10px;
+  color: rgb(83, 81, 81);
 }
-#con9 img{
+#con9 img {
   width: 70%;
   text-align: right;
 }
 
-#con10{
+#con10 {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin:80px auto 30px ;
+  margin: 80px auto 30px;
 }
-#con10 div:nth-child(2){
+#con10 div:nth-child(2) {
   width: 50%;
   height: 40px;
   text-align: right;
 }
-#con10 button{
+#con10 button {
   background-color: rgb(60, 60, 60);
   border: none;
   color: white;
   font-size: 20px;
   padding: 8px;
 }
-#con10 button:hover{
+#con10 button:hover {
   background-color: rgb(31, 30, 30);
 }
-#con10 input{
+#con10 input {
   width: 70%;
   border-color: grey;
   font-size: 20px;
@@ -165,73 +166,66 @@ color: rgb(83, 81, 81);
 }
 
 /* ----------------------------------------------------------- */
-#empty{
+#empty {
   width: 70%;
-
 }
-#empty>div{
+#empty > div {
   display: flex;
   width: 80%;
   margin: auto;
   margin-bottom: 35px;
-
-
 }
-#empty>div>div{
+#empty > div > div {
   margin: 10px;
- padding: 0;
+  padding: 0;
 }
-#empty>div>div:nth-child(4) button{
+#empty > div > div:nth-child(4) button {
   border-radius: 50%;
   border-width: 1px;
   background-color: white;
 }
-#empty>div>div:nth-child(4) button:hover{
+#empty > div > div:nth-child(4) button:hover {
   color: black;
 }
-#empty>div>div>img{
+#empty > div > div > img {
   width: 200px;
 }
-#empty>div>div:nth-child(1){
+#empty > div > div:nth-child(1) {
   width: 300px;
 }
-#empty>div>div:nth-child(2){
+#empty > div > div:nth-child(2) {
   margin: 10px;
   color: rgb(67, 66, 66);
   font-weight: 300;
   width: 400px;
 }
-#empty>div>div:nth-child(3){
+#empty > div > div:nth-child(3) {
   width: 200px;
 }
-#empty>div>div h4,h5{
+#empty > div > div h4,
+h5 {
   margin: 7px;
 }
-#empty>div>div span{
+#empty > div > div span {
   padding: 5px;
 }
-#empty>div>div>div{
+#empty > div > div > div {
   display: flex;
   margin-top: 20px;
 }
 
-h4{
+h4 {
   color: rgb(25, 25, 25);
 }
 
-
-#empty>div>div>div>button{
- background-color: rgb(73, 72, 72);
+#empty > div > div > div > button {
+  background-color: rgb(73, 72, 72);
   padding: 5px 15px;
   border: none;
   color: white;
 }
 
-#empty>div button:hover{
+#empty > div button:hover {
   background-color: rgb(32, 32, 32);
   color: white;
 }
-
-
-
-
