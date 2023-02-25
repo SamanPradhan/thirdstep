@@ -258,7 +258,8 @@ footer{
 }
 .icons{
     /* margin: auto; */
-    margin-left: 266px;
+    /* margin-left: 266px; */
+    margin-left: 300px;
     width: 200px;
     position: relative;
     left: 200px;
@@ -346,5 +347,16 @@ h5,
 h6,
 p {
   font-family: Tahoma, sans-serif;
+}
+
+#loginlogout{
+  font-size: 14px;
+  margin-top: -25px;
+  margin-left: 435px;
+  width: 20%;
+  text-align: center;
+}
+#signoutuser{
+ color: red;
 }
 
