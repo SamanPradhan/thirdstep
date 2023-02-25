@@ -31,6 +31,8 @@ async function fetch_product() {
     .join("");
 }
 fetch_product();
+let noOfProductAdded =
+  JSON.parse(localStorage.getItem("noOfProductAddedcount")) || 1;
 
 //console.log(addProductForm);
 
@@ -64,7 +66,14 @@ async function addProduct() {
       },
       body: JSON.stringify(obj),
     });
+
     console.log(register_request);
+    noOfProductAdded++;
+    localStorage.setItem(
+      "noOfProductAddedcount",
+      JSON.stringify(noOfProductAdded)
+    );
+    console.log(noOfProductAdded);
   } catch (error) {
     console.log(error);
   }

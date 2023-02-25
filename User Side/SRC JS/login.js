@@ -24,7 +24,13 @@ function loginUser() {
           loginUserEmail.value == "admin@gmail.com" &&
           loginUserPassword.value == "admin"
         ) {
-          location.href = "../Admin Side/admin.html";
+          if (loginUserToken == false) {
+            location.href = "../Admin Side/admin.html";
+          } else {
+            alert("Please sign out before logging as Admin");
+          }
+
+          return;
         } else if (
           data[i].email == loginUserEmail.value &&
           data[i].password == loginUserPassword.value

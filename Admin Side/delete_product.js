@@ -7,7 +7,8 @@ sidebarBtn.onclick = function () {
     sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
   } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 };
-
+let noOfProductDeleted =
+  JSON.parse(localStorage.getItem("noOfProductDeletedcount")) || 0;
 async function fetch_product() {
   let req = await fetch(`${url}beverage`);
   let res = await req.json();
@@ -47,11 +48,17 @@ async function deleteProduct() {
       },
     });
     console.log(register_request);
+    noOfProductDeleted++;
+    localStorage.setItem(
+      "noOfProductDeletedcount",
+      JSON.stringify(noOfProductDeleted)
+    );
+    console.log(noOfProductDeleted);
   } catch (error) {
     console.log(error);
   }
 }
-
+console.log(noOfProductDeleted);
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
   deleteProduct();
