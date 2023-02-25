@@ -16,37 +16,7 @@ a {
   margin: 40px auto;
   padding: 5px;
 }
-<<<<<<< HEAD
-/* #empty{
-  display: grid;
-  padding: 40px;
-  width: 60%;
-  height:fit-content;
-}
-#empty>h1,p{
-  text-align: center;
-  color: rgb(73, 72, 72);
-}*/
-/* a{
- font-weight: bold;
- color: rgb(83, 81, 81);
- cursor: pointer;
-}  */
-/* #empty button{
-  padding: 15px 100px;
-  width: fit-content;
-  margin: auto;
- font-size: 15px;
- background-color: rgb(65, 64, 64);
- border:none;
- font-weight: bold;
-}
-#empty button:hover{
-  background-color: rgb(30, 30, 30);
-} */
-=======
 
->>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
 #summary{
   width: 40%;
   padding: 15px;
@@ -203,16 +173,21 @@ color: rgb(83, 81, 81);
   display: flex;
   width: 80%;
   margin: auto;
-<<<<<<< HEAD
-  background-color: white;
-  margin-bottom: 15px;
-=======
   margin-bottom: 35px;
->>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
+
+
 }
 #empty>div>div{
   margin: 10px;
  padding: 0;
+}
+#empty>div>div:nth-child(4) button{
+  border-radius: 50%;
+  border-width: 1px;
+  background-color: white;
+}
+#empty>div>div:nth-child(4) button:hover{
+  color: black;
 }
 #empty>div>div>img{
   width: 200px;
@@ -239,18 +214,19 @@ color: rgb(83, 81, 81);
   display: flex;
   margin-top: 20px;
 }
-<<<<<<< HEAD
-=======
+
 h4{
   color: rgb(25, 25, 25);
 }
->>>>>>> c3f03a85547ff484674dc16d7c3f50a7fcd68cd8
+
+
 #empty>div>div>div>button{
  background-color: rgb(73, 72, 72);
   padding: 5px 15px;
   border: none;
   color: white;
 }
+
 #empty>div button:hover{
   background-color: rgb(32, 32, 32);
   color: white;

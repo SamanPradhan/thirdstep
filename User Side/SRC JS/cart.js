@@ -46,7 +46,7 @@ function display(data) {
     Decrement.textContent = "-";
 
     let remove = document.createElement("button");
-    remove.innerText = "Remove";
+    remove.innerText = "x";
     // ------------------Remove------------------------
 
     remove.addEventListener("click", () => {
@@ -73,8 +73,8 @@ function display(data) {
     btn.append(remove);
     products.append(img);
     productDetails.append(name,brand, gender);
-    productAmount.append(price, Decrement,quantity, Increment, btn);
-    box.append(products, productDetails, productAmount);
+    productAmount.append(price, Decrement,quantity, Increment);
+    box.append(products, productDetails, productAmount, btn);
     empty.append(box)
   });
   
