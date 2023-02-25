@@ -34,7 +34,7 @@ fetch_product();
 
 ///adding the products
 
-let deleteId = document.getElementById("addBtn");
+let deleteId = document.getElementById("deleteId");
 
 let addProductForm = document.querySelector("form");
 
