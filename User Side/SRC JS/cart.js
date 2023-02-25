@@ -4,6 +4,7 @@ let amt = document.getElementById("amount");
 let inp = document.getElementById("inp");
 let apply = document.getElementById("app");
 let empty = document.getElementById("empty");
+
 let coupon = document.getElementById("coupon");
 let loginUserToken = localStorage.getItem("loginUser") || false;
 console.log("loginUserToken:", loginUserToken);
@@ -13,6 +14,7 @@ let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 let sum = 0,
   s = 0,
   sum1 = 0;
+
 display(cartData);
 function display(data) {
   empty.innerHTML = "";
