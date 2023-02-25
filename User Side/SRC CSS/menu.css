@@ -21,17 +21,25 @@ body {
 #offbanner > div > p:nth-child(2) {
   font-size: 12px;
 }
+#headimage{
+  width: 100%;
+}
+#headimage>img{
+  width: 100%;
+}
 #categorytitle {
   width: 80%;
   margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 #h1 {
   font-size: 28px;
   line-height: 0.5;
 }
 #p {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
 }
 #procount {
   width: 80%;
@@ -291,4 +299,11 @@ a {
 #con9 img {
   width: 70%;
   text-align: right;
+}
+#bagcount{
+  display: flex;
+  align-items: center;
+}
+#bagcount>span{
+  font-size: 20px;
 }

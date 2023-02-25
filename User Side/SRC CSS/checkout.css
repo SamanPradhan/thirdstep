@@ -455,4 +455,11 @@ footer>div>div:nth-child(1){
     align-items: center;
     margin-left: 10px;
 }
+#bagcount{
+    display: flex;
+    align-items: center;
+}
+header>div>div:nth-child(3){
+    justify-content: flex-end;
+}
 

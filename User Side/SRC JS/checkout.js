@@ -181,3 +181,6 @@ let backtocartbottom=document.getElementById("backtocart")
 backtocartbottom.addEventListener("click",()=>{
     window.location.assign("cart.html")
 })
+
+let bagcount=document.getElementById("itemcounts")
+bagcount.textContent=products.length;
