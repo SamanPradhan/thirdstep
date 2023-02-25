@@ -31,3 +31,7 @@ async function fetch_product() {
     .join("");
 }
 fetch_product();
+let admin_name = document.getElementById("admin_name");
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+admin_name.innerText = login_name;
+console.log(login_name);

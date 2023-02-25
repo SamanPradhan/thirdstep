@@ -9,6 +9,7 @@ let loginUserToken = localStorage.getItem("loginUser") || false;
 console.log("loginUserToken:", loginUserToken);
 let myCart = JSON.parse(localStorage.getItem("product")) || {};
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 let sum=0,s=0,sum1=0;
 display(cartData);
 function display(data) {
