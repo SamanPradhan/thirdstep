@@ -350,13 +350,23 @@ p {
 }
 
 #loginlogout{
+  font-family: Tahoma, sans-serif;
   font-size: 14px;
-  margin-top: -25px;
+  margin-top: -15px;
   margin-left: 435px;
   width: 20%;
   text-align: center;
+  line-height: 0;
 }
-#signoutuser{
+#signoutButton{
+  font-family: Tahoma, sans-serif;
  color: red;
+ cursor: pointer;
 }
-
+#bagcount{
+  display: flex;
+  align-items: center;
+}
+#bagcount>span{
+  font-size: 20px;
+}
