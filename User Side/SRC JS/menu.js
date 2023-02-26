@@ -2,9 +2,9 @@ let productdata = JSON.parse(localStorage.getItem("product")) || null;
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 
 //cart item count start
-let productcounts=localStorage.getItem("productcounts")||0
-let itemcounts=document.getElementById("itemcounts")
-itemcounts.textContent=productcounts;
+let productcounts = localStorage.getItem("productcounts") || 0;
+let itemcounts = document.getElementById("itemcounts");
+itemcounts.textContent = productcounts;
 //cart item count code end
 
 ////login/signout option on navbar
@@ -31,12 +31,13 @@ if (loginUserToken == true) {
   signout.style.fontSize = "13px";
   signout.style.fontWeight = "bolder";
   signout.style.cursor = "pointer";
+  signout.style.marginTop = "-30px";
+  signout.style.marginLeft = "400px";
   // signout.addEventListener("click", () => {
   //   loginUserToken = false;
   //   login_name = "";
   // });
 }
-
 
 /*let loginButton = document.getElementById("loginButton");
 let signout = document.getElementById("signoutButton");
@@ -72,9 +73,20 @@ signout.addEventListener("click", () => {
 
 let alldata = [];
 let fetcheddata = [];
+
+//search functionality
+let query=localStorage.getItem("searchValue")||''
+let queriedData=[]
+  fetch(`https://63c77a71e52516043f3eaecd.mockapi.io/beverage?search=${query}`)
+  .then((res)=>res.json())
+  .then((data)=>{
+    queriedData=data;
+  })
 window.addEventListener("load", () => {
   fetchdata(1);
 });
+//search functionality
+
 
 //filter variables start
 let filterby = document.getElementById("filterby");
@@ -108,7 +120,11 @@ function fetchdata(pageNumber) {
       procount.textContent = `${data[0].id}-${data[data.length - 1].id} of ${
         alldata.length - 1
       } products`;
-      displaydata(data);
+      if(query!==""){
+        displaydata(queriedData)
+        localStorage.setItem("searchValue",(''))
+      }
+      else displaydata(data)
     })
     .catch((err) => {
       console.log(err);
@@ -348,3 +364,20 @@ document.onreadystatechange = function () {
     document.querySelector("body").style.visibility = "visible";
   }
 };
+
+//search functionality
+let searchquery=document.getElementById("searchquery")
+let searchbtn=document.getElementById("searchbtn")
+//cursor pointer css using js
+searchbtn.addEventListener("mouseover",()=>{
+    searchbtn.style.cursor="pointer";
+})
+//cursor pointer css end
+searchbtn.addEventListener("click",()=>{
+  fetch(`https://63c77a71e52516043f3eaecd.mockapi.io/beverage?search=${searchquery.value}`)
+  .then((res)=>res.json())
+  .then((data)=>{
+    displaydata(data)
+  })
+})
+//search functionality end

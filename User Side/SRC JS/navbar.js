@@ -1,5 +1,6 @@
-let signout = document.getElementById("loginlogout");
+let signout = document.getElementById("signoutButton");
 let loginUserToken = JSON.parse(localStorage.getItem("loginUser")) || false;
+console.log("loginUserToken",loginUserToken)
 let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 if (loginUserToken == true) {
   console.log("yes");

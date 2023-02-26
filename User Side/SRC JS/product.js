@@ -1,15 +1,15 @@
 let productdata = JSON.parse(localStorage.getItem("product")) || {};
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
-let loginUserToken = localStorage.getItem("loginUser") || false;
+let loginUserToken = JSON.parse(localStorage.getItem("loginUser")) || false;
 console.log("loginUserToken:", loginUserToken);
 let container = document.getElementById("product-container");
 let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 console.log(productdata);
 
 //cart item count start
-let productcounts=localStorage.getItem("productcounts")||0
-let itemcounts=document.getElementById("itemcounts")
-itemcounts.textContent=productcounts;
+let productcounts = localStorage.getItem("productcounts") || 0;
+let itemcounts = document.getElementById("itemcounts");
+itemcounts.textContent = productcounts;
 //cart item count code end
 
 container.innerHTML = ` <div id="roll">
@@ -75,25 +75,24 @@ container.innerHTML = ` <div id="roll">
 let btn = document.getElementById("btn");
 btn.addEventListener("click", function () {
   // addTocart(el);
-  let clickcount=0;
+  let clickcount = 0;
   clickcount++;
 
   if (loginUserToken == false) {
     alert("Please Log in First");
   } else {
     if (duplicate(productdata) == false) {
-
-     //products count
-     if(productcounts==0){
-      itemcounts.textContent=clickcount;
-      localStorage.setItem("productcounts",clickcount)
-     }else {
-      productcounts=localStorage.getItem("productcounts")||0
-      productcounts=Number(productcounts)+clickcount;
-      itemcounts.textContent=productcounts;
-      localStorage.setItem("productcounts",productcounts)
-     }
-     //products count end
+      //products count
+      if (productcounts == 0) {
+        itemcounts.textContent = clickcount;
+        localStorage.setItem("productcounts", clickcount);
+      } else {
+        productcounts = localStorage.getItem("productcounts") || 0;
+        productcounts = Number(productcounts) + clickcount;
+        itemcounts.textContent = productcounts;
+        localStorage.setItem("productcounts", productcounts);
+      }
+      //products count end
 
       cartData.push({ ...productdata, quantity: 1 });
 
@@ -105,23 +104,21 @@ btn.addEventListener("click", function () {
       alert("Product Successfully added to Cart");
       console.log("login", JSON_flag_signin);
     } else if (duplicate(productdata) == true) {
-
       //product count
-     productcounts=localStorage.getItem("productcounts")||0
-     productcounts=Number(productcounts)+clickcount;
-     console.log(productcounts)
-     itemcounts.textContent=productcounts;
-     localStorage.setItem("productcounts",productcounts)
-     //product count end
+      productcounts = localStorage.getItem("productcounts") || 0;
+      productcounts = Number(productcounts) + clickcount;
+      console.log(productcounts);
+      itemcounts.textContent = productcounts;
+      localStorage.setItem("productcounts", productcounts);
+      //product count end
 
       cartData.forEach((element) => {
         if (element.id == productdata.id) {
           element.quantity++;
-          
+
           console.log(element);
           localStorage.setItem("productsAdd", JSON.stringify(cartData));
         }
-       
       });
       alert("Product Successfully added to Cart");
     }
@@ -149,3 +146,62 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+////login/signout option on navbar
+
+/////signout/log in button
+
+//let loginButton = document.getElementById("loginButton");
+//let signout = document.getElementById("signoutButton");
+let signout = document.getElementById("loginlogout");
+// if (loginUserToken == true) {
+//   console.log(login_name);
+//   console.log("done");
+//   loginButton.innerText = "Hi,  " + login_name;
+// }
+
+if (loginUserToken == true) {
+  console.log("yes");
+  signout.innerText = "Hi,  " + login_name + "                   Sign Out";
+  signout.style.fontSize = "13px";
+  signout.style.fontWeight = "bolder";
+  signout.style.cursor = "pointer";
+  signout.style.marginTop = "-28px";
+  signout.style.marginLeft = "280px";
+  // signout.addEventListener("click", () => {
+  //   loginUserToken = false;
+  //   login_name = "";
+  // });
+}
+
+/*let loginButton = document.getElementById("loginButton");
+let signout = document.getElementById("signoutButton");
+loginandlogoutnames();
+function loginandlogoutnames(){
+  if (loginUserToken == true) {
+    //console.log(login_name);
+    loginButton.innerText = "Hi,  " + login_name;
+  }
+  
+  if (loginUserToken == true) {
+    signout.innerText = "Sign Out";
+    loginButton.style.fontSize = "14px";
+    signout.addEventListener("click", () => {
+      console.log("clicked on signout")
+      loginUserToken = false;
+      login_name = "";
+    });
+  }
+}
+let loginlogout=document.getElementById("loginlogout")*/
+
+signout.addEventListener("click", () => {
+  loginUserToken = false;
+  login_name = "";
+  cartData = [];
+  localStorage.setItem("cart", JSON.stringify(cartData));
+  localStorage.setItem("loginUser", JSON.stringify(loginUserToken));
+  localStorage.setItem("login_name", JSON.stringify(login_name));
+  localStorage.setItem("productsAdd", JSON.stringify(cartData));
+  window.location.href = "index.html";
+});

@@ -4,11 +4,13 @@ a {
   color: #333f48;
   font-size: 12px;
 }
-
-#logo{
+/* #signoutButton {
+  width: 150px;
+} */
+#logo {
   width: 25%;
 
-/*#logo {
+  /*#logo {
   width: 200px;*/
 
   padding-left: 40px;
@@ -182,7 +184,6 @@ a {
   width: 80%;
   margin: auto;
   margin-bottom: 35px;
-
 }
 #empty > div > div {
   margin: 10px;
@@ -224,51 +225,48 @@ h5 {
   margin-top: 20px;
 }
 
-h4{
+h4 {
   color: rgb(25, 25, 25);
 }
 
-#empty>div button:hover{
-
+#empty > div button:hover {
   background-color: rgb(32, 32, 32);
   color: white;
 }
-#no{
+#no {
   margin-left: 400px;
   font-weight: 100;
 }
 
-
 @media only screen and (max-width: 800px) {
-  #cont{
+  #cont {
     display: grid;
   }
- 
-  #con7{
+
+  #con7 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  #con10{
+  #con10 {
     display: none;
   }
-  #con9{
+  #con9 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-#no{
-margin-left: 50px;
-}
-  #extra{
+  #no {
+    margin-left: 50px;
+  }
+  #extra {
     display: none;
   }
 }
-@media only screen and (max-width: 500px){
-  #empty>div{
+@media only screen and (max-width: 500px) {
+  #empty > div {
     display: grid;
   }
-  
 }
 
-#itemcounts{
+#itemcounts {
   font-weight: 100;
 }
