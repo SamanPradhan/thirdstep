@@ -224,3 +224,7 @@ h4{
   background-color: rgb(32, 32, 32);
   color: white;
 }
+
+#itemcounts{
+  font-weight: 100;
+}

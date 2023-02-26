@@ -1,5 +1,6 @@
 let total = document.getElementById("total");
 let count = document.getElementById("count");
+let bagitemcount=document.getElementById("itemcounts")
 let amt = document.getElementById("amount");
 let inp = document.getElementById("inp");
 let apply = document.getElementById("app");
@@ -91,15 +92,21 @@ function display(data) {
   }
   sum1 = sum + 0;
   count.textContent = s;
+  bagitemcount.textContent=s;
+  //product count adding to localstorage
+   localStorage.setItem("productcounts",s)
+  //product count added to localstorage
   total.textContent = sum;
   // console.log(sum1)
   amt.textContent = sum1;
+  localStorage.setItem("totalprice",sum1)
 }
 apply.addEventListener("click", () => {
   inpVal = inp.value;
   if (inpVal == "masai20") {
     sum1 = Math.floor(sum1 * 0.8);
     amt.textContent = sum1;
+    localStorage.setItem("totalprice",sum1)
     coupon.innerText = "Applied";
     coupon.style.fontSize = "30px";
     coupon.style.color = "rgb(235, 19, 55)";

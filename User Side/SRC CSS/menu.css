@@ -298,6 +298,7 @@ a {
 #con9 img {
   width: 70%;
   text-align: right;
+
 }
 #bagcount {
   display: flex;
@@ -306,3 +307,4 @@ a {
 #bagcount > span {
   font-size: 20px;
 }
+

@@ -5,8 +5,20 @@ let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 
 loginUserform.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  loginUser();
+  //login box border red if empty
+  if(loginUserEmail.value==""){
+    loginUserEmail.style.border="2px solid red";
+  }
+  else if(loginUserPassword.value==""){
+    loginUserEmail.style.border="1px solid black";
+    loginUserPassword.style.border="2px solid red";
+  }
+  //
+  else{
+    loginUserEmail.style.border="1px solid black";
+    loginUserPassword.style.border="1px solid black";
+    loginUser();
+  }
 });
 
 function loginUser() {
