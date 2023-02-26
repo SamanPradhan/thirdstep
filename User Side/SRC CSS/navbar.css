@@ -452,9 +452,15 @@ p {
   }
   #i{
     width: 100%;
+    padding-left: 18px;
+}
   }
   #i img{
     width: 100%;
+  }
+  .tag-line{
+    /* margin: auto; */
+    margin-left: 26px;
   }
   .footer-links .sub-links{
     display: grid;
