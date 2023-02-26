@@ -98,6 +98,7 @@ function display(data) {
   //product count added to localstorage
   total.textContent = sum;
   // console.log(sum1)
+
   amt.textContent = sum1;
   localStorage.setItem("totalprice",sum1)
 }
@@ -113,5 +114,6 @@ apply.addEventListener("click", () => {
   } else {
     alert("Not a valid Coupon");
     amt.textContent = sum1;
+
   }
 });

@@ -193,3 +193,28 @@ a{
   font-size: 20px;
   padding: 8px;
 }
+@media only screen and (max-width: 800px) {
+  #container1{
+    display: grid;
+  }
+  #cont>img{
+    width: 40%;
+  }
+  #con7{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  #con7>div>div>img{
+    width: 50%;
+  }
+  #con10{
+    display: none;
+  }
+  #con9{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  #cool{
+    margin-left: 20px;
+  }
+}
