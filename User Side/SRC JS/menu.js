@@ -2,9 +2,9 @@ let productdata = JSON.parse(localStorage.getItem("product")) || null;
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 
 //cart item count start
-let productcounts=localStorage.getItem("productcounts")||0
-let itemcounts=document.getElementById("itemcounts")
-itemcounts.textContent=productcounts;
+let productcounts = localStorage.getItem("productcounts") || 0;
+let itemcounts = document.getElementById("itemcounts");
+itemcounts.textContent = productcounts;
 //cart item count code end
 
 ////login/signout option on navbar
@@ -31,12 +31,13 @@ if (loginUserToken == true) {
   signout.style.fontSize = "13px";
   signout.style.fontWeight = "bolder";
   signout.style.cursor = "pointer";
+  signout.style.marginTop = "-30px";
+  signout.style.marginLeft = "400px";
   // signout.addEventListener("click", () => {
   //   loginUserToken = false;
   //   login_name = "";
   // });
 }
-
 
 /*let loginButton = document.getElementById("loginButton");
 let signout = document.getElementById("signoutButton");
