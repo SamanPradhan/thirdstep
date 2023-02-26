@@ -1,20 +1,23 @@
 let products=JSON.parse(localStorage.getItem("productsAdd"))||[]
-console.log(products)
+
+let totalprices=localStorage.getItem("totalprice")||""
+let productcounts=localStorage.getItem("productcounts")||0
+
 let loginUserToken = localStorage.getItem("loginUser") || false;
 console.log("loginUserToken:", loginUserToken);
 let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 // order summery variables
 let totalprice=document.getElementById("totalprice")
-let totalp=0;
+
+let bagcount=document.getElementById("itemcounts")
+bagcount.textContent=productcounts;
 let estimatedtotal=document.getElementById("estimatedtotal")
-let productcount=document.getElementById("totalcount")
 let productcard=document.getElementById("summeryproduct")
 let zipdoller=document.getElementById("zipdoller")
 
 // product append
 appendproduct(products)
 function appendproduct(data){
-   productcount.textContent=data.length;
    let card=`
    ${data.map((item)=>(
     getcards(
@@ -31,9 +34,17 @@ function appendproduct(data){
 }
 
 function getcards(image,name,size,price,quantity){
-    totalp+=price*quantity;
-    totalprice.textContent="₹"+totalp;
-    estimatedtotal.textContent="₹"+totalp;
+
+   /* 
+   let amount=JSON.parse(localStorage.getItem("discount"))
+    // totalp+=price*quantity;
+    totalprice.textContent="₹"+amount;
+    estimatedtotal.textContent="₹"+amount;
+    */
+
+    totalprice.textContent="₹"+totalprices;
+    estimatedtotal.textContent="₹"+totalprices;
+
     let cards=`<div class="products">
     <div id="image">
         <img src="${image}" alt="" id="img">
@@ -52,7 +63,6 @@ function getcards(image,name,size,price,quantity){
 <hr>`;
 return cards;
 }
-
 //order summary variable end
 
 // form data catching
@@ -151,7 +161,7 @@ function storingdatainorderapi(){
     obj.lastName=lname.value;
     obj.Address=streetadrs.value+","+city.value+","+state.value+","+zipcode.value;
     obj.phoneNo=phone.value;
-    obj.orderValue=totalp;
+    obj.orderValue=totalprices;
     obj.products=products;
     fetch(`https://63c687494ebaa8028547befe.mockapi.io/order`,{
         method:"POST",
@@ -181,3 +191,4 @@ let backtocartbottom=document.getElementById("backtocart")
 backtocartbottom.addEventListener("click",()=>{
     window.location.assign("cart.html")
 })
+

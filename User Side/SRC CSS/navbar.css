@@ -10,12 +10,14 @@ body {
 }
 .navbar {
   position: sticky;
+
 }
 .top-section .fa-sharp {
   display: none;
 }
  #hamburger-menu {
   display: none;
+
 }
 #container .navbar {
   width: 100%;
@@ -262,9 +264,17 @@ footer {
   margin: 7px;
   font-weight: 500;
 }
+
+.icons {
+  /* margin: auto; */
+  /* margin-left: 266px; */
+  margin-left: 300px;
+
+
 .icons {
   /* margin: auto; */
   margin-left: 266px;
+
   width: 200px;
   position: relative;
   left: 200px;
@@ -273,6 +283,7 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   /* border: 1px solid teal; */
+
 }
 /* .icons a:nth-child(1){
     margin-top: 24px;
@@ -283,6 +294,7 @@ footer {
 .icons a:nth-child(3) {
   /* margin-top: 15px; */
   margin-left: -30px;
+
 }
 .icon-top {
   /* border: 2px solid teal; */
@@ -339,6 +351,7 @@ footer {
   text-decoration: none;
   color: gray;
 }
+
 .stores div:first-child {
   margin-bottom: 15px;
 }
@@ -355,6 +368,8 @@ p {
 #con9 hr{
     display: none;
 }
+
+
 
 @media only screen and (max-width: 400px) {
   #container {
@@ -517,3 +532,33 @@ p {
     margin-top: 10px;
   }
 }
+
+/*
+#loginlogout{
+  font-family: Tahoma, sans-serif;
+
+  font-size: 14px;
+  margin-top: -15px;
+  margin-left: 435px;
+  width: 20%;
+  text-align: center;
+  line-height: 0;
+}
+
+#signoutButton{
+  font-family: Tahoma, sans-serif;
+ color: red;
+ cursor: pointer;
+}
+#bagcount{
+  display: flex;
+  align-items: center;
+}
+#bagcount>span{
+  font-size: 20px;
+}
+
+*/
+
+
+

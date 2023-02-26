@@ -127,3 +127,9 @@ a {
   color: #333f48;
   font-size: 12px;
 }
+
+@media only screen and (max-width: 750px){
+  #imgSignin>img{
+    display: none;
+  }
+}

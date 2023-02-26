@@ -7,7 +7,8 @@ sidebarBtn.onclick = function () {
     sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
   } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 };
-
+let noOfProductEdited =
+  JSON.parse(localStorage.getItem("noOfProductEditedcount")) || 1;
 async function fetch_product() {
   console.log("fetched");
   let req = await fetch(`${url}beverage`);
@@ -66,6 +67,11 @@ async function editProduct() {
       body: JSON.stringify(obj),
     });
     console.log(register_request);
+    noOfProductEdited++;
+    localStorage.setItem(
+      "noOfProductEditedcount",
+      JSON.stringify(noOfProductEdited)
+    );
   } catch (error) {
     console.log(error);
   }

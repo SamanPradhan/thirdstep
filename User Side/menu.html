@@ -35,17 +35,24 @@
                         <a>
                             <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/user (1).png" alt="">
-                            <p id="loginButton">log In</p>
+
                             <p id="signoutButton"></p>
                         </a>
                         <a href="">
                             <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a onclick="window.location.href='cart.html';">
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
+                            <span id="itemcounts">0</span>
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
+
+                    <div>
+                        <p id="loginlogout"></p>
+                    </div>
+
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -744,9 +751,13 @@
             </p>
         </div>
     </div>
+    <div id="headimage">
+        <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/hallmark-stories/2023/spring/sneaker-shop/child-pages/wk4_022223_lp_sneaker_shop_spg23_childpage_nikeair.jpg"
+            alt="">
+    </div>
     <div id="categorytitle">
-        <h1 id="h1">Women's Shoes</h1>
-        <p id="p">Shoes / Women</p>
+        <h1 id="h1">Getaway Styles</h1>
+        <p id="p">Get vacay ready with styles curated for sand, sun and fun.</p>
     </div>
     <div id="procount">
         1-42 of 100 products
@@ -757,8 +768,8 @@
                 <p>Sort by</p>
                 <select name="filter" id="filterby">
                     <option value="featured">Featured</option>
-                    <option value="top">Shoe Size: Smaller</option>
-                    <option value="newest">Shoe Size: Larger</option>
+                    <option value="top">Top rated</option>
+                    <option value="newest">Newest</option>
                     <option value="high">Price: High to Low</option>
                     <option value="low">Price: Low to High</option>
                 </select>
@@ -794,15 +805,13 @@
             <div id="sizefilter">
                 <p>Size</p>
                 <div class="btn">
-                    <button>6</button>
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>10</button>
-                    <button>11</button>
-                    <button>12</button>
-                    <button>13</button>
-                    <button>14</button>
+                    <button class="buttons" value="7">7.0</button>
+                    <button class="buttons" value="8">8.0</button>
+                    <button class="buttons" value="9">9.0</button>
+                    <button class="buttons" value="10">10.0</button>
+                    <button class="buttons" value="11">11.0</button>
+                    <button class="buttons" value="12">12.0</button>
+                    <button class="buttons" value="13">13.0</button>
                 </div>
             </div>
             <hr>
@@ -814,20 +823,20 @@
                 <div id="prcchk">
                     <div class="pricechecks">
                         <label for="">
-                            <input type="checkbox" value="200" class="price">
-                            <P>Under ₹200</P>
-                        </label>
-                        <label for="">
                             <input type="checkbox" value="500" class="price">
-                            <p>₹300 to ₹500</p>
+                            <P>Under ₹500</P>
                         </label>
                         <label for="">
-                            <input type="checkbox" value="750" class="price">
-                            <p>₹500 to ₹750</p>
+                            <input type="checkbox" value="1000" class="price">
+                            <p>₹500 to ₹1000</p>
                         </label>
                         <label for="">
-                            <input type="checkbox" value="" class="price">
-                            <p>₹750+</p>
+                            <input type="checkbox" value="1500" class="price">
+                            <p>₹1000 to ₹1500</p>
+                        </label>
+                        <label for="">
+                            <input type="checkbox" value="2000" class="price">
+                            <p>₹1500+</p>
                         </label>
                     </div>
                 </div>
@@ -1032,5 +1041,6 @@
 
 </body>
 <script src="SRC JS/menu.js"></script>
+<script src="SRC JS/navbar.js"></script>
 
 </html>
