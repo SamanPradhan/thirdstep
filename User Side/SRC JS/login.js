@@ -2,10 +2,7 @@ let loginUserEmail = document.getElementById("email");
 let loginUserPassword = document.getElementById("password");
 let loginUserform = document.querySelector("form");
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
-let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
-let userAuthToken = localStorage.getItem("localAccessToken") || null;
-let loginUserToken = localStorage.getItem("loginUser") || false;
-console.log("loginUserToken:", loginUserToken);
+
 loginUserform.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -36,7 +33,7 @@ function loginUser() {
           data[i].password == loginUserPassword.value
         ) {
           loginUserToken = true;
-          localStorage.setItem("loginUser", loginUserToken);
+          localStorage.setItem("loginUser", JSON.stringify(loginUserToken));
           login_name = data[i].firstName;
           localStorage.setItem("login_name", JSON.stringify(login_name));
           console.log(loginUserToken);
@@ -49,5 +46,3 @@ function loginUser() {
       return;
     });
 }
-
-console.log(loginUserToken);

@@ -6,11 +6,10 @@ let apply = document.getElementById("app");
 let empty = document.getElementById("empty");
 
 let coupon = document.getElementById("coupon");
-let loginUserToken = localStorage.getItem("loginUser") || false;
-console.log("loginUserToken:", loginUserToken);
+
 let myCart = JSON.parse(localStorage.getItem("product")) || {};
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
-let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+
 let sum = 0,
   s = 0,
   sum1 = 0;
