@@ -2,13 +2,13 @@ let productdata = JSON.parse(localStorage.getItem("product")) || null;
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
 
 //cart item count start
-let productcounts=localStorage.getItem("productcounts")||0
-let itemcounts=document.getElementById("itemcounts")
-itemcounts.textContent=productcounts;
+let productcounts = localStorage.getItem("productcounts") || 0;
+let itemcounts = document.getElementById("itemcounts");
+itemcounts.textContent = productcounts;
 //cart item count code end
 
 ////login/signout option on navbar
-let loginUserToken = localStorage.getItem("loginUser") || false;
+let loginUserToken = JSON.parse(localStorage.getItem("loginUser")) || false;
 console.log("loginUserToken:", loginUserToken);
 
 /////signout/log in button
@@ -16,7 +16,30 @@ console.log("loginUserToken:", loginUserToken);
 let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 console.log(login_name);
 
-let loginButton = document.getElementById("loginButton");
+//let loginButton = document.getElementById("loginButton");
+//let signout = document.getElementById("signoutButton");
+let signout = document.getElementById("loginlogout");
+// if (loginUserToken == true) {
+//   console.log(login_name);
+//   console.log("done");
+//   loginButton.innerText = "Hi,  " + login_name;
+// }
+
+if (loginUserToken == true) {
+  console.log("yes");
+  signout.innerText = "Hi,  " + login_name + "                   Sign Out";
+  signout.style.fontSize = "13px";
+  signout.style.fontWeight = "bolder";
+  signout.style.cursor = "pointer";
+  signout.style.marginTop = "-30px";
+  signout.style.marginLeft = "400px";
+  // signout.addEventListener("click", () => {
+  //   loginUserToken = false;
+  //   login_name = "";
+  // });
+}
+
+/*let loginButton = document.getElementById("loginButton");
 let signout = document.getElementById("signoutButton");
 loginandlogoutnames();
 function loginandlogoutnames(){
@@ -35,7 +58,8 @@ function loginandlogoutnames(){
     });
   }
 }
-let loginlogout=document.getElementById("loginlogout")
+let loginlogout=document.getElementById("loginlogout")*/
+
 signout.addEventListener("click", () => {
   loginUserToken = false;
   login_name = "";
@@ -262,74 +286,69 @@ filterby.addEventListener("change", () => {
 });
 
 //filter by brand
-function checkbrandfilter(){
-  for(let i=0; i<checkbrand.length; i++){
-    checkbrand[i].addEventListener("click",()=>{
-      if(checkbrand[i].checked==true){
-        let newdata=alldata.filter((item)=>{
-          return item.brand==checkbrand[i].value;
-        })
-        displaydata(newdata)
-      }
-      else displaydata(alldata)
-    })
+function checkbrandfilter() {
+  for (let i = 0; i < checkbrand.length; i++) {
+    checkbrand[i].addEventListener("click", () => {
+      if (checkbrand[i].checked == true) {
+        let newdata = alldata.filter((item) => {
+          return item.brand == checkbrand[i].value;
+        });
+        displaydata(newdata);
+      } else displaydata(alldata);
+    });
   }
 }
-checkbrandfilter()
+checkbrandfilter();
 //filter by brand end
 //filter by size start
-let sizes=document.querySelectorAll(".buttons")
-function filterbysize(){
-   for(let i=0; i<sizes.length; i++){
-    sizes[i].addEventListener("click",()=>{
-      let newdata=alldata.filter((item)=>{
-        return item.size==sizes[i].value;
-      })
-      displaydata(newdata)
-    })
-   }
-}
-filterbysize()
-//filter by size end 
-//filter by price start
-function filterbyprice(){
-  for(let i=0; i<price.length; i++){
-    price[i].addEventListener("click",()=>{
-      if(price[i].checked==true){
-        if(price[i].value==500){
-          let newdata=alldata.filter((item)=>{
-            return item.price<=500;
-          })
-          displaydata(newdata)
-        }
-        else if(price[i].value==1000){
-          let newdata=alldata.filter((item)=>{
-            if(item.price>500 && item.price<=1000){
-              return item;
-            }
-          })
-          displaydata(newdata)
-        }
-        else if(price[i].value==1500){
-          let newdata=alldata.filter((item)=>{
-            if(item.price>1000 && item.price<=1500){
-              return item;
-            }
-          })
-          displaydata(newdata)
-        }
-        else if(price[i].value==2000){
-          let newdata=alldata.filter((item)=>{
-            return item.price>1500;
-          })
-          displaydata(newdata)
-        }
-      }
-      else displaydata(alldata)
-    })
+let sizes = document.querySelectorAll(".buttons");
+function filterbysize() {
+  for (let i = 0; i < sizes.length; i++) {
+    sizes[i].addEventListener("click", () => {
+      let newdata = alldata.filter((item) => {
+        return item.size == sizes[i].value;
+      });
+      displaydata(newdata);
+    });
   }
 }
-filterbyprice()
+filterbysize();
+//filter by size end
+//filter by price start
+function filterbyprice() {
+  for (let i = 0; i < price.length; i++) {
+    price[i].addEventListener("click", () => {
+      if (price[i].checked == true) {
+        if (price[i].value == 500) {
+          let newdata = alldata.filter((item) => {
+            return item.price <= 500;
+          });
+          displaydata(newdata);
+        } else if (price[i].value == 1000) {
+          let newdata = alldata.filter((item) => {
+            if (item.price > 500 && item.price <= 1000) {
+              return item;
+            }
+          });
+          displaydata(newdata);
+        } else if (price[i].value == 1500) {
+          let newdata = alldata.filter((item) => {
+            if (item.price > 1000 && item.price <= 1500) {
+              return item;
+            }
+          });
+          displaydata(newdata);
+        } else if (price[i].value == 2000) {
+          let newdata = alldata.filter((item) => {
+            return item.price > 1500;
+          });
+          displaydata(newdata);
+        }
+      } else displaydata(alldata);
+    });
+  }
+}
+filterbyprice();
 //filter by price end
 
 //end filter code

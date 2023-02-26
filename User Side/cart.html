@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="image/logoAsset 3@4x-8.png">
     <link rel="stylesheet" href="SRC CSS/cart.css">
     <link rel="stylesheet" href="SRC CSS/navbar.css">
     <link rel="stylesheet" href="SRC CSS/footer.css">
@@ -15,14 +16,14 @@
 </head>
 
 <body>
+
     <!-- Start Navbar code Here -->
     <div id="container">
         <div class="top-section">
             <nav class="navbar">
-                <div>
+                <div class="logo">
                     <a>
-                        <img onclick="window.location.href='index.html';" style="width: 25%; margin-top: 5px;"
-                            src="./image/logoAsset 3@4x-8.png" id="logo" alt="" />
+                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
                 </div>
                 <div class="main-menu">
@@ -30,19 +31,28 @@
                         <input type="text" placeholder="Find Something Famous For You" />
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
-                    <div class="icons">
-                        <a href="./login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                    <div class="icons" id="loginUpdates">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
                         </a>
                         <a href="">
-                            <img class="icon-top" width="10px"
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a href="" id="bagcount">
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
                             <span id="itemcounts">0</span>
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
+
+                    <div>
+                        <p id="loginlogout"></p>
+                    </div>
+
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -721,7 +731,10 @@
         </div>
     </div>
     <!-- End Navbar code here -->
-    <h2 style="margin-left: 400px;font-weight: 100;">Your Cart (<span id="count">0</span> Items)</h2>
+
+    <h2 id="no">Your Cart (<span id="count">0</span> Items)</h2>
+
+
     <div id="cont">
 
         <div id="empty">
@@ -731,7 +744,7 @@
             <h2>Order Summary</h2>
             <div id="sub">
                 <h3>Subtotal</h3>
-                <h3 id="total">$0</h3>
+                <h3 id="total">₹0</h3>
             </div>
             <div id="sub">
                 <h3>Shipping</h3>
@@ -760,7 +773,7 @@
                     FAMOUSLY YOU REWARDS® Credit Card at time of account opening.</p>
             </div><br>
 
-            <a href="checkout.html"><button>CHECKOUT</button></a>
+            <a href="checkout.html"><button id="check">CHECKOUT</button></a>
 
         </div>
     </div>
@@ -774,31 +787,41 @@
                 <div> <img src="./SRC Image/24.avif" alt=""></div>
                 <h3>SKETCHERS</h3>
                 <p>Kids Heart Lights light up <br> Sneaker Little/Big Kid</p>
-                <p>$49.99</p>
+
+                <p>₹1999.99</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/25.avif" alt=""></div>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>$59.99</p>
+
+                <p>₹1099</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/28.avif" alt=""></div>
                 <h3>NIKE</h3>
                 <p>Women's Legend Essential<br>Training Shoe </p>
-                <p>$54.99</p>
+
+                <p>₹1999.99</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/27.avif" alt=""></div>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>$59.99</p>
+
+                <p>₹1999.99</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/26.avif" alt=""></div>
                 <h3>NIKE</h3>
                 <p>Women's Air Max Excee<br>Sneaker</p>
-                <p>$64.99</p>
+
+                <p>₹1999.99</p>
+
             </div>
         </div>
     </a>
@@ -971,5 +994,6 @@
     <!-- footer code end here -->
 </body>
 <script src="SRC JS/cart.js"></script>
+<!-- <script src="SRC JS/navbar.js"></script> -->
 
 </html>

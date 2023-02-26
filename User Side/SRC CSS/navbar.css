@@ -11,10 +11,10 @@ body {
 .navbar {
   position: sticky;
 }
-.top-section .fa-sharp{
+.top-section .fa-sharp {
   display: none;
 }
-#hamburger-menu{
+#hamburger-menu {
   display: none;
 }
 #container .navbar {
@@ -274,7 +274,6 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   /* border: 1px solid teal; */
-
 }
 /* .icons a:nth-child(1){
     margin-top: 24px;
@@ -286,9 +285,7 @@ footer {
   /* margin-top: 15px; */
   margin-left: -30px;
 }
-.icon-top {
-  /* border: 2px solid teal; */
-}
+
 .icons img {
   width: 50%;
 }
@@ -354,9 +351,12 @@ h6,
 p {
   font-family: Tahoma, sans-serif;
 }
-
-
 @media only screen and (max-width: 400px) {
+  body {
+    display: none;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 800px) {
   #container {
     width: 100%;
     margin: auto;
@@ -384,22 +384,22 @@ p {
   .navbar .info-menu {
     display: none;
   }
-  .navbar .main-menu{
+  .navbar .main-menu {
     display: none;
   }
-  #container .top-section .fa-sharp{
+  #container .top-section .fa-sharp {
     display: block;
     position: relative;
     left: 326px;
-    top: 30px
+    top: 30px;
   }
   #con2 {
     display: flex;
     width: 245%;
     margin: auto;
     padding: 47px;
-}
-  #hamburger-menu{
+  }
+  #hamburger-menu {
     width: 50%;
     height: 200px;
     padding-top: 20px;
@@ -408,87 +408,87 @@ p {
     padding-left: 50px;
     display: block;
   }
-  #hamburger-menu div{
+  #hamburger-menu div {
     margin-top: 15px;
     /* margin-bottom: 20px; */
   }
-  #hamburger-menu div a img{
+  #hamburger-menu div a img {
     width: 10%;
   }
-  .footer{
+  .footer {
     width: 100%;
   }
-  .footer .sub-links{
+  .footer .sub-links {
     display: grid;
     /* grid-template-columns: auto auto; */
   }
-  .footer-links .boldtag{
+  .footer-links .boldtag {
     display: none;
-  } 
-  .social-media{
+  }
+  .social-media {
     width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
   }
-  #con2{
+  #con2 {
     padding: 20px;
     display: grid;
     grid-template-columns: auto;
   }
   #con2 div {
     width: 100%;
-}
-  #con3{
+  }
+  #con3 {
     padding: 20px;
     display: grid;
     grid-template-columns: auto auto;
   }
-  #con4{
+  #con4 {
     padding: 20px;
     display: grid;
     grid-template-columns: auto auto;
   }
-  #con7{
+  #con7 {
     display: grid;
     grid-template-columns: auto auto;
   }
-  #i{
+  #i {
     width: 100%;
     padding-left: 18px;
-}
   }
-  #i img{
+
+  #i img {
     width: 100%;
   }
-  .tag-line{
+  .tag-line {
     /* margin: auto; */
     margin-left: 26px;
   }
-  .footer-links .sub-links{
+  .footer-links .sub-links {
     display: grid;
     grid-template-columns: auto auto;
     /* margin-right: 100px; */
     row-gap: 50px;
     column-gap: 30px;
   }
-  .social-media strong{
+  .social-media strong {
     width: 110%;
     margin-left: 41px;
     /* float: inline-start; */
   }
-  .img-subinfo{
+  .img-subinfo {
     display: none;
   }
-  .footer .social-media .social-icons a{
+  .footer .social-media .social-icons a {
     display: block;
   }
-  .footer .social-media .social-icons{
+  .footer .social-media .social-icons {
     display: flex;
     margin-left: -31px;
     /* flex-direction: row; */
   }
-  .footer .last-tnstruction{
+  .footer .last-tnstruction {
     width: 212%;
     padding: 20px;
     margin-left: -81px;
@@ -519,5 +519,3 @@ p {
 }
 
 */
-
-
