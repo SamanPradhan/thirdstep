@@ -88,7 +88,6 @@ function display(data) {
   total.textContent=sum;
   // console.log(sum1)
    amt.textContent=sum1;
-
 }
 apply.addEventListener("click",()=>{
   inpVal=inp.value;
@@ -98,9 +97,11 @@ apply.addEventListener("click",()=>{
     coupon.innerText="Applied"
     coupon.style.fontSize="30px";
     coupon.style.color="rgb(235, 19, 55)"
+    localStorage.setItem("discount",JSON.stringify(sum1))
   }
   else{
     alert("Not a valid Coupon");
     amt.textContent=sum1;
+    localStorage.setItem("discount",JSON.stringify(sum1))
   }
 })

@@ -55,6 +55,7 @@ header>div>div>p:nth-child(2){
     width: 30%;
     background-color: rgb(232, 232, 232);
     float: right;
+    height: fit-content;
   }
 #headsection{
     text-align: center;
@@ -291,6 +292,7 @@ input.checks{
 #ordersummery{
     width: 93%;
     margin: auto;
+    
 }
 #ordersummery>h5{
     font-size: 18px;
@@ -332,6 +334,7 @@ input.checks{
 }
 #summeryproduct>div{
     display: flex;
+   
     
 }
 #summeryproduct>div>div:nth-child(1){
@@ -454,4 +457,21 @@ footer>div>div:nth-child(1){
     align-items: center;
     margin-left: 10px;
 }
+@media only screen and (max-width: 750px){
+   main{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+  #summery{
+    width: fit-content;
+  }
+  #topback{
+    font-size: 15px;
+    width: 100%;
+  }
+  #q{
+    display: none;
+  }
+  }
+  
 

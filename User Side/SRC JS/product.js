@@ -47,7 +47,7 @@ container.innerHTML = ` <div id="roll">
 
 <button id="btn">ADD TO CART</button>
 
-<h5><span style="color:rgb(235, 19, 55);">Enjoy $10 OFF Today*</span> on your first purchase with the <br>
+<h5><span style="color:rgb(235, 19, 55);">Enjoy 10% OFF Today*</span> on your first purchase with the <br>
  FAMOUSLY YOU REWARDS® Credit Card at time of <br>
  account opening.Learn More</h5>
  </div>
@@ -87,10 +87,13 @@ btn.addEventListener("click", function () {
       cartData.forEach((element) => {
         if (element.id == productdata.id) {
           element.quantity++;
+          
           console.log(element);
           localStorage.setItem("productsAdd", JSON.stringify(cartData));
         }
+       
       });
+      alert("Product Successfully added to Cart");
     }
 
     //window.location.href = "cart.html";
