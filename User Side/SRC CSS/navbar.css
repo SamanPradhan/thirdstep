@@ -262,6 +262,7 @@ footer {
   margin: 7px;
   font-weight: 500;
 }
+
 .icons {
   /* margin: auto; */
   margin-left: 266px;
@@ -273,6 +274,7 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   /* border: 1px solid teal; */
+
 }
 /* .icons a:nth-child(1){
     margin-top: 24px;
@@ -352,6 +354,7 @@ h6,
 p {
   font-family: Tahoma, sans-serif;
 }
+
 
 @media only screen and (max-width: 400px) {
   #container {
@@ -491,3 +494,18 @@ p {
     margin-left: -81px;
   }
 }
+
+/*
+#loginlogout{
+  font-size: 14px;
+  margin-top: -25px;
+  margin-left: 435px;
+  width: 20%;
+  text-align: center;
+}
+#signoutuser{
+ color: red;
+}
+*/
+
+

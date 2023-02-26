@@ -240,6 +240,77 @@ filterby.addEventListener("change", () => {
   }
 });
 
+//filter by brand
+function checkbrandfilter(){
+  for(let i=0; i<checkbrand.length; i++){
+    checkbrand[i].addEventListener("click",()=>{
+      if(checkbrand[i].checked==true){
+        let newdata=alldata.filter((item)=>{
+          return item.brand==checkbrand[i].value;
+        })
+        displaydata(newdata)
+      }
+      else displaydata(alldata)
+    })
+  }
+}
+checkbrandfilter()
+//filter by brand end
+//filter by size start
+let sizes=document.querySelectorAll(".buttons")
+function filterbysize(){
+   for(let i=0; i<sizes.length; i++){
+    sizes[i].addEventListener("click",()=>{
+      let newdata=alldata.filter((item)=>{
+        return item.size==sizes[i].value;
+      })
+      displaydata(newdata)
+    })
+   }
+}
+filterbysize()
+//filter by size end 
+//filter by price start
+function filterbyprice(){
+  for(let i=0; i<price.length; i++){
+    price[i].addEventListener("click",()=>{
+      if(price[i].checked==true){
+        if(price[i].value==500){
+          let newdata=alldata.filter((item)=>{
+            return item.price<=500;
+          })
+          displaydata(newdata)
+        }
+        else if(price[i].value==1000){
+          let newdata=alldata.filter((item)=>{
+            if(item.price>500 && item.price<=1000){
+              return item;
+            }
+          })
+          displaydata(newdata)
+        }
+        else if(price[i].value==1500){
+          let newdata=alldata.filter((item)=>{
+            if(item.price>1000 && item.price<=1500){
+              return item;
+            }
+          })
+          displaydata(newdata)
+        }
+        else if(price[i].value==2000){
+          let newdata=alldata.filter((item)=>{
+            return item.price>1500;
+          })
+          displaydata(newdata)
+        }
+      }
+      else displaydata(alldata)
+    })
+  }
+}
+filterbyprice()
+//filter by price end
+
 //end filter code
 
 //page loader code
