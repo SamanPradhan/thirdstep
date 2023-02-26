@@ -1,5 +1,12 @@
 let productdata = JSON.parse(localStorage.getItem("product")) || null;
 let cartData = JSON.parse(localStorage.getItem("productsAdd")) || [];
+
+//cart item count start
+let productcounts=localStorage.getItem("productcounts")||0
+let itemcounts=document.getElementById("itemcounts")
+itemcounts.textContent=productcounts;
+//cart item count code end
+
 ////login/signout option on navbar
 let loginUserToken = JSON.parse(localStorage.getItem("loginUser")) || false;
 console.log("loginUserToken:", loginUserToken);
@@ -30,6 +37,28 @@ if (loginUserToken == true) {
   // });
 }
 
+
+/*let loginButton = document.getElementById("loginButton");
+let signout = document.getElementById("signoutButton");
+loginandlogoutnames();
+function loginandlogoutnames(){
+  if (loginUserToken == true) {
+    //console.log(login_name);
+    loginButton.innerText = "Hi,  " + login_name;
+  }
+  
+  if (loginUserToken == true) {
+    signout.innerText = "Sign Out";
+    loginButton.style.fontSize = "14px";
+    signout.addEventListener("click", () => {
+      console.log("clicked on signout")
+      loginUserToken = false;
+      login_name = "";
+    });
+  }
+}
+let loginlogout=document.getElementById("loginlogout")*/
+
 signout.addEventListener("click", () => {
   loginUserToken = false;
   login_name = "";
@@ -53,7 +82,6 @@ let checkbrand = document.querySelectorAll(".checkbrand");
 let size = document.querySelectorAll(".btn");
 let price = document.querySelectorAll(".price");
 //filter variables end
-
 let url = `https://63c77a71e52516043f3eaecd.mockapi.io/beverage`;
 fetch(url)
   .then((res) => res.json())

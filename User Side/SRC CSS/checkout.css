@@ -55,6 +55,7 @@ header>div>div>p:nth-child(2){
     width: 30%;
     background-color: rgb(232, 232, 232);
     float: right;
+    height: fit-content;
   }
 #headsection{
     text-align: center;
@@ -292,6 +293,7 @@ input.checks{
 #ordersummery{
     width: 93%;
     margin: auto;
+    
 }
 #ordersummery>h5{
     font-size: 18px;
@@ -333,6 +335,7 @@ input.checks{
 }
 #summeryproduct>div{
     display: flex;
+   
     
 }
 #summeryproduct>div>div:nth-child(1){
@@ -402,7 +405,7 @@ input.checks{
     border-radius: 5px;
 }
 #expirydate{
-    width:40%;
+    width:45%;
     height: 30px;
     font-size: 18px;
     padding: 5px;
@@ -410,11 +413,10 @@ input.checks{
     border-radius: 5px;
 }
 #cvv{
-    width:40%;
+    width:45%;
     height: 30px;
     font-size: 18px;
     padding: 5px;
-    margin-left: 40px;
     border: 2px solid rgb(177, 177, 177);
     border-radius: 5px;
 }
@@ -455,6 +457,26 @@ footer>div>div:nth-child(1){
     align-items: center;
     margin-left: 10px;
 }
+
+/*
+@media only screen and (max-width: 750px){
+   main{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+  #summery{
+    width: fit-content;
+  }
+  #topback{
+    font-size: 15px;
+    width: 100%;
+  }
+  #q{
+    display: none;
+  }
+  }
+  */
+
 #bagcount{
     display: flex;
     align-items: center;
@@ -462,4 +484,38 @@ footer>div>div:nth-child(1){
 header>div>div:nth-child(3){
     justify-content: flex-end;
 }
+
+/*media queries*/
+@media screen and (max-width:1000px) {
+    header>div{
+        width: 90%;
+    }
+    main{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+      }
+      #delivery{
+        width: 100%;
+      }
+    #summery{
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        background-color: rgb(232, 232, 232);
+      }
+      #carddetails{
+        margin: auto;
+      }
+      #sspeed{
+        display: flex;
+        justify-content: center;
+      }
+      footer>div{
+        width: 90%;
+      }
+}
+
 

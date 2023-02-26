@@ -298,11 +298,43 @@ a {
 #con9 img {
   width: 70%;
   text-align: right;
+
 }
+
+
+#mainbox{
+  padding: 20px;
+}
+#mainbox>div{
+  margin: 20px;
+}
+@media only screen and (max-width: 1000px){
+
+  #products{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media only screen and (max-width: 750px){
+  
+  #products{
+    #mainbox>div{
+      margin: 30px;
+    }
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+  #con9{
+    display: grid;
+    grid-template-columns: repeat(2,1fr)
+  }
+
 #bagcount {
   display: flex;
   align-items: center;
 }
 #bagcount > span {
   font-size: 20px;
+
 }
+

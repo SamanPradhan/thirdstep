@@ -6,6 +6,12 @@ let container = document.getElementById("product-container");
 let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 console.log(productdata);
 
+//cart item count start
+let productcounts=localStorage.getItem("productcounts")||0
+let itemcounts=document.getElementById("itemcounts")
+itemcounts.textContent=productcounts;
+//cart item count code end
+
 container.innerHTML = ` <div id="roll">
 <p>Shoes / ${productdata.gender} / Sneakers and Athletic Shoes / Lifestyle and Fashion Sneakers</p>
 </div>
@@ -47,7 +53,7 @@ container.innerHTML = ` <div id="roll">
 
 <button id="btn">ADD TO CART</button>
 
-<h5><span style="color:rgb(235, 19, 55);">Enjoy $10 OFF Today*</span> on your first purchase with the <br>
+<h5><span style="color:rgb(235, 19, 55);">Enjoy 10% OFF Today*</span> on your first purchase with the <br>
  FAMOUSLY YOU REWARDS® Credit Card at time of <br>
  account opening.Learn More</h5>
  </div>
@@ -69,11 +75,26 @@ container.innerHTML = ` <div id="roll">
 let btn = document.getElementById("btn");
 btn.addEventListener("click", function () {
   // addTocart(el);
+  let clickcount=0;
+  clickcount++;
 
   if (loginUserToken == false) {
     alert("Please Log in First");
   } else {
     if (duplicate(productdata) == false) {
+
+     //products count
+     if(productcounts==0){
+      itemcounts.textContent=clickcount;
+      localStorage.setItem("productcounts",clickcount)
+     }else {
+      productcounts=localStorage.getItem("productcounts")||0
+      productcounts=Number(productcounts)+clickcount;
+      itemcounts.textContent=productcounts;
+      localStorage.setItem("productcounts",productcounts)
+     }
+     //products count end
+
       cartData.push({ ...productdata, quantity: 1 });
 
       console.log(cartData);
@@ -84,13 +105,25 @@ btn.addEventListener("click", function () {
       alert("Product Successfully added to Cart");
       console.log("login", JSON_flag_signin);
     } else if (duplicate(productdata) == true) {
+
+      //product count
+     productcounts=localStorage.getItem("productcounts")||0
+     productcounts=Number(productcounts)+clickcount;
+     console.log(productcounts)
+     itemcounts.textContent=productcounts;
+     localStorage.setItem("productcounts",productcounts)
+     //product count end
+
       cartData.forEach((element) => {
         if (element.id == productdata.id) {
           element.quantity++;
+          
           console.log(element);
           localStorage.setItem("productsAdd", JSON.stringify(cartData));
         }
+       
       });
+      alert("Product Successfully added to Cart");
     }
 
     //window.location.href = "cart.html";
