@@ -53,18 +53,22 @@ console.log(login_name);
 function dataCard(arr) {
   product_details.admin_name = null;
   arr.forEach((el) => {
+    let divmain = document.createElement("div");
     let div = document.createElement("div");
+    let OrderID = document.createElement("p");
     let userNamecard = document.createElement("p");
     let userphoneNocard = document.createElement("p");
     let userAddresscard = document.createElement("p");
     let userorderValuecard = document.createElement("p");
 
+    OrderID.innerHTML = "Order ID:-" + el.id;
     userNamecard.innerHTML = "User name:-" + el.firstName + " " + el.lastName;
     userphoneNocard.innerHTML = "User Phone No:-" + el.phoneNo;
     userAddresscard.innerHTML = "User Adress:-" + el.Address;
     userorderValuecard.innerHTML = "Total Order Value:-" + el.orderValue;
-
+    div.setAttribute("id", "userInfo");
     div.append(
+      OrderID,
       userNamecard,
       userphoneNocard,
       userAddresscard,
@@ -77,10 +81,10 @@ function dataCard(arr) {
     let brand = document.createElement("th");
     let name = document.createElement("th");
     let image = document.createElement("th");
-    let gender = document.createElement("thead");
-    let size = document.createElement("thead");
-    let quantity = document.createElement("thead");
-    let price = document.createElement("thead");
+    let gender = document.createElement("th");
+    let size = document.createElement("th");
+    let quantity = document.createElement("th");
+    let price = document.createElement("th");
     let tbody = document.createElement("tbody");
     brand.innerHTML = "brand";
     name.innerHTML = "name";
@@ -102,7 +106,7 @@ function dataCard(arr) {
       let quantity = document.createElement("td");
 
       name.innerText = element.name;
-      image.setAttribute("src", element.image1);
+      image.setAttribute("src", element.image2);
       gender.innerText = element.gender;
       size.innerText = element.size;
       price.innerText = element.price;
@@ -114,7 +118,8 @@ function dataCard(arr) {
     });
     table.append(thead, tbody);
     div1.append(table);
-    product_details.append(div, table);
+    divmain.append(div, table);
+    product_details.append(divmain);
   });
 }
 
