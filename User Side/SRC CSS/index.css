@@ -1,5 +1,5 @@
 /* -------------start body--------------- */
-a{
+a {
   text-decoration: none;
 }
 #con1 {
@@ -252,4 +252,7 @@ a {
   color: #333f48;
   font-size: 12px;
 }
-/* ------------End body------------- */
+
+#con1 p {
+  font-size: 15px;
+} /* ------------End body------------- */

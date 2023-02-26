@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home Page</title>
     <link rel="stylesheet" href="SRC CSS/index.css">
     <link rel="stylesheet" href="SRC CSS/footer.css">
@@ -20,11 +20,33 @@
     <!-- Start Navbar code Here -->
     <div id="container">
         <div class="top-section">
+            
             <nav class="navbar">
                 <div class="logo">
-                    <a href="">
-                        <img src="./image/logoAsset 3@4x-8.png" alt="" />
+                    <a>
+                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
+                </div>
+                <i class="fa-sharp fa-solid fa-bars fa-2x"></i>
+                <div id="hamburger-menu">
+                    <div>
+                        <a href="">Menu</a>
+                    </div>
+                    <div>
+                            <a href="">
+                                <img src="./image/user (1).png" alt="">
+                            </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./image/shopping-bag (1).png" alt="">
+                        </a>
+                    </div>
                 </div>
                 <div class="main-menu">
                     <div class="search">
@@ -32,20 +54,25 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <a href="login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
                         </a>
-                        <a onclick="window.location.href='login.html';">
-                            <img class="icon-top" width="10px"
+                        <a href="">
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-
-                        <a onclick="window.location.href='cart.html';">
-                            <img onclick="window.location.href='cart.html';" class="icon-top" width="10px"
-                                src="./image/shopping-bag (1).png" alt=""></a>
-
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
+                            <span id="itemcounts">0</span>
+                            <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
+                    </div>
+                    <div>
+                        <p id="loginlogout"></p>
                     </div>
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -722,40 +749,45 @@
                 </div>
             </nav>
         </div>
-    </div>
+    
     <!-- End Navbar code here -->
+
     <!-- --------------body start------------------- -->
     <!-- <br><br><br><br><br><br><br><br><br> -->
-    <a href="menu.html"> <div id="con1">
-        <div>
-            <p>Up to 30% Off</p>
-            <p>Select Nike</p>
-            <p><u>Shop Now</u></p>
+    <a href="menu.html">
+        <div id="con1">
+            <div>
+                <p>Up to 30% Off</p>
+                <p>Select Nike</p>
+                <p><u>Shop Now</u></p>
+            </div>
+            <div>
+                <p>Up to 70% Off</p>
+                <p>Select Women's Styles</p>
+                <p><u>Shop Now</u></p>
+            </div>
+            <div>
+                <p>Up to 30% Off</p>
+                <p>Select Kid's Styles</p>
+                <p><u>Shop Now</u> </p>
+            </div>
+            <div>
+                <p>Up to 30% Off</p>
+                <p>Select Atheletic Brands</p>
+                <p><u>Shop Now</u></p>
+            </div>
         </div>
-        <div>
-            <p>Up to 70% Off</p>
-            <p>Select Women's Styles</p>
-            <p><u>Shop Now</u></p>
-        </div>
-        <div>
-            <p>Up to 30% Off</p>
-            <p>Select Kid's Styles</p>
-            <p><u>Shop Now</u> </p>
-        </div>
-        <div>
-            <p>Up to 30% Off</p>
-            <p>Select Atheletic Brands</p>
-            <p><u>Shop Now</u></p>
-        </div>
-    </div></a>
+    </a>
 
 
-    <a href="menu.html"><div id="con2">
-        <div>
-            <video src="./SRC Image/vid1.mp4" loop autoplay muted></video>
+    <a href="menu.html">
+        <div id="con2">
+            <div>
+                <video src="./SRC Image/vid1.mp4" loop autoplay muted></video>
+            </div>
+            <div><img src="./SRC Image/1.jpg" alt=""></div>
         </div>
-        <div><img src="./SRC Image/1.jpg" alt=""></div>
-    </div></a>
+    </a>
 
 
     <h2>Famous for Converse</h2>
@@ -766,69 +798,77 @@
     <h2>Shop By Category</h2>
 
 
-    <a href="menu.html"><div id="con3">
-        <div><img src="./SRC Image/3.png" alt="">
-            <h3><span>New</span> Arrivals</h3>
+    <a href="menu.html">
+        <div id="con3">
+            <div><img src="./SRC Image/3.png" alt="">
+                <h3><span>New</span> Arrivals</h3>
+            </div>
+            <div><img src="./SRC Image/4.png" alt="">
+                <h3>Running Shoes</h3>
+            </div>
+            <div><img src="./SRC Image/5.png" alt="">
+                <h3>Block Heel Sandals</h3>
+            </div>
+            <div><img src="./SRC Image/6.png" alt="">
+                <h3>Footbed Sandals</h3>
+            </div>
         </div>
-        <div><img src="./SRC Image/4.png" alt="">
-            <h3>Running Shoes</h3>
-        </div>
-        <div><img src="./SRC Image/5.png" alt="">
-            <h3>Block Heel Sandals</h3>
-        </div>
-        <div><img src="./SRC Image/6.png" alt="">
-            <h3>Footbed Sandals</h3>
-        </div>
-    </div></a>
+    </a>
     <div id="i"><img src="./SRC Image/7.png" alt=""></div>
     <h2>Can't Miss Deals</h2>
 
     <a href="menu.html">
-    <div id="con4">
-        <div>
-            <h4>Up to 40% Off <br> Select Kids <br> Styles</h4><img src="./SRC Image/8.png" alt="">
+
+        <div id="con4">
+            <div>
+                <h4>Up to 40% Off <br> Select Kids <br> Styles</h4><img src="./SRC Image/8.png" alt="">
+            </div>
+            <div>
+                <h4>Up to 30% Off <br> Select Atheletics</h4><img src="./SRC Image/9.png" alt="">
+            </div>
+            <div>
+                <h4>Up to 25% Off <br> Select Crocs</h4><img src="./SRC Image/10.png" alt="">
+            </div>
+            <div>
+                <h4>Sandal Under <br><span>₹1999.99</span></h4><img src="./SRC Image/11.png" alt="">
+            </div>
+
         </div>
-        <div>
-            <h4>Up to 30% Off <br> Select Atheletics</h4><img src="./SRC Image/9.png" alt="">
-        </div>
-        <div>
-            <h4>Up to 25% Off <br> Select Crocs</h4><img src="./SRC Image/10.png" alt="">
-        </div>
-        <div>
-            <h4>Sandal Under <br><span>₹399</span></h4><img src="./SRC Image/11.png" alt="">
-        </div>
-    </div></a>
+    </a>
 
     <a href="menu.html">
-    <div id="con5">
-        <div><img src="./SRC Image/12.png" alt=""></div>
-        <div><img src="./SRC Image/13.webp" alt=""></div>
-    </div></a>
+        <div id="con5">
+            <div><img src="./SRC Image/12.png" alt=""></div>
+            <div><img src="./SRC Image/13.webp" alt=""></div>
+        </div>
+    </a>
 
-    <p>Follow us @famousfootwear to see their creative twists on our shoes throughout the month.</p>
+    <p class="tag-line">Follow us @famousfootwear to see their creative twists on our shoes throughout the month.</p>
 
     <a href="menu.html">
-    <div id="con6">
-        <div>
-            <img src="./SRC Image/14.png" alt="">
-            <h2>Style of the Week</h2>
-            <p>Trending neutrals + cool retro vibes = the perfect sneaker combo.</p>
-            <h3><u>SHOP NIKE WAFFLE DEBUT </u> </h3>
+        <div id="con6">
+            <div>
+                <img src="./SRC Image/14.png" alt="">
+                <h2>Style of the Week</h2>
+                <p>Trending neutrals + cool retro vibes = the perfect sneaker combo.</p>
+                <h3><u>SHOP NIKE WAFFLE DEBUT </u> </h3>
+            </div>
+            <div>
+                <img src="./SRC Image/15.webp" alt="">
+                <h2>Turn on the Brights</h2>
+                <p>Make every step more fun with bold colors from Crocs.</p>
+                <h3><u>SHOP CROCS</u> </h3>
+            </div>
         </div>
-        <div>
-            <img src="./SRC Image/15.webp" alt="">
-            <h2>Turn on the Brights</h2>
-            <p>Make every step more fun with bold colors from Crocs.</p>
-            <h3><u>SHOP CROCS</u> </h3>
-        </div>
-    </div></a>
+    </a>
 
-    <a href="menu.html"> 
-    <div id="con5">
-        <div><img src="./SRC Image/16.png" alt=""></div>
-        <div><img src="./SRC Image/17.png" alt=""></div>
-    </div></a>
-    <p>The perfect transition shoe from the early spring chill to late spring sunshine.</p>
+    <a href="menu.html">
+        <div id="con5">
+            <div><img src="./SRC Image/16.png" alt=""></div>
+            <div><img src="./SRC Image/17.png" alt=""></div>
+        </div>
+    </a>
+    <p class="tag-line">The perfect transition shoe from the early spring chill to late spring sunshine.</p>
 
 
 
@@ -846,59 +886,65 @@
 
     <h2>New Arrivals</h2>
     <a href="menu.html">
-    <div id="con7">
-        <div>
-            <div> <img src="./SRC Image/24.avif" alt=""></div>
-            <h3 style="color: blue;">New</h3>
-            <h3>SKETCHERS</h3>
-            <p>Kids Heart Lights light up <br> Sneaker Little/Big Kid</p>
-            <p>₹999</p>
-        </div>
-        <div>
-            <div> <img src="./SRC Image/25.avif" alt=""></div>
-            <h3 style="color: blue;">New</h3>
-            <h3>HEYDUDE</h3>
-            <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-            <p>₹1099</p>
-        </div>
-        <div>
-            <div> <img src="./SRC Image/28.avif" alt=""></div>
-            <h3 style="color: blue;">New</h3>
-            <h3>NIKE</h3>
 
-            <p>Women's Legend Essential<br>Training Shoe </p>
+        <div id="con7">
+            <div>
+                <div> <img src="./SRC Image/24.avif" alt=""></div>
+                <h3 style="color:#2b95ff">New</h3>
+                <h3>SKETCHERS</h3>
+                <p>Kids Heart Lights light up <br> Sneaker Little/Big Kid</p>
+                <p>₹1999.99</p>
+            </div>
+            <div>
+                <div> <img src="./SRC Image/25.avif" alt=""></div>
+                <h3 style="color:#2b95ff">New</h3>
+                <h3>HEYDUDE</h3>
+                <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
+                <p>₹1999.99</p>
+            </div>
+            <div>
+                <div> <img src="./SRC Image/28.avif" alt=""></div>
+                <h3 style="color:#2b95ff">New</h3>
+                <h3>NIKE</h3>
 
-            <p>₹2049</p>
-        </div>
-        <div>
-            <div> <img src="./SRC Image/27.avif" alt=""></div>
-            <h3 style="color: blue;">New</h3>
-            <h3>HEYDUDE</h3>
-            <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-            <p>₹1299</p>
-        </div>
-        <div>
-            <div> <img src="./SRC Image/26.avif" alt=""></div>
-            <h3 style="color: blue;">New</h3>
-            <h3>NIKE</h3>
-            <p>Women's Air Max Excee<br>Sneaker</p>
-            <p>₹1049</p>
-        </div>
-    </div></a>
 
-    <div id="i"><img src="./SRC Image/29.png" alt=""></div>
+                <p>Women's Legend Essential<br>Training Shoe </p>
+
+
+                <p>₹1999.99</p>
+            </div>
+            <div>
+                <div> <img src="./SRC Image/27.avif" alt=""></div>
+                <h3 style="color:#2b95ff">New</h3>
+                <h3>HEYDUDE</h3>
+                <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
+                <p>₹1999.99</p>
+            </div>
+            <div>
+                <div> <img src="./SRC Image/26.avif" alt=""></div>
+                <h3 style="color: #2b95ff">New</h3>
+                <h3>NIKE</h3>
+                <p>Women's Air Max Excee<br>Sneaker</p>
+                <p>₹1999.99</p>
+            </div>
+
+        </div>
+    </a>
+
+    <div id="i"><img onclick="window.location.href='menu.html';" src="./SRC Image/29.png" alt=""></div>
 
 
     <hr>
 
     <h2>Shop for:</h2>
     <a href="menu.html">
-    <div id="con8">
-        <div>WOMEN</div>
-        <div>MEN</div>
-        <div>KIDS</div>
-        <div>SALE</div>
-    </div></a>
+        <div id="con8">
+            <div>WOMEN</div>
+            <div>MEN</div>
+            <div>KIDS</div>
+            <div>SALE</div>
+        </div>
+    </a>
 
     <h1>Find Your Next Pair of Shoes at Thirdstep</h1>
     <div id="con10">
@@ -1065,15 +1111,13 @@
             </div>
         </footer>
     </div>
+    </div>
     <!-- footer code end here -->
 
     <!-- ------------------------End body------------------------------------ -->
 
 </body>
 <script src="SRC JS/index.js"></script>
-
-
-
-
+<script src="SRC JS/navbar.js"></script>
 
 </html>

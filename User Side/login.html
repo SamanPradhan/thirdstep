@@ -31,17 +31,25 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <a href="./login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
                         </a>
                         <a href="">
-                            <img class="icon-top" width="10px"
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a onclick="window.location.href='cart.html';">
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
+                            <span id="itemcounts">0</span>
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
+                    <div>
+                        <p id="loginlogout"></p>
+                    </div>
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -720,6 +728,7 @@
         </div>
     </div>
     <!-- End Navbar code here -->
+
     <div id="biggMain">
 
         <div id="main11">
@@ -889,5 +898,6 @@
 
 </body>
 <script src="SRC JS/login.js"></script>
+<script src="SRC JS/navbar.js"></script>
 
 </html>

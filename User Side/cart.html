@@ -15,14 +15,22 @@
 </head>
 
 <body>
+
     <!-- Start Navbar code Here -->
     <div id="container">
         <div class="top-section">
             <nav class="navbar">
-                <div>
+
+              /*  <div>
                     <a href="">
                        <a href="index.html"> <img src="./image/logoAsset 3@4x-8.png" id="logo"
                             alt="" /></a>
+                            */
+
+                <div class="logo">
+                    <a>
+                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
+
                     </a>
                 </div>
                 <div class="main-menu">
@@ -31,17 +39,27 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <a href="./login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
                         </a>
                         <a href="">
-                            <img class="icon-top" width="10px"
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a href="">
+
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
+
+                            <span id="itemcounts">0</span>
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
+                    <div>
+                        <p id="loginlogout"></p>
+                    </div>
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -720,17 +738,20 @@
         </div>
     </div>
     <!-- End Navbar code here -->
+
     <h2 id="no">Your Cart (<span id="count">0</span> Items)</h2>
+
+
     <div id="cont">
-        
+
         <div id="empty">
-        
+
         </div>
         <div id="summary">
             <h2>Order Summary</h2>
             <div id="sub">
                 <h3>Subtotal</h3>
-                <h3 id="total">$0</h3>
+                <h3 id="total">₹0</h3>
             </div>
             <div id="sub">
                 <h3>Shipping</h3>
@@ -743,13 +764,16 @@
                 <h3>Estimated Total</h3>
                 <h3><span>₹</span><span id="amount">0</span></h3>
             </div><br>
+
             <p style="color: grey;"> Do you have any coupon code? Apply.</p><br>
             <div id="coupon">
-            <input type="text" id="inp" placeholder="Enter Coupon Code" style="width: 60%;height: 25px;">
-            <span id="app" style="border: 1px solid black; color: white;background-color: rgb(73, 73, 73);font-weight: 100;padding: 5px 10px; cursor: pointer;">Submit</span>
+                <input type="text" id="inp" placeholder="Enter Coupon Code" style="width: 60%;height: 25px;">
+                <span id="app"
+                    style="border: 1px solid black; color: white;background-color: rgb(73, 73, 73);font-weight: 100;padding: 5px 10px; cursor: pointer;">Submit</span>
             </div>
-            
+
             <br><br>
+
             <div id="extra">
                 <img src="./SRC Image/plcc-double.webp" alt="">
                 <p><span style="color:rgb(235, 19, 55);">Enjoy 20% OFF Today*</span> on your first purchase with the
@@ -770,31 +794,41 @@
                 <div> <img src="./SRC Image/24.avif" alt=""></div>
                 <h3>SKETCHERS</h3>
                 <p>Kids Heart Lights light up <br> Sneaker Little/Big Kid</p>
-                <p>₹999</p>
+
+                <p>₹1999.99</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/25.avif" alt=""></div>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
+
                 <p>₹1099</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/28.avif" alt=""></div>
                 <h3>NIKE</h3>
                 <p>Women's Legend Essential<br>Training Shoe </p>
-                <p>₹1199</p>
+
+                <p>₹1999.99</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/27.avif" alt=""></div>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>₹1099</p>
+
+                <p>₹1999.99</p>
+
             </div>
             <div>
                 <div> <img src="./SRC Image/26.avif" alt=""></div>
                 <h3>NIKE</h3>
                 <p>Women's Air Max Excee<br>Sneaker</p>
-                <p>₹999</p>
+
+                <p>₹1999.99</p>
+
             </div>
         </div>
     </a>
@@ -848,8 +882,8 @@
     </div>
     <hr style="width: 100%;margin-top: 50px;border: 2px solid  rgb(241, 9, 102);">
 
-     <!-- footer code start from here -->
-     <div class="footer">
+    <!-- footer code start from here -->
+    <div class="footer">
         <footer>
             <div class="social-media">
                 <strong>CONNECT WITH US</strong>
@@ -967,5 +1001,6 @@
     <!-- footer code end here -->
 </body>
 <script src="SRC JS/cart.js"></script>
+<script src="SRC JS/navbar.js"></script>
 
 </html>

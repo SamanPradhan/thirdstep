@@ -275,6 +275,7 @@ input.checks{
     color: white;
     background-color: #333F48;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
 }
@@ -404,7 +405,7 @@ input.checks{
     border-radius: 5px;
 }
 #expirydate{
-    width:40%;
+    width:45%;
     height: 30px;
     font-size: 18px;
     padding: 5px;
@@ -412,11 +413,10 @@ input.checks{
     border-radius: 5px;
 }
 #cvv{
-    width:40%;
+    width:45%;
     height: 30px;
     font-size: 18px;
     padding: 5px;
-    margin-left: 40px;
     border: 2px solid rgb(177, 177, 177);
     border-radius: 5px;
 }
@@ -457,6 +457,8 @@ footer>div>div:nth-child(1){
     align-items: center;
     margin-left: 10px;
 }
+
+/*
 @media only screen and (max-width: 750px){
    main{
     display: flex;
@@ -473,5 +475,47 @@ footer>div>div:nth-child(1){
     display: none;
   }
   }
-  
+  */
+
+#bagcount{
+    display: flex;
+    align-items: center;
+}
+header>div>div:nth-child(3){
+    justify-content: flex-end;
+}
+
+/*media queries*/
+@media screen and (max-width:1000px) {
+    header>div{
+        width: 90%;
+    }
+    main{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+      }
+      #delivery{
+        width: 100%;
+      }
+    #summery{
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        background-color: rgb(232, 232, 232);
+      }
+      #carddetails{
+        margin: auto;
+      }
+      #sspeed{
+        display: flex;
+        justify-content: center;
+      }
+      footer>div{
+        width: 90%;
+      }
+}
+
 

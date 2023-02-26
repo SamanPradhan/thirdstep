@@ -21,17 +21,25 @@ body {
 #offbanner > div > p:nth-child(2) {
   font-size: 12px;
 }
+#headimage {
+  width: 100%;
+}
+#headimage > img {
+  width: 100%;
+}
 #categorytitle {
   width: 80%;
   margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 #h1 {
   font-size: 28px;
   line-height: 0.5;
 }
 #p {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
 }
 #procount {
   width: 80%;
@@ -62,7 +70,6 @@ body {
   border: 2px solid #7c878e;
   border-radius: 2px;
   padding-left: 8px;
-  -webkit-appearance: none;
   background-image: url("https://www.famousfootwear.com/-/media/Themes/Tenant/Famous%20Footwear/Famous%20Footwear%20Default/images/icons/icon_arrow_down.svg");
   background-repeat: no-repeat;
   background-position-x: calc(100% - 8px);
@@ -197,6 +204,9 @@ input.price {
 #beforepages {
   width: 15%;
 }
+#protitle {
+  height: 40px;
+}
 #pages {
   width: 85%;
   text-align: center;
@@ -266,7 +276,6 @@ a {
   margin-left: 50px;
 }
 
-
 #con9 {
   display: flex;
   justify-content: space-between;
@@ -289,7 +298,9 @@ a {
 #con9 img {
   width: 70%;
   text-align: right;
+
 }
+
 
 #mainbox{
   padding: 20px;
@@ -317,5 +328,13 @@ a {
     display: grid;
     grid-template-columns: repeat(2,1fr)
   }
+
+#bagcount {
+  display: flex;
+  align-items: center;
+}
+#bagcount > span {
+  font-size: 20px;
+
 }
 

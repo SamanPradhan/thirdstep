@@ -44,7 +44,7 @@
 }
 
 .sidebar .nav-links {
-  margin-top: 10px;
+  margin-top: 23px;
 }
 
 .sidebar .nav-links li {
@@ -153,7 +153,8 @@ nav .search-box input {
   outline: none;
   background: #f5f6fa;
   border: 2px solid #efeef1;
-  border-radius: 6px;
+  /* border-radius: 6px; */
+  border-radius: 1px;
   font-size: 18px;
   padding: 0 15px;
 }
@@ -166,7 +167,9 @@ nav .search-box .bx-search {
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 1px;
+
   line-height: 40px;
   text-align: center;
   color: #fff;
@@ -179,7 +182,8 @@ nav .search-box .bx-search {
   align-items: center;
   background: #f5f6fa;
   border: 2px solid #efeef1;
-  border-radius: 6px;
+  /* border-radius: 6px; */
+  border-radius: 1px;
   height: 50px;
   min-width: 190px;
   padding: 0 15px 0 2px;
@@ -188,7 +192,8 @@ nav .search-box .bx-search {
 nav .profile-details img {
   height: 40px;
   width: 40px;
-  border-radius: 6px;
+  /* border-radius: 6px; */
+  border-radius: 1px;
   object-fit: cover;
 }
 
@@ -204,7 +209,9 @@ nav .profile-details i {
   font-size: 25px;
   color: #333;
 }
-
+.home-section{
+ background-color: #333F48;
+}
 .home-section .home-content {
   position: relative;
   padding-top: 104px;
@@ -226,7 +233,10 @@ nav .profile-details i {
   width: calc(100% / 4 - 15px);
   background: #fff;
   padding: 15px 14px;
-  border-radius: 12px;
+
+  border-radius: 1px;
+
+  /* border-radius: 12px; */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -253,7 +263,8 @@ nav .profile-details i {
   background: #8fdacb;
   line-height: 20px;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 1px;
+  /* border-radius: 50%; */
   color: #fff;
   font-size: 20px;
   margin-right: 5px;
@@ -276,7 +287,8 @@ nav .profile-details i {
   line-height: 50px;
   text-align: center;
   color: #66b0ff;
-  border-radius: 12px;
+  /* border-radius: 12px; */
+  border-radius: 1px;
   margin: -15px 0 0 6px;
 }
 
@@ -312,7 +324,10 @@ nav .profile-details i {
   background: #fff;
   padding: 20px 30px;
   margin: 0 20px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
+
+  border-radius: 1px;
+
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -373,7 +388,8 @@ nav .profile-details i {
   padding: 4px 12px;
   font-size: 15px;
   font-weight: 400;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-radius: 1px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -388,7 +404,10 @@ nav .profile-details i {
   background: #fff;
   padding: 20px 30px;
   margin: 0 20px 0 0;
-  border-radius: 12px;
+  /* border-radius: 12px; */
+
+  border-radius: 1px;
+
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -403,7 +422,10 @@ nav .profile-details i {
   height: 40px;
   width: 40px;
   object-fit: cover;
-  border-radius: 12px;
+
+  /* border-radius: 12px; */
+  border-radius: 1px;
+
   margin-right: 10px;
   background: #333;
 }
@@ -427,7 +449,8 @@ nav .profile-details i {
 
   width: 95%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 10px;
+  /* border-radius: 10px;                */
+  border-radius: 1px;
   margin-top: 10px;
   padding: 20px;
 }
@@ -440,7 +463,8 @@ nav .profile-details i {
 .img img {
   height: 170px;
   width: 250px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-radius: 1px;
   margin-right: 30px;
 }
 
