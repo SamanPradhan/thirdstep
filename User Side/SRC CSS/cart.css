@@ -4,9 +4,15 @@ a {
   color: #333f48;
   font-size: 12px;
 }
-#logo {
-  width: 200px;
+
+#logo{
+  width: 25%;
+
+/*#logo {
+  width: 200px;*/
+
   padding-left: 40px;
+  margin-top: 7px;
 }
 #empty > hr {
   width: 80%;
@@ -54,6 +60,8 @@ p {
 }
 #extra p {
   text-align: left;
+  color: #333f48;
+  font-size: 13px;
 }
 #summary button {
   padding: 15px 100px;
@@ -206,6 +214,7 @@ a {
 #empty > div > div h4,
 h5 {
   margin: 7px;
+  font-weight: 300;
 }
 #empty > div > div span {
   padding: 5px;
@@ -223,6 +232,41 @@ h4{
 
   background-color: rgb(32, 32, 32);
   color: white;
+}
+#no{
+  margin-left: 400px;
+  font-weight: 100;
+}
+
+
+@media only screen and (max-width: 800px) {
+  #cont{
+    display: grid;
+  }
+ 
+  #con7{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  #con10{
+    display: none;
+  }
+  #con9{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+#no{
+margin-left: 50px;
+}
+  #extra{
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px){
+  #empty>div{
+    display: grid;
+  }
+  
 }
 
 #itemcounts{

@@ -23,8 +23,8 @@
             
             <nav class="navbar">
                 <div class="logo">
-                    <a href="">
-                        <img src="./image/logoAsset 3@4x-8.png" alt="" />
+                    <a>
+                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
                 </div>
                 <i class="fa-sharp fa-solid fa-bars fa-2x"></i>
@@ -54,20 +54,25 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <a href="login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
                         </a>
-                        <a onclick="window.location.href='login.html';">
-                            <img class="icon-top" width="10px"
+                        <a href="">
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-
-                        <a onclick="window.location.href='cart.html';">
-                            <img onclick="window.location.href='cart.html';" class="icon-top" width="10px"
-                                src="./image/shopping-bag (1).png" alt=""></a>
-
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
+                            <span id="itemcounts">0</span>
+                            <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
+                    </div>
+                    <div>
+                        <p id="loginlogout"></p>
                     </div>
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -746,6 +751,7 @@
         </div>
     
     <!-- End Navbar code here -->
+
     <!-- --------------body start------------------- -->
     <!-- <br><br><br><br><br><br><br><br><br> -->
     <a href="menu.html">
@@ -812,6 +818,7 @@
     <h2>Can't Miss Deals</h2>
 
     <a href="menu.html">
+
         <div id="con4">
             <div>
                 <h4>Up to 40% Off <br> Select Kids <br> Styles</h4><img src="./SRC Image/8.png" alt="">
@@ -823,8 +830,9 @@
                 <h4>Up to 25% Off <br> Select Crocs</h4><img src="./SRC Image/10.png" alt="">
             </div>
             <div>
-                <h4>Sandal Under <br><span>$40</span></h4><img src="./SRC Image/11.png" alt="">
+                <h4>Sandal Under <br><span>₹1999.99</span></h4><img src="./SRC Image/11.png" alt="">
             </div>
+
         </div>
     </a>
 
@@ -878,44 +886,48 @@
 
     <h2>New Arrivals</h2>
     <a href="menu.html">
+
         <div id="con7">
             <div>
                 <div> <img src="./SRC Image/24.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>SKETCHERS</h3>
                 <p>Kids Heart Lights light up <br> Sneaker Little/Big Kid</p>
-                <p>$49.99</p>
+                <p>₹1999.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/25.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>$59.99</p>
+                <p>₹1999.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/28.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>NIKE</h3>
 
+
                 <p>Women's Legend Essential<br>Training Shoe </p>
 
-                <p>$54.99</p>
+
+                <p>₹1999.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/27.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>$59.99</p>
+                <p>₹1999.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/26.avif" alt=""></div>
                 <h3 style="color: #2b95ff">New</h3>
                 <h3>NIKE</h3>
                 <p>Women's Air Max Excee<br>Sneaker</p>
-                <p>$64.99</p>
+                <p>₹1999.99</p>
             </div>
+
         </div>
     </a>
 
@@ -946,7 +958,7 @@
     </div>
 
 
-    <hr style="width: 100%; margin-bottom: 50px;">
+    <hr style=" margin-bottom: 50px;">
     <div id="con9">
         <div>
             <div><img src="./SRC Image/open-box.png" alt=""></div>
@@ -955,6 +967,7 @@
                 <p style="text-align: left; margin: 0;">Plus, return your purchase to any store, at any time.</p>
             </div>
         </div>
+    <hr>
         <div>
             <div><img src="./SRC Image/gift-card.png" alt=""></div>
             <div>
@@ -962,6 +975,7 @@
                 <p style="text-align: left; margin: 0;">Fits every time! Physical card or instant eGift Card.</p>
             </div>
         </div>
+        <hr>
         <div>
             <div><img src="./SRC Image/stopwatch.png" alt=""></div>
             <div>
@@ -970,6 +984,7 @@
                     earn a bonus reward!</p>
             </div>
         </div>
+        <hr>
         <div>
             <div><img src="./SRC Image/mobile-payment.png" alt=""></div>
             <div>
@@ -978,6 +993,7 @@
                     more.</p>
             </div>
         </div>
+        <hr>
     </div>
 
 
@@ -1106,9 +1122,6 @@
 
 </body>
 <script src="SRC JS/index.js"></script>
-
-
-
-
+<script src="SRC JS/navbar.js"></script>
 
 </html>

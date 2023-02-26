@@ -10,12 +10,14 @@ body {
 }
 .navbar {
   position: sticky;
+
 }
-.top-section .fa-sharp{
+.top-section .fa-sharp {
   display: none;
 }
-#hamburger-menu{
+ #hamburger-menu {
   display: none;
+
 }
 #container .navbar {
   width: 100%;
@@ -265,7 +267,14 @@ footer {
 
 .icons {
   /* margin: auto; */
+  /* margin-left: 266px; */
+  margin-left: 300px;
+
+
+.icons {
+  /* margin: auto; */
   margin-left: 266px;
+
   width: 200px;
   position: relative;
   left: 200px;
@@ -285,6 +294,7 @@ footer {
 .icons a:nth-child(3) {
   /* margin-top: 15px; */
   margin-left: -30px;
+
 }
 .icon-top {
   /* border: 2px solid teal; */
@@ -341,6 +351,7 @@ footer {
   text-decoration: none;
   color: gray;
 }
+
 .stores div:first-child {
   margin-bottom: 15px;
 }
@@ -354,13 +365,17 @@ h6,
 p {
   font-family: Tahoma, sans-serif;
 }
+#con9 hr{
+    display: none;
+}
+
 
 
 @media only screen and (max-width: 400px) {
   #container {
     width: 100%;
     margin: auto;
-    /* overflow: hidden; */
+    overflow: hidden;
     /* align-items: center; */
   }
   #container .navbar {
@@ -370,7 +385,7 @@ p {
     /* display: none; */
   }
   .navbar .logo {
-    width: 30%;
+    width: 24%;
     /* height: 50px; */
     position: absolute;
     top: 15px;
@@ -384,120 +399,144 @@ p {
   .navbar .info-menu {
     display: none;
   }
-  .navbar .main-menu{
+  .navbar .main-menu {
     display: none;
   }
-  #container .top-section .fa-sharp{
+  #container .top-section .fa-sharp {
     display: block;
     position: relative;
     left: 326px;
-    top: 30px
+    top: 30px;
   }
   #con2 {
     display: flex;
     width: 245%;
     margin: auto;
     padding: 47px;
-}
-  #hamburger-menu{
+  }
+  #hamburger-menu {
     width: 50%;
     height: 200px;
     padding-top: 20px;
     position: relative;
     background-color: white;
     padding-left: 50px;
-    display: block;
+    display: none;
   }
-  #hamburger-menu div{
+  #hamburger-menu div {
     margin-top: 15px;
     /* margin-bottom: 20px; */
   }
-  #hamburger-menu div a img{
+  #hamburger-menu div a img {
     width: 10%;
   }
-  .footer{
+  .footer {
     width: 100%;
   }
-  .footer .sub-links{
+  .footer .sub-links {
     display: grid;
     /* grid-template-columns: auto auto; */
   }
-  .footer-links .boldtag{
+  .footer-links .boldtag {
     display: none;
-  } 
-  .social-media{
+  }
+  .social-media {
     width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
   }
-  #con2{
+  #con2 {
     padding: 20px;
     display: grid;
     grid-template-columns: auto;
   }
   #con2 div {
     width: 100%;
-}
-  #con3{
+  }
+  #con3 {
     padding: 20px;
     display: grid;
     grid-template-columns: auto auto;
   }
-  #con4{
+  #con4 {
     padding: 20px;
     display: grid;
     grid-template-columns: auto auto;
   }
-  #con7{
+  #con7 {
     display: grid;
     grid-template-columns: auto auto;
   }
-  #i{
+  #i {
     width: 100%;
     padding-left: 18px;
-}
   }
-  #i img{
-    width: 100%;
+
+  #i img {
+    width: 92%;
   }
-  .tag-line{
+  .tag-line {
     /* margin: auto; */
     margin-left: 26px;
   }
-  .footer-links .sub-links{
+  .footer-links .sub-links {
     display: grid;
     grid-template-columns: auto auto;
     /* margin-right: 100px; */
     row-gap: 50px;
     column-gap: 30px;
   }
-  .social-media strong{
+  .social-media strong {
     width: 110%;
     margin-left: 41px;
     /* float: inline-start; */
   }
-  .img-subinfo{
+  .img-subinfo {
     display: none;
   }
-  .footer .social-media .social-icons a{
+  .footer .social-media .social-icons a {
     display: block;
   }
-  .footer .social-media .social-icons{
+  .footer .social-media .social-icons {
     display: flex;
     margin-left: -31px;
     /* flex-direction: row; */
   }
-  .footer .last-tnstruction{
-    width: 212%;
+  .footer .last-tnstruction {
+    width: 157%;
     padding: 20px;
-    margin-left: -81px;
+    margin-left: -85px;
+  }
+  #con10 div:first-child{
+    margin-top: -59px;
+    margin-right: -274px;
+  }
+  #con1{
+    width: 100%;
+  }
+  #con9{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  #con9 hr{
+    display: block;
+  }
+  
+  #con10 div:nth-child(2){
+    /* display: flex; */
+    display: inline-block;
+    width: 100%;
+  }
+  #con10 button {
+    margin-top: 10px;
   }
 }
 
 /*
 #loginlogout{
   font-family: Tahoma, sans-serif;
+
   font-size: 14px;
   margin-top: -15px;
   margin-left: 435px;
@@ -505,6 +544,7 @@ p {
   text-align: center;
   line-height: 0;
 }
+
 #signoutButton{
   font-family: Tahoma, sans-serif;
  color: red;
@@ -519,5 +559,6 @@ p {
 }
 
 */
+
 
 

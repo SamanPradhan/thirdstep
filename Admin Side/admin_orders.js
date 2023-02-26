@@ -51,9 +51,10 @@ admin_name.innerText = login_name;
 console.log(login_name);
 
 function dataCard(arr) {
-  product_details.admin_name = null;
+  product_details.innerHTML = null;
   arr.forEach((el) => {
     let divmain = document.createElement("div");
+    divmain.setAttribute("id", "userdetails");
     let div = document.createElement("div");
     let OrderID = document.createElement("p");
     let userNamecard = document.createElement("p");
@@ -65,7 +66,7 @@ function dataCard(arr) {
     userNamecard.innerHTML = "User name:-" + el.firstName + " " + el.lastName;
     userphoneNocard.innerHTML = "User Phone No:-" + el.phoneNo;
     userAddresscard.innerHTML = "User Adress:-" + el.Address;
-    userorderValuecard.innerHTML = "Total Order Value:-" + el.orderValue;
+    userorderValuecard.innerHTML = "Total Order Value:-  ₹" + el.orderValue;
     div.setAttribute("id", "userInfo");
     div.append(
       OrderID,
@@ -76,47 +77,57 @@ function dataCard(arr) {
     );
 
     let div1 = document.createElement("div");
+    div1.setAttribute("id", "orderTable");
     let table = document.createElement("table");
-    let thead = document.createElement("thead");
-    let brand = document.createElement("th");
-    let name = document.createElement("th");
-    let image = document.createElement("th");
-    let gender = document.createElement("th");
-    let size = document.createElement("th");
-    let quantity = document.createElement("th");
-    let price = document.createElement("th");
-    let tbody = document.createElement("tbody");
-    brand.innerHTML = "brand";
-    name.innerHTML = "name";
-    gender.innerHTML = "gender";
-    image.innerHTML = "image";
-    size.innerHTML = "size";
-    quantity.innerHTML = "quantity";
-    price.innerHTML = "price";
-    thead.append(brand, name, image, gender, size, quantity, price);
 
+    let thead = document.createElement("thead");
+    let tbody = document.createElement("tbody");
+    let tr1 = document.createElement("tr");
+    let Productid = document.createElement("td");
+    let brand = document.createElement("td");
+    let name = document.createElement("td");
+    let image = document.createElement("td");
+    let gender = document.createElement("td");
+    let size = document.createElement("td");
+    let quantity = document.createElement("td");
+    let price = document.createElement("td");
+
+    Productid.innerHTML = "Product Id";
+    brand.innerHTML = "Brand";
+    name.innerHTML = "Name";
+    gender.innerHTML = "Gender";
+    image.innerHTML = "Image";
+    size.innerHTML = "Size";
+    quantity.innerHTML = "Quantity";
+    price.innerHTML = "Price";
+    tr1.append(Productid, brand, name, image, gender, size, quantity, price);
+    tbody.append(tr1);
     el.products.forEach((element) => {
-      let tr = document.createElement("tr");
+      let tr2 = document.createElement("tr");
+      let Productid = document.createElement("td");
       let name = document.createElement("td");
-      let image = document.createElement("td");
+      let image = document.createElement("img");
       let gender = document.createElement("td");
       let size = document.createElement("td");
       let price = document.createElement("td");
       let brand = document.createElement("td");
       let quantity = document.createElement("td");
 
+      Productid.innerText = element.id;
       name.innerText = element.name;
-      image.setAttribute("src", element.image2);
+      image.setAttribute("src", element.image1);
+
       gender.innerText = element.gender;
       size.innerText = element.size;
-      price.innerText = element.price;
+      price.innerText = " ₹" + element.price;
       brand.innerText = element.brand;
       quantity.innerText = element.quantity;
 
-      tr.append(brand, name, image, gender, size, quantity, price);
-      tbody.append(tr);
+      tr2.append(Productid, brand, name, image, gender, size, quantity, price);
+      tbody.append(tr2);
+      table.append(tbody);
     });
-    table.append(thead, tbody);
+
     div1.append(table);
     divmain.append(div, table);
     product_details.append(divmain);

@@ -34,8 +34,17 @@ function appendproduct(data){
 }
 
 function getcards(image,name,size,price,quantity){
+
+   /* 
+   let amount=JSON.parse(localStorage.getItem("discount"))
+    // totalp+=price*quantity;
+    totalprice.textContent="₹"+amount;
+    estimatedtotal.textContent="₹"+amount;
+    */
+
     totalprice.textContent="₹"+totalprices;
     estimatedtotal.textContent="₹"+totalprices;
+
     let cards=`<div class="products">
     <div id="image">
         <img src="${image}" alt="" id="img">
