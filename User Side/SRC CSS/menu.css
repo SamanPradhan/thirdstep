@@ -300,10 +300,3 @@ a {
   width: 70%;
   text-align: right;
 }
-#bagcount{
-  display: flex;
-  align-items: center;
-}
-#bagcount>span{
-  font-size: 20px;
-}
