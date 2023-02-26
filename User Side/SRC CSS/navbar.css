@@ -357,7 +357,8 @@ p {
   #container {
     width: 100%;
     margin: auto;
-    align-items: center;
+    /* overflow: hidden; */
+    /* align-items: center; */
   }
   #container .navbar {
     width: 150%;
@@ -432,6 +433,9 @@ p {
     display: grid;
     grid-template-columns: auto;
   }
+  #con2 div {
+    width: 100%;
+}
   #con3{
     padding: 20px;
     display: grid;
@@ -461,6 +465,7 @@ p {
   }
   .social-media strong{
     width: 110%;
+    margin-left: 41px;
     /* float: inline-start; */
   }
   .img-subinfo{
@@ -471,7 +476,7 @@ p {
   }
   .footer .social-media .social-icons{
     display: flex;
-    margin-left: -68px;
+    margin-left: -31px;
     /* flex-direction: row; */
   }
   .footer .last-tnstruction{
