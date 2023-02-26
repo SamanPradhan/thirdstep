@@ -73,9 +73,20 @@ signout.addEventListener("click", () => {
 
 let alldata = [];
 let fetcheddata = [];
+
+//search functionality
+let query=localStorage.getItem("searchValue")||''
+let queriedData=[]
+  fetch(`https://63c77a71e52516043f3eaecd.mockapi.io/beverage?search=${query}`)
+  .then((res)=>res.json())
+  .then((data)=>{
+    queriedData=data;
+  })
 window.addEventListener("load", () => {
   fetchdata(1);
 });
+//search functionality
+
 
 //filter variables start
 let filterby = document.getElementById("filterby");
@@ -109,7 +120,11 @@ function fetchdata(pageNumber) {
       procount.textContent = `${data[0].id}-${data[data.length - 1].id} of ${
         alldata.length - 1
       } products`;
-      displaydata(data);
+      if(query!==""){
+        displaydata(queriedData)
+        localStorage.setItem("searchValue",(''))
+      }
+      else displaydata(data)
     })
     .catch((err) => {
       console.log(err);
@@ -349,3 +364,20 @@ document.onreadystatechange = function () {
     document.querySelector("body").style.visibility = "visible";
   }
 };
+
+//search functionality
+let searchquery=document.getElementById("searchquery")
+let searchbtn=document.getElementById("searchbtn")
+//cursor pointer css using js
+searchbtn.addEventListener("mouseover",()=>{
+    searchbtn.style.cursor="pointer";
+})
+//cursor pointer css end
+searchbtn.addEventListener("click",()=>{
+  fetch(`https://63c77a71e52516043f3eaecd.mockapi.io/beverage?search=${searchquery.value}`)
+  .then((res)=>res.json())
+  .then((data)=>{
+    displaydata(data)
+  })
+})
+//search functionality end
