@@ -10,14 +10,12 @@ body {
 }
 .navbar {
   position: sticky;
-
 }
 .top-section .fa-sharp {
   display: none;
 }
- #hamburger-menu {
+#hamburger-menu {
   display: none;
-
 }
 #container .navbar {
   width: 100%;
@@ -267,14 +265,15 @@ footer {
 
 .icons {
   /* margin: auto; */
+
   /* margin-left: 266px; */
   margin-left: 300px;
 }
 
 .icons {
   /* margin: auto; */
-  margin-left: 266px;
 
+  margin-left: 266px;
   width: 200px;
   position: relative;
   left: 200px;
@@ -283,7 +282,6 @@ footer {
   align-items: center;
   justify-content: space-evenly;
   /* border: 1px solid teal; */
-
 }
 /* .icons a:nth-child(1){
     margin-top: 24px;
@@ -294,11 +292,8 @@ footer {
 .icons a:nth-child(3) {
   /* margin-top: 15px; */
   margin-left: -30px;
+}
 
-}
-.icon-top {
-  /* border: 2px solid teal; */
-}
 .icons img {
   width: 50%;
 }
@@ -351,7 +346,6 @@ footer {
   text-decoration: none;
   color: gray;
 }
-
 .stores div:first-child {
   margin-bottom: 15px;
 }
@@ -365,17 +359,16 @@ h6,
 p {
   font-family: Tahoma, sans-serif;
 }
-#con9 hr{
-    display: none;
-}
-
-
-
 @media only screen and (max-width: 400px) {
+  body {
+    display: none;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 800px) {
   #container {
     width: 100%;
     margin: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* align-items: center; */
   }
   #container .navbar {
@@ -385,7 +378,7 @@ p {
     /* display: none; */
   }
   .navbar .logo {
-    width: 24%;
+    width: 30%;
     /* height: 50px; */
     position: absolute;
     top: 15px;
@@ -421,7 +414,7 @@ p {
     position: relative;
     background-color: white;
     padding-left: 50px;
-    display: none;
+    display: block;
   }
   #hamburger-menu div {
     margin-top: 15px;
@@ -474,7 +467,7 @@ p {
   }
 
   #i img {
-    width: 92%;
+    width: 100%;
   }
   .tag-line {
     /* margin: auto; */
@@ -504,39 +497,15 @@ p {
     /* flex-direction: row; */
   }
   .footer .last-tnstruction {
-    width: 157%;
+    width: 212%;
     padding: 20px;
-    margin-left: -85px;
+    margin-left: -81px;
   }
-  #con10 div:first-child{
-    margin-top: -59px;
-    margin-right: -274px;
-  }
-  #con1{
-    width: 100%;
-  }
-  #con9{
-    display: grid;
-    grid-template-columns: auto;
-  }
-  #con9 hr{
-    display: block;
-  }
-  
-  #con10 div:nth-child(2){
-    /* display: flex; */
-    display: inline-block;
-    width: 100%;
-  }
-  #con10 button {
-    margin-top: 10px;
-  }
-}
+
 
 /*
 #loginlogout{
   font-family: Tahoma, sans-serif;
-
   font-size: 14px;
   margin-top: -15px;
   margin-left: 435px;
@@ -544,7 +513,6 @@ p {
   text-align: center;
   line-height: 0;
 }
-
 #signoutButton{
   font-family: Tahoma, sans-serif;
  color: red;
@@ -559,6 +527,3 @@ p {
 }
 
 */
-
-
-

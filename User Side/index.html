@@ -8,7 +8,8 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="SRC CSS/index.css">
     <link rel="stylesheet" href="SRC CSS/footer.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="icon" type="image/x-icon" href="image/logoAsset 3@4x-8.png">
+
     <link rel="stylesheet" href="SRC CSS/navbar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -20,11 +21,11 @@
     <!-- Start Navbar code Here -->
     <div id="container">
         <div class="top-section">
-            
+
             <nav class="navbar">
                 <div class="logo">
-                    <a>
-                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
+                    <a href="">
+                        <img src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
                 </div>
                 <i class="fa-sharp fa-solid fa-bars fa-2x"></i>
@@ -33,13 +34,17 @@
                         <a href="">Menu</a>
                     </div>
                     <div>
-                            <a href="">
-                                <img src="./image/user (1).png" alt="">
-                            </a>
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
+                        </a>
                     </div>
                     <div>
                         <a href="">
-                            <img src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
+                            <img src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg"
+                                alt="">
                         </a>
                     </div>
                     <div>
@@ -50,8 +55,8 @@
                 </div>
                 <div class="main-menu">
                     <div class="search">
-                        <input type="text" placeholder="Find Something Famous For You" />
-                        <i class="fa fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Find Something Famous For You" id="searchquery" />
+                        <i class="fa fa-magnifying-glass" id="searchbtn"></i>
                     </div>
                     <div class="icons">
                         <a>
@@ -60,19 +65,17 @@
 
                             <p id="signoutButton"></p>
                         </a>
-                        <a href="">
-                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                        <a onclick="window.location.href='login.html';">
+                            <img class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a onclick="window.location.href='cart.html';" id="bagcount">
-                            <span id="itemcounts">0</span>
-                            <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
-                    </div>
-                    <div>
-                        <p id="loginlogout"></p>
+
+                        <a onclick="window.location.href='cart.html';">
+                            <img onclick="window.location.href='cart.html';" class="icon-top" width="10px"
+                                src="./image/shopping-bag (1).png" alt=""></a>
+
                     </div>
                 </div>
-
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -749,9 +752,8 @@
                 </div>
             </nav>
         </div>
-    
+    </div>
     <!-- End Navbar code here -->
-
     <!-- --------------body start------------------- -->
     <!-- <br><br><br><br><br><br><br><br><br> -->
     <a href="menu.html">
@@ -794,7 +796,7 @@
     <p>Elevate your sneaker style with trendy and iconic favorites.</p>
     <h4>SHOP CONVERSE</h4>
 
-    <div id="i"><img src="./SRC Image/2.png" alt=""></div>
+    <div id="i"><img style="width: 100%;" src="./SRC Image/2.png" alt=""></div>
     <h2>Shop By Category</h2>
 
 
@@ -818,7 +820,6 @@
     <h2>Can't Miss Deals</h2>
 
     <a href="menu.html">
-
         <div id="con4">
             <div>
                 <h4>Up to 40% Off <br> Select Kids <br> Styles</h4><img src="./SRC Image/8.png" alt="">
@@ -830,9 +831,8 @@
                 <h4>Up to 25% Off <br> Select Crocs</h4><img src="./SRC Image/10.png" alt="">
             </div>
             <div>
-                <h4>Sandal Under <br><span>₹1999.99</span></h4><img src="./SRC Image/11.png" alt="">
+                <h4>Sandal Under <br><span>$40</span></h4><img src="./SRC Image/11.png" alt="">
             </div>
-
         </div>
     </a>
 
@@ -886,48 +886,44 @@
 
     <h2>New Arrivals</h2>
     <a href="menu.html">
-
         <div id="con7">
             <div>
                 <div> <img src="./SRC Image/24.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>SKETCHERS</h3>
                 <p>Kids Heart Lights light up <br> Sneaker Little/Big Kid</p>
-                <p>₹1999.99</p>
+                <p>$49.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/25.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>₹1999.99</p>
+                <p>$59.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/28.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>NIKE</h3>
 
-
                 <p>Women's Legend Essential<br>Training Shoe </p>
 
-
-                <p>₹1999.99</p>
+                <p>$54.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/27.avif" alt=""></div>
                 <h3 style="color:#2b95ff">New</h3>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>₹1999.99</p>
+                <p>$59.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/26.avif" alt=""></div>
                 <h3 style="color: #2b95ff">New</h3>
                 <h3>NIKE</h3>
                 <p>Women's Air Max Excee<br>Sneaker</p>
-                <p>₹1999.99</p>
+                <p>$64.99</p>
             </div>
-
         </div>
     </a>
 
@@ -958,7 +954,7 @@
     </div>
 
 
-    <hr style=" margin-bottom: 50px;">
+    <hr style="width: 100%; margin-bottom: 50px;">
     <div id="con9">
         <div>
             <div><img src="./SRC Image/open-box.png" alt=""></div>
@@ -967,7 +963,6 @@
                 <p style="text-align: left; margin: 0;">Plus, return your purchase to any store, at any time.</p>
             </div>
         </div>
-    <hr>
         <div>
             <div><img src="./SRC Image/gift-card.png" alt=""></div>
             <div>
@@ -975,7 +970,6 @@
                 <p style="text-align: left; margin: 0;">Fits every time! Physical card or instant eGift Card.</p>
             </div>
         </div>
-        <hr>
         <div>
             <div><img src="./SRC Image/stopwatch.png" alt=""></div>
             <div>
@@ -984,7 +978,6 @@
                     earn a bonus reward!</p>
             </div>
         </div>
-        <hr>
         <div>
             <div><img src="./SRC Image/mobile-payment.png" alt=""></div>
             <div>
@@ -993,7 +986,6 @@
                     more.</p>
             </div>
         </div>
-        <hr>
     </div>
 
 
@@ -1115,13 +1107,17 @@
             </div>
         </footer>
     </div>
-    </div>
+
     <!-- footer code end here -->
 
     <!-- ------------------------End body------------------------------------ -->
 
 </body>
 <script src="SRC JS/index.js"></script>
-<script src="SRC JS/navbar.js"></script>
+<!-- <script src="SRC JS/navbar.js"></script> -->
+<!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+
+
+
 
 </html>

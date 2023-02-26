@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="image/logoAsset 3@4x-8.png">
     <link rel="stylesheet" href="SRC CSS/cart.css">
     <link rel="stylesheet" href="SRC CSS/navbar.css">
     <link rel="stylesheet" href="SRC CSS/footer.css">
@@ -20,17 +21,9 @@
     <div id="container">
         <div class="top-section">
             <nav class="navbar">
-
-              /*  <div>
-                    <a href="">
-                       <a href="index.html"> <img src="./image/logoAsset 3@4x-8.png" id="logo"
-                            alt="" /></a>
-                            */
-
                 <div class="logo">
                     <a>
                         <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
-
                     </a>
                 </div>
                 <div class="main-menu">
@@ -38,7 +31,7 @@
                         <input type="text" placeholder="Find Something Famous For You" />
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
-                    <div class="icons">
+                    <div class="icons" id="loginUpdates">
                         <a>
                             <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/user (1).png" alt="">
@@ -49,15 +42,15 @@
                             <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-
                         <a onclick="window.location.href='cart.html';" id="bagcount">
-
                             <span id="itemcounts">0</span>
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
+
                     <div>
                         <p id="loginlogout"></p>
                     </div>
+
                 </div>
 
                 <div class="info-menu">
@@ -1001,6 +994,6 @@
     <!-- footer code end here -->
 </body>
 <script src="SRC JS/cart.js"></script>
-<script src="SRC JS/navbar.js"></script>
+<!-- <script src="SRC JS/navbar.js"></script> -->
 
 </html>

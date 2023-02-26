@@ -1,6 +1,6 @@
 let total = document.getElementById("total");
 let count = document.getElementById("count");
-let bagitemcount=document.getElementById("itemcounts")
+let bagitemcount = document.getElementById("itemcounts");
 let amt = document.getElementById("amount");
 let inp = document.getElementById("inp");
 let apply = document.getElementById("app");
@@ -92,28 +92,52 @@ function display(data) {
   }
   sum1 = sum + 0;
   count.textContent = s;
-  bagitemcount.textContent=s;
+  bagitemcount.textContent = s;
   //product count adding to localstorage
-   localStorage.setItem("productcounts",s)
+  localStorage.setItem("productcounts", s);
   //product count added to localstorage
   total.textContent = sum;
   // console.log(sum1)
 
   amt.textContent = sum1;
-  localStorage.setItem("totalprice",sum1)
+  localStorage.setItem("totalprice", sum1);
 }
 apply.addEventListener("click", () => {
   inpVal = inp.value;
   if (inpVal == "masai20") {
     sum1 = Math.floor(sum1 * 0.8);
     amt.textContent = sum1;
-    localStorage.setItem("totalprice",sum1)
+    localStorage.setItem("totalprice", sum1);
     coupon.innerText = "Applied";
     coupon.style.fontSize = "30px";
     coupon.style.color = "rgb(235, 19, 55)";
   } else {
     alert("Not a valid Coupon");
     amt.textContent = sum1;
-
   }
+});
+let signout = document.getElementById("signoutButton");
+let loginUserToken = JSON.parse(localStorage.getItem("loginUser")) || false;
+let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
+if (loginUserToken == true) {
+  console.log("yes");
+  signout.innerText = " Sign Out";
+  signout.style.fontSize = "13px";
+  signout.style.fontWeight = "bolder";
+  signout.style.cursor = "pointer";
+  // signout.addEventListener("click", () => {
+  //   loginUserToken = false;
+  //   login_name = "";
+  // });
+}
+
+signout.addEventListener("click", () => {
+  loginUserToken = false;
+  login_name = "";
+  cartData = [];
+  localStorage.setItem("cart", JSON.stringify(cartData));
+  localStorage.setItem("loginUser", JSON.stringify(loginUserToken));
+  localStorage.setItem("login_name", JSON.stringify(login_name));
+  localStorage.setItem("productsAdd", JSON.stringify(cartData));
+  window.location.href = "index.html";
 });
