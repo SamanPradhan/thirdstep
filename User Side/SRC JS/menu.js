@@ -123,6 +123,9 @@ function fetchdata(pageNumber) {
       if(query!==""){
         displaydata(queriedData)
         localStorage.setItem("searchValue",(''))
+        let pages=document.getElementById("paginationstart")
+        pages.style.display="none";
+
       }
       else displaydata(data)
     })
@@ -379,5 +382,7 @@ searchbtn.addEventListener("click",()=>{
   .then((data)=>{
     displaydata(data)
   })
+  let pages=document.getElementById("paginationstart")
+  pages.style.display="none";
 })
 //search functionality end
