@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="SRC CSS/navbar.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
+
 
 
 </head>
@@ -28,7 +28,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a>
-                        <img style="width: 80%; height: 120px;" onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
+                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
                 </div>
                 <div class="main-menu">
@@ -37,18 +37,27 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <a href="./login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
                         </a>
                         <a href="">
-                            <img class="icon-top" width="10px"
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a href="cart.html" id="bagcount">
+
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
+
                             <span id="itemcounts">0</span>
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
+                    <div>
+                        <p id="loginlogout"></p>
+                    </div>
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -727,6 +736,7 @@
         </div>
     </div>
     <!-- End Navbar code here -->
+
     <div id="product-container">
 
 
@@ -740,50 +750,51 @@
                 <h3 style="color: blue;">New</h3>
                 <h3>SKETCHERS</h3>
                 <p>Kids Heart Lights light up <br> Sneaker Little/Big Kid</p>
-                <p>$49.99</p>
+                <p>₹1499.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/25.avif" alt=""></div>
                 <h3 style="color: blue;">New</h3>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>$59.99</p>
+                <p>₹1999.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/28.avif" alt=""></div>
                 <h3 style="color: blue;">New</h3>
                 <h3>NIKE</h3>
-    
+
                 <p>Women's Legend Essential<br>Training Shoe </p>
-    
-                <p>$54.99</p>
+
+                <p>₹1799.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/27.avif" alt=""></div>
                 <h3 style="color: blue;">New</h3>
                 <h3>HEYDUDE</h3>
                 <p>Men's Wally Sox<br>Medium/Wide Casual Shoe</p>
-                <p>$59.99</p>
+                <p>₹1999.99</p>
             </div>
             <div>
                 <div> <img src="./SRC Image/26.avif" alt=""></div>
                 <h3 style="color: blue;">New</h3>
                 <h3>NIKE</h3>
                 <p>Women's Air Max Excee<br>Sneaker</p>
-                <p>$64.99</p>
-            </div>
-        </div></a>
-
-
-        <div id="con10">
-            <div>
-                <p>Sign up for special offers & trend updates</p>
-            </div>
-            <div>
-                <input type="email" name="" id="" placeholder="Email">
-                <button>SIGN UP</button>
+                <p>₹2999.99</p>
             </div>
         </div>
+    </a>
+
+
+    <div id="con10">
+        <div>
+            <p>Sign up for special offers & trend updates</p>
+        </div>
+        <div>
+            <input type="email" name="" id="" placeholder="Email">
+            <button>SIGN UP</button>
+        </div>
+    </div>
 
     <hr style="width: 100%; margin-bottom: 50px;">
     <div id="con9">
@@ -925,8 +936,8 @@
                 </div>
                 <div class="img-subinfo">
 
-                    <img style="width: 50%;height: 80px;" src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/plcc-double.png?w=+1440&hash=68621878391AE4CD59361AC547BEFA9F"
-
+                    <img style="width: 50%;height: 80px;"
+                        src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/rewards-images/plcc-double.png?w=+1440&hash=68621878391AE4CD59361AC547BEFA9F"
                         alt="">
                 </div>
                 <div class="boldtag">
@@ -948,7 +959,7 @@
 </body>
 
 <script src="SRC JS/product.js"></script>
-
+<script src="SRC JS/navbar.js"></script>
 
 
 

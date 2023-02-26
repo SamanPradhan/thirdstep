@@ -21,8 +21,7 @@
             <nav class="navbar">
                 <div class="logo">
                     <a>
-                        <img style="width: 180px; margin: -10px;" onclick="window.location.href='index.html';"
-                            src="./image/logoAsset 3@4x-8.png" alt="" />
+                        <img onclick="window.location.href='index.html';" src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
                 </div>
                 <div class="main-menu">
@@ -31,17 +30,25 @@
                         <i class="fa fa-magnifying-glass"></i>
                     </div>
                     <div class="icons">
-                        <a href="./login.html">
-                            <img class="icon-top" width="10px" src="./image/user (1).png" alt="">
+                        <a>
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
+                                src="./image/user (1).png" alt="">
+
+                            <p id="signoutButton"></p>
                         </a>
                         <a href="">
-                            <img class="icon-top" width="10px"
+                            <img onclick="window.location.href ='login.html';" class="icon-top" width="10px"
                                 src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
                         </a>
-                        <a href="">
+                        <a onclick="window.location.href='cart.html';" id="bagcount">
+                            <span id="itemcounts">0</span>
                             <img class="icon-top" width="10px" src="./image/shopping-bag (1).png" alt=""></a>
                     </div>
+                    <div>
+                        <p id="loginlogout"></p>
+                    </div>
                 </div>
+
                 <div class="info-menu">
                     <ul>
                         <li>
@@ -720,6 +727,7 @@
         </div>
     </div>
     <!-- End Navbar code here -->
+
     <div id="main">
 
         <form id="login-form">
@@ -906,5 +914,6 @@
 
 </body>
 <script src="SRC JS/signup.js"></script>
+<script src="SRC JS/navbar.js"></script>
 
 </html>

@@ -10,12 +10,14 @@ body {
 }
 .navbar {
   position: sticky;
+
 }
 .top-section .fa-sharp{
   display: none;
 }
 #hamburger-menu{
   display: none;
+
 }
 #container .navbar {
   width: 100%;
@@ -265,7 +267,14 @@ footer {
 
 .icons {
   /* margin: auto; */
+  /* margin-left: 266px; */
+  margin-left: 300px;
+
+
+.icons {
+  /* margin: auto; */
   margin-left: 266px;
+
   width: 200px;
   position: relative;
   left: 200px;
@@ -285,6 +294,7 @@ footer {
 .icons a:nth-child(3) {
   /* margin-top: 15px; */
   margin-left: -30px;
+
 }
 .icon-top {
   /* border: 2px solid teal; */
@@ -341,6 +351,7 @@ footer {
   text-decoration: none;
   color: gray;
 }
+
 .stores div:first-child {
   margin-bottom: 15px;
 }
@@ -354,6 +365,7 @@ h6,
 p {
   font-family: Tahoma, sans-serif;
 }
+
 
 
 @media only screen and (max-width: 400px) {
@@ -498,6 +510,7 @@ p {
 /*
 #loginlogout{
   font-family: Tahoma, sans-serif;
+
   font-size: 14px;
   margin-top: -15px;
   margin-left: 435px;
@@ -505,6 +518,7 @@ p {
   text-align: center;
   line-height: 0;
 }
+
 #signoutButton{
   font-family: Tahoma, sans-serif;
  color: red;
@@ -519,5 +533,6 @@ p {
 }
 
 */
+
 
 
