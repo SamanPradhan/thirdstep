@@ -83,3 +83,19 @@ let admin_name = document.getElementById("admin_name");
 let login_name = JSON.parse(localStorage.getItem("login_name")) || [];
 admin_name.innerText = login_name;
 console.log(login_name);
+//top bar dashboard numbers of new added, deleted, and edited
+let noOfProductAdded =
+  JSON.parse(localStorage.getItem("noOfProductAddedcount")) || 0;
+let noOfProductEdited =
+  JSON.parse(localStorage.getItem("noOfProductEditedcount")) || 0;
+let noOfProductDeleted =
+  JSON.parse(localStorage.getItem("noOfProductDeletedcount")) || 0;
+console.log(noOfProductAdded);
+console.log(noOfProductEdited);
+console.log(noOfProductDeleted);
+let NewlyAdd = document.getElementById("NewlyAdd");
+let TotalEdited = document.getElementById("TotalEdited");
+let TotalDelete = document.getElementById("TotalDelete");
+NewlyAdd.innerText = noOfProductAdded;
+TotalEdited.innerText = noOfProductEdited;
+TotalDelete.innerText = noOfProductDeleted;

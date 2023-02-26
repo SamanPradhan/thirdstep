@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home Page</title>
     <link rel="stylesheet" href="SRC CSS/index.css">
     <link rel="stylesheet" href="SRC CSS/footer.css">
@@ -20,11 +20,33 @@
     <!-- Start Navbar code Here -->
     <div id="container">
         <div class="top-section">
+            
             <nav class="navbar">
                 <div class="logo">
                     <a href="">
                         <img src="./image/logoAsset 3@4x-8.png" alt="" />
                     </a>
+                </div>
+                <i class="fa-sharp fa-solid fa-bars fa-2x"></i>
+                <div id="hamburger-menu">
+                    <div>
+                        <a href="">Menu</a>
+                    </div>
+                    <div>
+                            <a href="">
+                                <img src="./image/user (1).png" alt="">
+                            </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./image/flat-simple-white-heart-icon-on-isolated-white-vector-28983972.jpg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="./image/shopping-bag (1).png" alt="">
+                        </a>
+                    </div>
                 </div>
                 <div class="main-menu">
                     <div class="search">
@@ -722,7 +744,7 @@
                 </div>
             </nav>
         </div>
-    </div>
+    
     <!-- End Navbar code here -->
     <!-- --------------body start------------------- -->
     <!-- <br><br><br><br><br><br><br><br><br> -->
@@ -813,7 +835,7 @@
         </div>
     </a>
 
-    <p>Follow us @famousfootwear to see their creative twists on our shoes throughout the month.</p>
+    <p class="tag-line">Follow us @famousfootwear to see their creative twists on our shoes throughout the month.</p>
 
     <a href="menu.html">
         <div id="con6">
@@ -838,7 +860,7 @@
             <div><img src="./SRC Image/17.png" alt=""></div>
         </div>
     </a>
-    <p>The perfect transition shoe from the early spring chill to late spring sunshine.</p>
+    <p class="tag-line">The perfect transition shoe from the early spring chill to late spring sunshine.</p>
 
 
 
@@ -897,7 +919,7 @@
         </div>
     </a>
 
-    <div id="i"><img src="./SRC Image/29.png" alt=""></div>
+    <div id="i"><img onclick="window.location.href='menu.html';" src="./SRC Image/29.png" alt=""></div>
 
 
     <hr>
@@ -1076,6 +1098,7 @@
                         Policy</a> </p>
             </div>
         </footer>
+    </div>
     </div>
     <!-- footer code end here -->
 
