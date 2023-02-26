@@ -285,9 +285,7 @@ footer {
   /* margin-top: 15px; */
   margin-left: -30px;
 }
-.icon-top {
-  /* border: 2px solid teal; */
-}
+
 .icons img {
   width: 50%;
 }
@@ -353,8 +351,12 @@ h6,
 p {
   font-family: Tahoma, sans-serif;
 }
-
 @media only screen and (max-width: 400px) {
+  body {
+    display: none;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 800px) {
   #container {
     width: 100%;
     margin: auto;
