@@ -427,6 +427,31 @@ p {
     display: flex;
     flex-direction: column;
   }
+  #con2{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  #con3{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  #con4{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  #con7{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  #i{
+    width: 100%;
+  }
+  #i img{
+    width: 100%;
+  }
   .footer-links .sub-links{
     display: grid;
     grid-template-columns: auto auto;
